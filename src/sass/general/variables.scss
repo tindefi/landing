@@ -1,0 +1,23 @@
+$font-size: 16px;
+$font-weight: 300;
+$font-size-1: 64px;
+$font-size-2: 48px;
+$font-size-3: 32px;
+$font-size-4: 24px;
+$font-size-5: 16px;
+$font-size-6: 12px;
+$font-size-7: 10px;
+$font-primary: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+
+$text-color: #B5BCC8;
+$text-color-dark: #707A8A;
+$text-color-light: #E5E5E5;
+$text-color-lighter: #F5F5F5;
+$success-color: #00FFA3;
+
+$background-color: #17191C;
+$background-color-light: #232528;
+$background-color-footer: #1E2329;
+$background-radial: radial-gradient(38.78% 45.59% at 82.99% 19.63%, rgba(20, 179, 244, 0.2) 0%, rgba(20, 179, 244, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+$container-max-width: 1110px;

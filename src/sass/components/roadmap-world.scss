@@ -1,0 +1,93 @@
+.tin-world-roadmap{
+  &__filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0 8px;
+
+    &__header{
+      background: rgba(255, 255, 255, 0.05);
+      border: solid transparent 1px;
+      border-radius: 999px;
+      padding: 13px 20px;
+      cursor: pointer;
+    }
+
+    &__quarters{
+      display: none;
+      margin-left: 8px;
+    }
+
+    &__quarter{
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      border: solid white 1px;
+      border-radius: 999px;
+      padding: 9px 20px;
+      cursor: pointer;
+      margin: 0 8px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: calc(50% - 1px);
+        left: -17px;
+        width: 16px;
+        height: 2px;
+        background: white;
+      }
+
+      &.is-active{
+        color: white;
+
+        ~ .tin-world-roadmap__filter__quarter{
+          background: rgba(255, 255, 255, 0.05);
+          border: solid transparent 1px;
+
+          &:before{
+            background: rgba(255, 255, 255, 0.05);
+          }
+        }
+      }
+
+      &.is-old{
+        color: rgba(255, 255, 255, 0.1) !important;
+        background-color: rgba(255, 255, 255, 0.02) !important;
+        pointer-events: none !important;
+      }
+    }
+
+    &.is-active{
+      .tin-world-roadmap__filter__header{
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+        color: white;
+      }
+
+      .tin-world-roadmap__filter__quarters{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.is-old{
+      .tin-world-roadmap__filter__quarter{
+        border-color: transparent;
+        pointer-events: none;
+
+        &:before{
+          background: rgba(255, 255, 255, 0.02);
+        }
+      }
+    }
+  }
+}

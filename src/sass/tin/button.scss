@@ -1,0 +1,33 @@
+.tin-button{
+  display: inline-block;
+  background: transparent;
+  color: $text-color;
+  border: solid 1px $text-color;
+  padding: 10px 30px;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover{
+    @include blurBackground(white);
+    color: white;
+  }
+
+  &.is-success{
+    background-color: $success-color;
+    border-color: $success-color;
+
+    &:hover{
+      background-color: darken($success-color, 5);
+      border-color: darken($success-color, 5);
+    }
+
+    &.big-shadow{
+      box-shadow: 0 0 50px $success-color;
+    }
+  }
+
+  &.is-long{
+    padding: 10px 60px;
+  }
+}

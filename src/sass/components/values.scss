@@ -1,0 +1,37 @@
+.tin-value{
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    background: rgba(white, 0.05);
+    border-radius: 34px;
+    padding: 30px;
+    min-height: 388px;
+    margin-bottom: 30px;
+
+    &__image{
+      width: 50%;
+      max-width: 150px;
+    }
+
+    &__title{
+      margin-top: 5px;
+      margin-bottom: 18px;
+    }
+  }
+
+  @media(min-width:768px){
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    &__item{
+      margin-bottom: initial;
+    }
+  }
+}

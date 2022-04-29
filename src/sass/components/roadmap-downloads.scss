@@ -1,0 +1,119 @@
+.tin-downloads-roadmap{
+  &__downloads{
+    background-color: rgba(white, 0.05);
+    border-radius: 32px;
+    padding: 40px 30px 30px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 40px;
+
+      :nth-child(2){
+        margin-top: 25px;
+        display: inline-block;
+      }
+    }
+
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(white, 0.05);
+      padding: 10px 20px;
+      align-items: center;
+      border-radius: 16px;
+      margin-bottom: 10px;
+
+      &__platform{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .tin-icon{
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__footer{
+      margin-top: 20px;
+
+      &__launch{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(white, 0.05);
+        border-radius: 16px;
+        min-height: 100px;
+        margin-top: 7px;
+      }
+    }
+  }
+
+  &__info{
+    display: none;
+    position: relative;
+    background-color: rgba(white, 0.05);
+    border-radius: 32px;
+    overflow: hidden;
+
+    &__wrapper{
+      position: relative;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      background: linear-gradient(180deg, rgba($background-color-light, 0.5) 0%, $background-color-light 100%);
+    }
+
+    &__background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/images/dogesun.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img{
+        width: 150px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__targets{
+      padding: 0 40px 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    &__target{
+      color: white;
+      border: solid 1px white;
+      padding: 10px 15px;
+      border-radius: 999px;
+      margin: 0 6px;
+      cursor: pointer;
+    }
+  }
+
+  @media(min-width:768px){
+    &__container{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 34px;
+    }
+
+    &__info{
+      display: block;
+    }
+  }
+}

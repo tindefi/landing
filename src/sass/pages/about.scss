@@ -1,0 +1,93 @@
+.tin-about-page{
+  .video-section{
+    margin: 140px auto 75px;
+
+    &__container{
+      width: 450px;
+      aspect-ratio: 1 / 1;
+      border-radius: 34px;
+      overflow: hidden;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__video{
+      width: 100%;
+    }
+  }
+
+  .about-section{
+    &__title{
+      width: min-content;
+      white-space: nowrap;
+      text-align: center;
+      margin: auto;
+    }
+
+    &__container{
+      max-width: 695px;
+      margin: 60px auto 180px;
+    }
+
+    &__text{
+      text-align: center;
+      margin-bottom: 13px;
+    }
+  }
+
+  .unique-section{
+    margin-bottom: 160px;
+
+    &__title{
+      max-width: 695px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+  }
+
+  .advantages-section{
+    &__title{
+      max-width: 695px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .tin-carousel{
+      margin-bottom: 210px;
+
+      &__item{
+        &__content{
+          // justify-content: flex-end;
+
+          h3{
+            margin: 16px 0px;
+          }
+
+          p{
+            max-width: 390px;
+          }
+        }
+      }
+    }
+  }
+
+  .chief-section{
+    &__title{
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
+  .team-section{
+    margin: 200px auto;
+
+    &__title{
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+}

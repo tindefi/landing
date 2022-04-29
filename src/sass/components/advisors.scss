@@ -1,0 +1,51 @@
+.tin-advisors{
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+  }
+
+  &__card{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+
+    &__picture{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      align-self: start;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      filter: grayscale(1);
+    }
+
+    &__info{
+      margin-left: 16px;
+    }
+
+    &__name{
+      color: white;
+      font-weight: 400;
+    }
+
+    &__position{
+      font-size: 14px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.05);
+      color: $text-color-light;
+      padding: 3px 10px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 6px 0 13px;
+    }
+
+    &__social{
+      display: flex;
+
+      &__icon{
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

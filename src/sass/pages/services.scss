@@ -1,0 +1,73 @@
+.tin-services-page{
+  .services-section{
+    &__title{
+      width: min-content;
+      white-space: nowrap;
+      margin: 200px auto 0;
+      text-align: center;
+    }
+  }
+
+  .tin-services{
+    margin: 60px auto 160px;
+
+    &__item{
+      background-color: rgba(white, 0.05);
+      border-radius: 34px;
+      padding: 40px 50px;
+      margin-bottom: 34px;
+
+      &__img{
+        width: 90%;
+        max-width: 200px;
+        margin: auto;
+      }
+
+      &__title{
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      &__content{
+        li{
+          position: relative;
+          padding-left: 16px;
+
+          &:before{
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: $success-color;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            border-radius: 999px;
+          }
+        }
+      }
+    }
+  }
+
+  @media(min-width:768px){
+    &__items{
+      display: grid;
+      gap: 34px;
+
+      &.gtc-2{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &.gtc-3{
+        grid-template-columns: repeat(3, 1fr);
+
+        .tin-services__item{
+          padding: 30px;
+        }
+      }
+    }
+
+    &__item{
+      margin-bottom: initial;
+    }
+  }
+}

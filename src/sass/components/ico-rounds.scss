@@ -1,0 +1,114 @@
+.tin-ico{
+  &__item{
+    background: rgba(white, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    padding: 56px 40px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.75);
+
+    &__header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__left{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__title{
+      font-weight: 500;
+    }
+
+    &__label-text{
+      margin-left: 40px;
+    }
+
+    &__text{
+      font-size: $font-size-4;
+      font-weight: 700;
+      color: $text-color-light;
+    }
+
+    .last-buy{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 15px;
+      color: $text-color-light;
+      background: rgba(white, 0.2);
+      box-shadow: 0px 4px 4px rgba(black, 0.2);
+      border-radius: 20px;
+
+      &__avatar{
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 999px;
+        background: $background-color;
+      }
+
+      &__amount{
+        font-size: $font-size-4;
+        font-weight: 700;
+        margin: 0 30px;
+      }
+    }
+
+    &.is-next{
+      padding: 20px 40px 25px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      width: calc(100% - 100px);
+      margin: auto;
+      opacity: 0.6;
+
+      &:nth-child(3){
+        width: calc(100% - 200px);
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left{
+      display: flex;
+    }
+
+    &__item{
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      border-left: solid 2px;
+
+      &:first-child{
+        border-left: none;
+        padding-left: 0;
+      }
+
+      &__icon{
+        margin-right: 10px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+
+        .tin-value{
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__button{
+    width: 225px;
+  }
+}

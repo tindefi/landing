@@ -1,0 +1,14 @@
+<template>
+  <section class="tin-faq-page">
+    <section class="faq-section container">
+      <h1 class="faq-section__title fz-2 fw-700 text-gradient-5">{{t('pages.faq.title')}}</h1>
+      <Faq />
+    </section>
+  </section>
+</template>
+
+<script setup>
+  import Faq from '@/components/common/Faq.vue'
+
+  const { t } = useI18n()
+</script>

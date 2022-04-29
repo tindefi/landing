@@ -1,0 +1,26 @@
+.appear{
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+
+  &.fade-up{ transform: translateY(-80px) }
+  &.fade-down{ transform: translateY(80px) }
+  &.fade-left{ transform: translateX(-80px) }
+  &.fade-right{ transform: translateX(80px) }
+
+  &.is-in-viewport{
+    opacity: 1;
+
+    &.fade-up{ transform: translateY(0) }
+    &.fade-down{ transform: translateY(0) }
+    &.fade-left{ transform: translateX(0) }
+    &.fade-right{ transform: translateX(0) }
+  }
+
+  $delays: (100, 200, 300, 400, 500, 600, 700, 800, 900, 1000);
+
+  @each $delay in $delays {
+    &.delay-#{$delay}{
+      transition-delay: #{$delay}ms;
+    }
+  }
+}

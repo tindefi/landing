@@ -1,0 +1,165 @@
+.tin-ico-component{
+  padding-top: 130px;
+
+  .phases-section{
+    position: relative;
+    min-height: 100vh;
+
+    .tin-ico-back{
+      position: absolute;
+      left: 0;
+
+      .tin-button{
+        padding: 6px 20px;
+      }
+    }
+
+    &__background{
+      position: fixed;
+      width: 1233px;
+      height: 1233px;
+      left: 526px;
+      top: -49px;
+      background: radial-gradient(50% 50% at 47.3% 50.07%, rgba(0, 255, 163, 0.25) 10.94%, rgba(23, 25, 28, 0) 100%);
+    }
+
+    &__header{
+      position: relative;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    &__title{
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: $text-color-dark;
+
+      .separator{
+        margin: 0 15px;
+      }
+    }
+
+    &__text{
+      max-width: 494px;
+      margin: auto;
+    }
+  }
+
+  .world-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__text{
+      max-width: 555px;
+      margin: auto;
+    }
+  }
+
+  .road-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__text{
+      max-width: 555px;
+      margin: auto;
+    }
+  }
+
+  .financials-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+
+  .tokenomics-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+
+  .goals-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+
+  .utils-section{
+    margin-bottom: 200px;
+
+    &__header{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    &__title{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__text{
+      width: 690px;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .tin-carousel{
+      &__item{
+        &__content{
+          // justify-content: flex-end;
+
+          h3{
+            margin: 16px 0px;
+          }
+
+          p{
+            max-width: 390px;
+          }
+        }
+      }
+    }
+  }
+}

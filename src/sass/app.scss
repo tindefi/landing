@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import '@/sass/general/reset';
+@import '@/sass/general/variables';
+
+@import '@/sass/pages/app';
+@import '@/sass/pages/home';
+@import '@/sass/pages/ico';
+@import '@/sass/pages/faq';
+@import '@/sass/pages/faq-item';
+@import '@/sass/pages/about';
+@import '@/sass/pages/services';
+
+@import '@/sass/general/extends';
+@import '@/sass/general/mixins';
+@import '@/sass/general/main';
+
+@import '@/sass/tin/appear';
+@import '@/sass/tin/button';
+@import '@/sass/tin/range';
+@import '@/sass/tin/countdown';
+@import '@/sass/tin/carousel';
+
+@import '@/sass/components/navbar';
+@import '@/sass/components/footer';
+@import '@/sass/components/profit';
+@import '@/sass/components/masonry';
+@import '@/sass/components/team';
+@import '@/sass/components/advisors';
+@import '@/sass/components/partners';
+@import '@/sass/components/ico-rounds';
+@import '@/sass/components/roadmap-world';
+@import '@/sass/components/roadmap-downloads';
+@import '@/sass/components/financials';
+@import '@/sass/components/tokenomics';
+@import '@/sass/components/goals';
+@import '@/sass/components/faq';
+@import '@/sass/components/values';

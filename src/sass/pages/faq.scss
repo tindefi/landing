@@ -1,0 +1,10 @@
+.tin-faq-page{
+  .faq-section{
+    &__title{
+      width: min-content;
+      white-space: nowrap;
+      margin: 200px auto 100px;
+      text-align: center;
+    }
+  }
+}

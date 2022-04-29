@@ -1,0 +1,78 @@
+.tin-team{
+  &__card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    padding: 25px 25px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px auto;
+    max-width: 200px;
+
+    &__picture{
+      border-radius: 999px;
+      max-width: 90px;
+      margin: auto;
+      filter: grayscale(1);
+    }
+
+    &__name{
+      margin: 14px auto 9px;
+      font-weight: 400;
+      color: white;
+    }
+
+    &__position{
+      font-size: 14px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.05);
+      color: $text-color-light;
+      padding: 3px 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    &__formation{
+      margin-top: 13px;
+      color: $text-color-dark;
+      font-size: 14px;
+    }
+
+    &__foot{
+      margin-top: 30px;
+    }
+
+    &__social{
+      display: flex;
+      justify-content: center;
+
+      &__icon{
+        width: 25px;
+        margin: 0 5px;
+      }
+    }
+
+    &.is-short{
+      min-height: 260px;
+    }
+  }
+
+  @media(min-width:768px){
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 34px;
+
+      &.gtc-4{
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &__card{
+      margin-bottom: initial;
+      max-width: initial;
+      width: 100%;
+    }
+  }
+}

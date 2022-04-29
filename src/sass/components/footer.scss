@@ -1,0 +1,86 @@
+.tin-footer{
+  margin-top: 300px;
+  background-color: $background-color-footer;
+  padding: 60px 45px;
+
+  &__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 65px;
+  }
+
+  &__right{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__logo{
+    margin: 0 auto 15px;
+  }
+
+  &__link{
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color-light;
+    margin: 22px 0;
+    display: inline-block;
+
+    &:hover{
+      color: white;
+    }
+  }
+
+  &__text{
+    color: $text-color-dark;
+    font-weight: 400;
+
+    &:not(:last-child){
+      margin-bottom: 14px;
+    }
+  }
+
+  &__social{
+    margin-top: 20px;
+  }
+
+  &__rrss{
+    margin-right: 8px;
+
+    &:hover{
+      background: white;
+    }
+  }
+
+  &__bottom{
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  @media(min-width:768px){
+    padding: 60px 75px;
+
+    &__container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__left{
+      text-align: left;
+      margin-bottom: initial;
+    }
+
+    &__logo{
+      margin: 0 0 5px;
+    }
+
+    &__right{
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__link{
+      margin: 0 0 22px;
+    }
+  }
+}

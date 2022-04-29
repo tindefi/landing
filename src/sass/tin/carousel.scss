@@ -1,0 +1,84 @@
+.tin-carousel{
+  &__item{
+    background: $background-color-light;
+    border-radius: 40px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    display: inline-block;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    margin-bottom: 34px;
+
+    &__title{
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    &__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 50px;
+    }
+
+    &__image{
+      width: 180px;
+    }
+  }
+
+  @media(min-width:768px){
+    &__items{
+      position: relative;
+      height: 475px;
+      width: 1000px;
+      max-width: 85vw;
+      margin: auto;
+    }
+
+    &__item{
+      position: absolute;
+      left:50%;
+      width: 60%;
+      height: 100%;
+      margin-bottom: initial;
+
+      &__titles{
+        font-weight: 700;
+        font-size: 40px;
+      }
+
+      &.is-active{
+        position: absolute;
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 2;
+      }
+
+      &.is-prev, &.is-next{
+        position: absolute;
+        display: inline-block;
+        opacity: 0.6;
+        z-index: 1;
+      }
+
+      &.is-prev{
+        transform: translateX(-75%) scale(0.9);
+      }
+
+      &.is-next{
+        transform: translateX(-25%) scale(0.9);
+      }
+
+      &.is-hidden{
+        transform: translateX(-50%) scale(0.9);
+        opacity: 0;
+      }
+
+      &__container{
+        height: 100%;
+      }
+    }
+  }
+}

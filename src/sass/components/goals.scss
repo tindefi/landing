@@ -1,0 +1,82 @@
+.tin-goals{
+  &__item{
+    background-color: $background-color-light;
+    border-radius: 34px;
+    padding: 35px 40px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__title{
+      margin-bottom: 12px;
+    }
+
+    &__text{
+      margin-bottom: 16px;
+    }
+
+    &__achieved{
+      position: relative;
+      border: double 2px transparent;
+      border-radius:999px;
+      background-image: linear-gradient($background-color-light, $background-color-light), linear-gradient(to right, $success-color 0%, $text-color 0%);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+
+      span{
+        padding: 4px 30px;
+      }
+
+      // &:before{
+      //   content: "";
+      //   position: absolute;
+      //   inset: 0;
+      //   border-radius: 999px;
+      //   padding: 3px;
+      //   background: linear-gradient(to right, $success-color 10%, gainsboro 10%);
+      //   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      //   mask:  linear-gradient(#fff 0 0) content-box,  linear-gradient(#fff 0 0);
+      //   -webkit-mask-composite: xor;
+      //   mask-composite: exclude;
+      // }
+    }
+
+    &__total{
+      margin-bottom: 34px;
+    }
+
+    &__button{
+      background-color: rgba(white, 0.05);
+      border-radius: 16px;
+      padding: 10px;
+      cursor: pointer;
+
+      &:hover{
+        background-color: rgba(white, 0.1);
+      }
+    }
+  }
+
+  @media(min-width: 768px){
+    &__items{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    &__item{
+      margin-bottom: initial;
+    }
+  }
+}
