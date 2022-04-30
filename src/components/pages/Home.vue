@@ -209,7 +209,7 @@
 
     <section class="experiences-section container">
       <div class="experiences-section__header">
-        <h2 class="experiences-section__title text-gradient" v-html="t('pages.home.experiences.title')"></h2>
+        <h2 class="experiences-section__title text-gradient-1" v-html="t('pages.home.experiences.title')"></h2>
         <p class="experiences-section__text">{{t('pages.home.experiences.text')}}</p>
       </div>
     </section>

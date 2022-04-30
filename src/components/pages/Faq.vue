@@ -8,7 +8,13 @@
 </template>
 
 <script setup>
+  import { onMounted } from 'vue'
   import Faq from '@/components/common/Faq.vue'
+  import { sketch } from '@/modules/sketch'
 
   const { t } = useI18n()
+
+  onMounted(() => {
+    sketch(document.querySelector('.tin-faq-page'), false)
+  })
 </script>

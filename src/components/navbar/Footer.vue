@@ -10,8 +10,8 @@
           <a href="#">
             <TinIcon class="tin-footer__rrss" name="rrss/tindefi" size="23px" />
           </a>
-          <a :href="filteredSocial.github" target="_blank">
-            <TinIcon class="tin-footer__rrss" name="rrss/github" size="23px" />
+          <a :href="filteredSocial.instagram" target="_blank">
+            <TinIcon class="tin-footer__rrss" name="rrss/instagram" size="23px" />
           </a>
           <a :href="filteredSocial.telegram" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
