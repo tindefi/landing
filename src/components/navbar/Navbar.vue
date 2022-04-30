@@ -31,10 +31,10 @@
       <router-link class="tin-navbar__item" to="/faq">{{t('navbar.faq')}}</router-link>
 
       <template v-if="$route.name === 'ico'">
-        <a v-if="walletStore.address" class="tin-navbar__item is-button wallet-connect-button is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
-        <a v-else class="tin-navbar__item is-button wallet-connect-button" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
+        <a v-if="walletStore.address" class="tin-navbar__item is-button tin-button wallet-connect-button is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
+        <a v-else class="tin-navbar__item is-button tin-button wallet-connect-button" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
       </template>
-      <router-link v-else class="tin-navbar__item is-button wallet-connect-button" to="/ico">{{t('navbar.join-ico')}}</router-link>
+      <router-link v-else class="tin-navbar__item is-button tin-button wallet-connect-button" to="/ico">{{t('navbar.join-ico')}}</router-link>
 
       <MenuItemDropdown position="right" simple class="lang-dropdown">
         <template #title>
@@ -52,11 +52,11 @@
 </template>
 
 <script setup>
-  import MenuItemDropdown from '@/components/navbar/MenuItemDropdown.vue';
-  import TinIcon from '@/components/tin/TinIcon.vue';
+  import MenuItemDropdown from '@/components/navbar/MenuItemDropdown.vue'
+  import TinIcon from '@/components/tin/TinIcon.vue'
 
-  import { useWalletStore } from '@/stores/wallet';
-  const walletStore = useWalletStore();
+  import { useWalletStore } from '@/stores/wallet'
+  const walletStore = useWalletStore()
 
   const { t, locale } = useI18n()
 

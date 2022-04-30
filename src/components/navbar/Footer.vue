@@ -4,7 +4,7 @@
       <div class="tin-footer__left">
         <div class="tin-footer__brand">
           <img class="tin-footer__logo" src="/tindefi-logo-full.svg" alt="Logo Tin Defi">
-          <p class="tin-footer__copy">Connecting all crypto stakeholders.</p>
+          <p class="tin-footer__slogan"><small>{{t('footer.slogan')}}</small></p>
         </div>
         <div class="tin-footer__social">
           <a href="/">
@@ -17,50 +17,37 @@
       </div>
       <div class="tin-footer__right">
         <div class="tin-footer__column">
-          <router-link to="/" class="tin-footer__link">About us</router-link>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
+          <router-link to="/services" class="tin-footer__link">{{t('navbar.services')}}</router-link>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/" class="tin-footer__link">About us</router-link>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
+          <router-link to="/about" class="tin-footer__link">{{t('navbar.about')}}</router-link>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/" class="tin-footer__link">About us</router-link>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
+          <router-link to="/faq" class="tin-footer__link">{{t('navbar.faq')}}</router-link>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/" class="tin-footer__link">About us</router-link>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
-          <p class="tin-footer__text">Información</p>
+          <template v-if="$route.name === 'ico'">
+            <a v-if="walletStore.address" class="tin-button wallet-connect-button is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
+            <a v-else class="tin-button wallet-connect-button" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
+          </template>
+          <router-link v-else class="tin-button wallet-connect-button is-success big-shadow" to="/ico">{{t('navbar.join-ico')}}</router-link>
         </div>
       </div>
     </div>
     <div class="tin-footer__bottom">
-      Made by Tindefi with ❤ for the cryptoworld️
+      <small>{{t('footer.love')}}</small>
     </div>
   </footer>
 </template>
 
 <script setup>
   import TinIcon from '@/components/tin/TinIcon.vue'
+
+  import { useWalletStore } from '@/stores/wallet'
+  const walletStore = useWalletStore()
+
+  const { t, locale } = useI18n()
 </script>

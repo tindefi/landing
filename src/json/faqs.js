@@ -187,11 +187,11 @@ const faqs = {
           },
           {
               question: `¿Me beneficia de alguna manera ser poseedor de $TIN?`,
-              answer: ``,
+              answer: `Ver utilidades (redirección)`,
           },
           {
               question: `¿Cómo se repartirán los tokens?`,
-              answer: ``,
+              answer: `Ver tokenomics (redirección)`,
           },
           {
               question: `¿Qué significa hacer una quema de tokens?`,
@@ -205,10 +205,10 @@ const faqs = {
               question: `¿Habrá comisión por compra y venta?`,
               answer: `No.`,
           },
-          {
-              question: `¿En cuántos exchanges se listará Tin DeFi?`,
-              answer: ``,
-          },
+        //   {
+        //       question: `¿En cuántos exchanges se listará Tin DeFi?`,
+        //       answer: ``,
+        //   },
           {
               question: `¿Habrá sistema de referidos?`,
               answer: `Si, la ICO contará con un sistema de referidos basado en misiones.`,
@@ -501,8 +501,8 @@ const faqs = {
   },
   en: {
     personal: {
-      icon: `tin-rounded`,
-      slug: `personal`,
+      icon: `tin-rounded`, // No se traduce
+      slug: `personal`, // No se traduce
       title: `Personal`,
       faqs: [
         {
@@ -559,8 +559,8 @@ const faqs = {
       ]
     },
     countries: {
-      icon: `global`,
-      slug: `countries`,
+      icon: `global`, // No se traduce
+      slug: `countries`, // No se traduce
       title: `Countries`,
       faqs: [
         {
@@ -569,7 +569,7 @@ const faqs = {
         },
         {
           question: `Where will Tin DeFi's base of operations be?`,
-          answer: `Tin DeFi se establece en países que favorezcan la adopción de las criptomonedas y respeten la naturaleza anonima de sus inversores.`,
+          answer: `Tin DeFi is established in countries that favor the adoption of cryptocurrencies and respect the anonymous nature of its investors.`,
         },
         {
           question: `Why Luxembourg, Singapore, USA, United Arab Emirates and Switzerland?`,
@@ -585,14 +585,14 @@ const faqs = {
         },
         {
           question: `Will there be restrictions in any country for trading the $TIN token?`,
-          answer: `Token trading will be accessible to everyone regardless of your country..`,
+          answer: `Token trading will be accessible to everyone regardless of your country.`,
         },
       ]
     },
     financials: {
-      icon: `invest`,
-      slug: `financials`,
-      title: `Financials`,
+      icon: `invest`, // No se traduce
+      slug: `financials`, // No se traduce
+      title: `Financiación`,
       faqs: [
         {
           question: `How can I invest in the project?`,
@@ -603,9 +603,9 @@ const faqs = {
       ]
     },
     collabs: {
-      icon: `lovely`,
-      slug: `collabs`,
-      title: `Collaborations`,
+      icon: `lovely`, // No se traduce
+      slug: `collabs`, // No se traduce
+      title: `Colaboraciones`,
       faqs: [
         {
           question: `How can I create preferential agreements as a token or project owner?`,
@@ -641,8 +641,8 @@ const faqs = {
       ]
     },
     ico: {
-      icon: `tokens`,
-      slug: `ico`,
+      icon: `tokens`, // No se traduce
+      slug: `ico`, // No se traduce
       title: `Token / ICO`,
       faqs: [
           {
@@ -667,31 +667,31 @@ const faqs = {
           },
           {
               question: `Listing price?`,
-              answer: `The token will be launched at a market price of $50.`,
+              answer: `The token will be launched at a market price of $50.00.`,
           },
           {
               question: `Starting price?`,
-              answer: `The initial pre-sale token is $5.`,
+              answer: `The initial pre-sale token is $5.00.`,
           },
           {
               question: `Price between the different rounds of financing?`,
-              answer: `2$ added to each round.`,
+              answer: `$2.00 added to each round.`,
           },
           {
               question: `Final price of the ICO?`,
-              answer: `33$.`,
+              answer: `$33.00`,
           },
           {
               question: `When will the token be listed?`,
               answer: `$TIN will be listed the moment we accumulate 1M downloads between Android and iOS of the APP. That way we increase the chances of success for the ICO investors and the project.`,
           },
           {
-              question: `¿Me beneficia de alguna manera ser poseedor de $TIN?`,
-              answer: ``,
+              question: `Does it benefit me in any way to be a $TIN holder?`,
+              answer: `See utilities (redirection)`,
           },
           {
-              question: `¿Cómo se repartirán los tokens?`,
-              answer: ``,
+              question: `How will the tokens be distributed?`,
+              answer: `See tokenomics (redirection)`,
           },
           {
               question: `What does it mean to do a token burn?`,
@@ -705,10 +705,10 @@ const faqs = {
               question: `Will there be a commission for buying and selling?`,
               answer: `No.`,
           },
-          {
-              question: `On how many exchanges will Tin DeFi be listed?`,
-              answer: ``,
-          },
+        //   {
+        //       question: `¿In how many exchanges will be listed Tin DeFi?`,
+        //       answer: ``,
+        //   },
           {
               question: `Will there be a referral system?`,
               answer: `Yes, the ICO will have a mission-based referral system.`,
@@ -736,8 +736,8 @@ const faqs = {
       ]
     },
     product: {
-      icon: `investigation`,
-      slug: `product`,
+      icon: `investigation`, // No se traduce
+      slug: `product`, // No se traduce
       title: 'Product',
       faqs: [
           {
@@ -801,8 +801,8 @@ const faqs = {
       ]
     },
     app: {
-      icon: `tin-semirounded`,
-      slug: `app`,
+      icon: `tin-semirounded`, // No se traduce
+      slug: `app`, // No se traduce
       title: `App`,
       faqs: [
           {
@@ -907,7 +907,7 @@ const faqs = {
           },
           {
               question: `My project has been added to Tin DeFi by someone else, how can I verify that I am the owner of the project?`,
-              answer: `Conecta la billetera con la billetera del owner y tendrás acceso a modificar toda la información sensible.`,
+              answer: `Connect the wallet to the owner's wallet and you will have access to modify all sensitive information.`,
           },
           {
               question: `Will I be identified within Tin DeFi by my wallet or by username?`,
@@ -923,9 +923,9 @@ const faqs = {
       ]
     },
     security: {
-      icon: `lock`,
-      slug: `security`,
-      title: `Security`,
+      icon: `lock`, // No se traduce
+      slug: `security`, // No se traduce
+      title: `Seguridad`,
       faqs: [
           {
               question: `How do we maintain your privacy / How do we protect your data?`,
@@ -937,7 +937,7 @@ const faqs = {
           },
           {
               question: `Which wallets can I connect to Tin DeFi?`,
-              answer: `Metamask and Wallect Connect`,
+              answer: `Metamask and Wallet Connect`,
           },
           {
               question: `Do I need a password to log in to my account?`,
@@ -946,21 +946,22 @@ const faqs = {
       ]
     },
     official: {
-      icon: `official`,
-      slug: `official`,
+      icon: `official`, // No se traduce
+      slug: `official`, // No se traduce
       title: `Official`,
       faqs: [
           {
-              question: `Where is TINDEFI's headquarters located?`,
-              answer: `Fiscal Management (El Salvador )`,
+              question: `Where are TINDEFI's headquarters located?`,
+              answer: `Fiscal Management (El Salvador)`,
           },
           {
               question: `Is Tin DeFi a centralized or decentralized company?`,
               answer: `In fact, Tin DeFi is correctly registered in El Salvador, in a centralized way, since it is a country that supports and promotes new technologies and allows us to carry out our operations in a decentralized way for the benefit of the user's anonymity. That is to say, without requiring any type of KYC.`,
           },
           {
-              question: `¿What are Tin DeFi's official social networks?`,
-              answer: ``,
+              question: `What are Tin DeFi's official social networks?`,
+              answer: `<p>Twitter: <a href=" https://twitter.com/tindefi" target="_blank">https://twitter.com/tindefi</a>
+                 <p>Instagram: <a href="https://instagram.com/tindefi" target="_blank">https://instagram.com/tindefi</a>`,
           },
           {
               question: `Can I contact Tin DeFi's management team directly?`,
@@ -970,8 +971,8 @@ const faqs = {
       ]
     },
     service: {
-      icon: `user`,
-      slug: `service`,
+      icon: `user`, // No se traduce
+      slug: `service`, // No se traduce
       title: `Customer Service`,
       faqs: [
           {
@@ -992,7 +993,8 @@ const faqs = {
           },
           {
               question: `Anything else?`,
-              answer: `<p>Send an email to <a href="mailto:hello@tindefi.net">hello@tindefi.net</a> or to <a href="mailto:help@tindefi.net" target="_blank">help@tindefi.net</a> for any other questions you may have.</p>`,
+              answer: `<p>Send an email to <a href="mailto:hello@tindefi.net">hello@tindefi.net</a> or to <a href="mailto:help@tindefi.net" target="_blank">help@tindefi.net</a> for any other questions you may have.
+              </p>`,
           },
       ]
     },

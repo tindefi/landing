@@ -21,13 +21,19 @@
           <div class="tin-financial__item__percent fz-2 fw-600 has-text-lighter">10%</div>
           <div class="tin-financial__item__title fz-4 fw-700 has-text-lighter">{{t('common.financials.item_4.title')}}</div>
         </div>
-        <div class="tin-financials__item">
-          <div class="tin-financial__item__percent fz-2 fw-600 has-text-lighter">5%</div>
-          <div class="tin-financial__item__title fz-4 fw-700 has-text-lighter">{{t('common.financials.item_5.title')}}</div>
-        </div>
-        <div class="tin-financials__item">
-          <div class="tin-financial__item__percent fz-2 fw-600 has-text-lighter">4%</div>
-          <div class="tin-financial__item__title fz-4 fw-700 has-text-lighter">{{t('common.financials.item_6.title')}}</div>
+        <div class="tin-financials__row">
+          <div class="tin-financials__item">
+            <div class="tin-financial__item__percent fz-3 fw-600 has-text-lighter">4%</div>
+            <div class="tin-financial__item__title fz-5 fw-600 has-text-lighter">{{t('common.financials.item_6.title')}}</div>
+          </div>
+          <div class="tin-financials__item">
+            <div class="tin-financial__item__percent fz-3 fw-600 has-text-lighter">3.8%</div>
+            <div class="tin-financial__item__title fz-5 fw-600 has-text-lighter">{{t('common.financials.item_7.title')}}</div>
+          </div>
+          <div class="tin-financials__item">
+            <div class="tin-financial__item__percent fz-3 fw-600 has-text-lighter">1.2%</div>
+            <div class="tin-financial__item__title fz-5 fw-600 has-text-lighter">{{t('common.financials.item_5.title')}}</div>
+          </div>
         </div>
       </div>
     </div>

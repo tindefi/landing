@@ -255,6 +255,7 @@
       width: max-content;
       min-width: 135px;
       font-weight: initial;
+      background-color: $background-color-footer;
 
       &.is-opened{
         display: block;
@@ -279,7 +280,7 @@
     .wallet-connect-button{
       position: relative;
       bottom: initial;
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       margin-left: 40px;
     }
 

@@ -33,19 +33,34 @@
       <section class="tin-services">
         <div class="tin-services__items gtc-3">
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_1.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.content.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.content.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.views.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.views.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_3.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.subscriptions.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.subscriptions.html')"></div>
+          </article>
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/i_item_1.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.collaborations.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.income.items.collaborations.html')"></div>
+          </article>
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.defi.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.income.items.defi.html')"></div>
+          </article>
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/i_item_3.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.security.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.income.items.security.html')"></div>
           </article>
         </div>
       </section>
@@ -55,19 +70,41 @@
       <section class="tin-services">
         <div class="tin-services__items gtc-3">
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/d_item_1.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.difference.items.projects.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.difference.items.projects.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/d_item_2.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.difference.items.users.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.difference.items.users.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/d_item_3.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.difference.items.influencers.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.difference.items.influencers.html')"></div>
+          </article>
+        </div>
+      </section>
+
+      <p class="services-section__title fz-2 fw-600 has-text-lighter">{{t('pages.services.exposition.title')}}</p>
+
+      <section class="tin-services">
+        <div class="tin-services__items gtc-3">
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/e_item_1.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.exposition.items.influencers.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.exposition.items.influencers.html')"></div>
+          </article>
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/e_item_2.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.exposition.items.projects.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.exposition.items.projects.html')"></div>
+          </article>
+          <article class="tin-services__item">
+            <img class="tin-services__item__img" src="/images/services/e_item_3.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.exposition.items.vc.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.exposition.items.vc.html')"></div>
           </article>
         </div>
       </section>
@@ -77,19 +114,19 @@
       <section class="tin-services">
         <div class="tin-services__items gtc-3">
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.onchain.items.stats.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.onchain.items.stats.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.onchain.items.metrics.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.onchain.items.metrics.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/icons/diamond.svg" loading="lazy" />
-            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.onchain.items.graphics.title')}}</p>
-            <div class="tin-services__item__content" v-html="t('pages.services.onchain.items.graphics.html')"></div>
+            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
+            <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.onchain.items.monitoring.title')}}</p>
+            <div class="tin-services__item__content" v-html="t('pages.services.onchain.items.monitoring.html')"></div>
           </article>
         </div>
       </section>

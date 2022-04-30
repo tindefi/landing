@@ -25,7 +25,10 @@
       </div>
     </nav>
 
-    <WorldMap class="tin-map" />
+    <section class="tin-map">
+      <img src="/icons/lang/es.svg" width="23" class="tin-map__country tin-map__country__es" />
+      <WorldMap class="tin-map__map" />
+    </section>
   </section>
 </template>
 

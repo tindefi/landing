@@ -37,6 +37,14 @@
       gap: 24px;
     }
 
+    &__row{
+      grid-column-start: 3;
+      grid-column-end: 5;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
     &__item{
       margin-bottom: initial;
     }

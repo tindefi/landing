@@ -59,16 +59,20 @@
     }
 
     &.is-next{
+      display: none;
       padding: 20px 40px 25px;
       border-top-right-radius: 0;
       border-top-left-radius: 0;
-      width: calc(100% - 100px);
-      margin: auto;
-      opacity: 0.6;
+      // width: calc(100% - 100px);
+      // margin: auto;
+      opacity: 0.5;
+      transform: scale(0.85);
+      transform-origin: top;
 
       &:nth-child(3){
-        width: calc(100% - 200px);
-        opacity: 0.4;
+        // width: calc(100% - 200px);
+        opacity: 0.3;
+        transform: scale(0.7) translateY(-20px);
       }
     }
   }
@@ -110,5 +114,13 @@
 
   &__button{
     width: 225px;
+  }
+
+  @media (min-width: 768px){
+    &__item{
+      &.is-next{
+        display: block;
+      }
+    }
   }
 }

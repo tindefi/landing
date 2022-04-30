@@ -86,7 +86,7 @@
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">1 TIN</span>
-                <span class="tin-value">≈ $ 5.00</span>
+                <span class="tin-value">≈ $ 7.00</span>
               </div>
             </article>
           </div>
@@ -101,7 +101,7 @@
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">1 TIN</span>
-                <span class="tin-value">≈ $ 5.00</span>
+                <span class="tin-value">≈ $ 9.00</span>
               </div>
             </article>
           </div>

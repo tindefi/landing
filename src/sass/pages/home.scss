@@ -1,9 +1,6 @@
 .tin-home-component{
   .hero-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding-top: 200px;
     height: 100vh;
     max-height: 100vh;
     position: relative;
@@ -15,6 +12,8 @@
     }
 
     &__buttons{
+      display: flex;
+      justify-content: center;
       margin-top: 50px;
 
       .tin-button{
@@ -23,8 +22,9 @@
     }
 
     &__scroll{
-      position: absolute;
-      bottom: 10vh;
+      position: relative;
+      width: 100%;
+      margin: 75px auto;
       left: 50%;
       transform: translateX(-50%);
       padding: 30px 75px;
@@ -58,9 +58,13 @@
   }
 
   .mission-section{
-    display: flex;
-    flex-direction: column-reverse;
     padding: 200px 0;
+    overflow: hidden;
+
+    &__wrapper{
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     &__column{
       position: relative;
@@ -77,7 +81,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         background: radial-gradient(50% 50% at 50% 50%, rgba(0, 163, 255, 0.2) 30%, rgba(0, 0, 0, 0) 100%);
-        width: 120%;
+        // width: 120%;
+        width: 300%;
         height: 200%;
         pointer-events: none;
       }
@@ -106,26 +111,27 @@
 
           &__coin{
             position: absolute;
-            filter: drop-shadow(0px 0px 40px rgba(255, 218, 68, 0.6));
+            // filter: drop-shadow(0px 0px 40px rgba(255, 218, 68, 0.6));
+            filter: drop-shadow(0px 0px 50px rgba(#e01fdd, 0.4));
             z-index: 4;
 
             &:first-child{
               top: 0;
-              left: 95%;
-              width: 115px;
+              left: 85%;
+              width: 95px;
             }
 
             &:nth-child(2){
               top: 40%;
               left: -45%;
               width: 140px;
-              transform: translateY(80px) matrix(-0.98, 0.22, 0.22, 0.98, 0, 0);
-              &.is-in-viewport{ transform: translateY(0) matrix(-0.98, 0.22, 0.22, 0.98, 0, 0) }
+              transform: translateY(80px);
+              &.is-in-viewport{ transform: translateY(0) }
             }
 
             &:nth-child(3){
               bottom: 0;
-              left: 80%;
+              left: 75%;
               width: 95px;
               transform: translateY(80px) matrix(0.97, 0.26, -0.26, 0.97, 0, 0);
               &.is-in-viewport{ transform: translateY(0) matrix(0.97, 0.26, -0.26, 0.97, 0, 0) }
@@ -181,11 +187,11 @@
 
             &__coin{
               &:first-child{
-                width: 235px;
+                width: 205px;
               }
 
               &:nth-child(2){
-                left: -65%;
+                left: -55%;
                 width: 180px;
               }
 
@@ -405,11 +411,9 @@
   }
 
   .profile-section{
-    margin-bottom: 250px;
-
     &__wrapper{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column-reverse;
     }
 
     &__items{
@@ -423,7 +427,7 @@
       &__container {
         position: sticky;
         top: 33.33%;
-        margin-bottom: 60vh;
+        margin-bottom: 200px;
       }
 
       &__title{
@@ -442,6 +446,19 @@
       top: 33.33%;
       margin-left: 50%;
       transform: translate(-50%, -25%);
+    }
+
+    @media(min-width:768px){
+      margin-bottom: 250px;
+
+      &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &__container{
+        margin-bottom: 60vh;
+      }
     }
   }
 

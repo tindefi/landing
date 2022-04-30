@@ -111,7 +111,7 @@
         }
       },
       "experiences": {
-        "title": "Nuevas <span class='text-gradient-4'>Experiencias</span>.<br/>Interfaz De La Próxima Generación.",
+        "title": "Nuevas <span class='text-gradient-4'>experiencias</span>.<br/>Interfaz de la próxima generación.",
         "text": "Diseñamos herramientas innovadoras y una interfaz fácil de usar y entender, actualizada en tiempo real con toda la información que necesitas saber sobre un Token o NFT."
       },
       "profile": {
@@ -194,7 +194,7 @@
         "title": "Factores que nos hacen <span class='text-gradient-12'>Únicos</span>"
       },
       "advantages": {
-        "title": "5 Ventajas Que Nos Diferencian Del Resto"
+        "title": "5 ventajas que nos diferencian del resto"
       },
       "chiefs": {
         "title": "Chief Officers"
@@ -212,36 +212,48 @@
         "items": {
           "investors": {
             "title": "Inversores",
-            "html": "<ul><li>Potenciador mensual de proyectos</li><li>Entrada preferente a launchpads</li><li>Cofres exclusivos</li><li>Más probabilidades de mejores recompensas en cofres</li><li>Descuentos en marketplace</li></ul>"
+            "html": "<ul><li>Potenciador mensual de proyectos con alta proyección</li><li>Entrada preferente a launchpads</li><li>Cofres exclusivos</li><li>Aumento de probabilidades de mejores recompensas en cofres</li><li>Descuentos en marketplace</li><li>Posibilidad de usar la opción “Volver atrás” en los TINS</li></ul>"
           },
           "projects": {
             "title": "Proyectos",
-            "html": "<ul><li>Posibilidad de obtener colaboraciones con influencers/vc gratis en cofres</li><li>Insignia distintiva de proyecto premium</li><li>Trending + visibilidad Paquete de marketing sufragado por la empresa</li><li>Recibir recomendaciones de influencers más adecuado en función del tipo de proyecto</li><li>Acceso a monetización de contenido</li><li>Poner eventos en la sección “Resumen”</li><li>Stickers personalizados</li></ul>"
+            "html": "<ul><li>Posibilidad de obtener paquetes de marketing gratuitos en cofres</li><li>Insignia distintiva de proyecto premium</li><li>Recibir recomendaciones de influencers más adecuado en función del tipo de proyecto</li><li>Acceso a monetización de contenido</li><li>Poner eventos en la sección “Resumen”</li><li>Stickers personalizados</li></ul>"
           },
           "influencers": {
             "title": "Influencers",
-            "html": "<ul><li>Exposición a proyectos con más capital</li><li>Ofertas de colaboración personalizadas</li><li>Posibilidad de tener más de un grupo en la sección de chats</li><li>Acceso a monetización de contenido</li></ul>"
+            "html": "<ul><li>Exposición a proyectos con más capital</li><li>Aumento de exposición a inversores de tu contenido Vibes</li><li>Ofertas de colaboración personalizadas</li><li>Posibilidad de tener más de un grupo en la sección de chats</li><li>Acceso a recompensas especiales para su comunidad</li><li>Acceso a monetización de contenido</li></ul>"
           },
           "vc": {
             "title": "Venture Capitals",
-            "html": "<ul><li>Exposición a proyectos con más capital</li><li>Ofertas de colaboración personalizadas</li><li>Posibilidad de tener más de un grupo en la sección de chats</li><li>Acceso a monetización de contenido</li></ul>"
+            "html": "<ul><li>Potenciador de exposición a proyectos e inversores de gran capital</li><li>Entrada preferente a launchpads</li><li>Insignia distintitiva de inversor de gran capital</li><li>Posibilidad de tener más de un grupo en la sección de chats</li><li>Acceso a monetización de contenido</li><li>Acceso a recompensas especiales para ellos y para su comunidad</li></ul>"
           }
         }
       },
       "income": {
-        "title": "Generar Ingresos",
+        "title": "Ingresos por generar contenido",
         "items": {
           "content": {
             "title": "Contenido",
-            "html": "<ul><li>Verificación de SCAN DeFi</li><li>Verificación de owner real</li><li>Plantillas personalizadas</li><li>Stickers personalizados</li><li>Rankings</li><li>Tin worth</li></ul>"
+            "html": "Nuestro sistema de generación de ingresos te recompensará por compartir publicaciones en los Vibes,hacer streamings en los Lives y subir noticias de actualidad"
           },
           "views": {
             "title": "Visualizaciones",
-            "html": "<ul><li>Skins personalizadas</li><li>Nivel de usuario según balance de wallet</li><li>Insignias</li><li>Tin worth (para VC)</li></ul>"
+            "html": "Según la interacción y la cantidad de visualizaciones que reciba tu contenido tu perfil será enmarcado dentro de un grado de viralización. Gracias a nuestro sistema podrás generar ingresos mensualmente en función de tu grado de viralización."
           },
           "subscriptions": {
             "title": "Suscripciones",
-            "html": "<ul><li>Niveles de influencer según número de colaboraciones</li><li>Tin worth</li><li>Insignias (distintas verificaciones de redes sociales: IG, YT, Twitch… / insignia de experto en una red por subir mucho contenido de esta)</li></ul>"
+            "html": "Los usuarios premium con un mínimo de seguidores tendrán la capacidad de lanzar distintas suscripciones de pago mensual a sus seguidores que solo podrán acceder a este contenido adquiriendo esta suscripción."
+          },
+          "collaborations": {
+            "title": "Colaboraciones",
+            "html": "Nuestro sistema permite a Proyectos, Influencers y Venture Capitals colaborar entre sí. Todos ellos podrán hacer acuerdos entre sí que les permitirán escalar su exposición al público rápidamente."
+          },
+          "defi": {
+            "title": "Descentralización",
+            "html": "Este sistema de intermediación está totalmente regido por Smart Contracts, de forma que se garantiza la seguridad a ambas partes de que el acuerdo se va a cumplir. Las dos partes deben quedar satisfechas para que el otro reciba lo acordado"
+          },
+          "security": {
+            "title": "Seguridad",
+            "html": "En caso de insatisfacción por el resultado del acuerdo pactado, se podrá acudir al equipo de Tin DeFi que actuará de juez para determinar si las cláusulas del acuerdo han sido totalmente cumplidas."
           }
         }
       },
@@ -258,7 +270,8 @@
           },
           "influencers": {
             "title": "Influencers",
-            "html": "<ul><li>Niveles de influencer según número de colaboraciones</li><li>Tin worth</li><li>Insignias (distintas verificaciones de redes sociales: IG, YT, Twitch… / insignia de experto en una red por subir mucho contenido de esta)</li></ul>"
+            "html": "<ul><li>Niveles de influencer según número de colaboraciones</li><li>Skins personalizadas</li><li>Stickers personalizados</li><li>Tin worth</li><li>Insignias</li><li>Reconocimiento de comunidades creadas en otras redes sociales.</li></ul>"
+
           }
         }
       },
@@ -267,15 +280,16 @@
         "items": {
           "influencers": {
             "title": "Influencers",
-            "html": "<ul><li>Potenciación de visibilidad</li><li>Agencia que les provee de proyectos mensuales</li></ul>"
+            "html": "<ul><li>Potenciación de visibilidad respecto al resto de usuarios</li><li>Servicio de obtención personalizada de acuerdos con proyectos</li><li>Colaboraciones</li><li>Realización de eventos online a gran escala</li></ul>"
           },
           "projects": {
             "title": "Proyectos",
-            "html": "<ul><li>Anuncios</li><li>Agencia que les provee de influencers mensuales</li></ul>"
+            "html": "<ul><li>Anuncios con gran segmentación de público objetivo</li><li>Colaboraciones</li><li>Rankings según métricas</li><li>Servicio de obtención personalizada de acuerdos con Influencers</li></ul>"
+
           },
           "vc": {
             "title": "Venture Capitals",
-            "html": "<ul><li>Potenciación de visibilidad</li><li>Agencia que les provee de proyectos potenciales mensuales</li></ul>"
+            "html": "<ul><li>Potenciación de visibilidad respecto al resto de usuarios</li><li>Servicio de obtención personalizada de acuerdos con proyectos</li><li>Colaboraciones</li><li>Exposición a inversores de gran capital</li></ul>"
           }
         }
       },
@@ -283,16 +297,17 @@
         "title": "Datos Onchain",
         "items": {
           "stats": {
-            "title": "Estadísticas",
-            "html": "<ul><li>Potenciación de visibilidad</li><li>Agencia que les provee de proyectos mensuales</li></ul>"
+            "title": "Estadísticas avanzadas",
+            "html": "Métricas desarrolladas por nuestro equipo para que tengas la opción de valorar como un experto si un proyecto está en un buen punto de inversión."
+
           },
           "metrics": {
-            "title": "Métricas",
-            "html": "<ul><li>Anuncios</li><li>Agencia que les provee de influencers mensuales</li></ul>"
+            "title": "Métricas fundamentales de un proyecto",
+            "html": "Información básica de un proyecto para que puedas comprender a la perfección las bases de un proyecto y sus objetivos."
           },
-          "graphics": {
-            "title": "Gráficos",
-            "html": "<ul><li>Anuncios</li><li>Agencia que les provee de influencers mensuales</li></ul>"
+          "monitoring": {
+            "title": "Monitorización en vivo ",
+            "html": "Información a tiempo real acerca de gráficos de precio, historial de transacciones, movimientos de billeteras en seguimiento y mucho más."
           }
         }
       }
@@ -494,6 +509,9 @@
       },
       "item_6": {
         "title": "Liquidez"
+      },
+      "item_7": {
+        "title": "Otros gastos"
       }
     },
     "tokenomics": {
@@ -621,5 +639,9 @@
         "text": "Nos preocupa la seguridad y confianza de nuestros usuarios, es por ello que nos sometemos a las normativas de El Salvador, las cuales dotan una libertad incomparable con el resto de países."
       }
     }
+  },
+  "footer": {
+    "slogan": "Conectando todas las partes del mundo cripto.",
+    "love": "Hecho por Tin Defi con ❤ para el mundo cripto"
   }
 }

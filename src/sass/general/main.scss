@@ -23,7 +23,7 @@ h2, .is-size-2, .fz-2{ font-size: 31px }
 h3, .is-size-3, .fz-3{ font-size: 23px }
 h4, .is-size-4, .fz-4{ font-size: $font-size-4 }
 h5, .is-size-5, .fz-5{ font-size: $font-size-5 }
-h6, .is-size-6, .fz-6{ font-size: $font-size-6 }
+h6, .is-size-6, .fz-6, small{ font-size: $font-size-6 }
 .is-size-7, .fz-7{ font-size: $font-size-7 }
 
 @media(min-width:768px){

@@ -5,12 +5,13 @@
     &__container{
       width: 450px;
       aspect-ratio: 1 / 1;
-      border-radius: 34px;
+      border-radius: 999px;
       overflow: hidden;
       margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
+      // box-shadow: 0 0 30px rgba(white, 0.1);
     }
 
     &__video{

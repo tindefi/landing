@@ -15,7 +15,7 @@
     "country": "Countries | Country | Countries",
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Projects | Project | Influencers",
-    "of": "de"
+    "of": "out of"
   },
   "wallet": {
     "connect": "Conect Wallet"
@@ -39,25 +39,25 @@
         "scroll": "Scroll"
       },
       "mission": {
-        "title": "Tin Defi's vital mission is to inform and conect every crypto sector, about the opportunities of this industry.",
+        "title": "Tin Defi's vital mission is to inform and connect every crypto sector, about the opportunities of this industry.",
         "text": "Through a platform which optimizes your time and improves your results every day."
       },
       "quote": {
-        "title": "“The moment you know what you have to do and you don't do it, then you are worse off than at the beginning..”",
-        "author": "- Confucio -"
+        "title": "“The moment you know what you have to do and you don't do it, then you are worse off than at the beginning.”",
+        "author": "- Confucius -"
       },
       "features": {
         "tins": {
           "title": "Tins",
-          "text": "<span class='text-gradient-8'>Efficiency</span> end efficiency"
+          "text": "<span class='text-gradient-8'>Effectiveness</span> and efficiency"
         },
         "discover": {
           "title": "Discover",
-          "text": "Achieve <span class='text-gradient-6'>Inmediacy</span> of content at all times"
+          "text": "Achieve the<span class='text-gradient-6'>inmediacy</span> of content at all times"
         },
         "study": {
           "title": "Study",
-          "text": "<span class='text-gradient-5'>Comprar</span>, analyze and research without leaving the app"
+          "text": "<span class='text-gradient-5'>Buy</span>, analyze and research without leaving the app"
         },
         "trade": {
           "title": "Trade",
@@ -69,7 +69,7 @@
         },
         "transmit": {
           "title": "Transmit",
-          "text": "<span class='text-gradient-4'>Cretea</span> crypto content to your liking"
+          "text": "<span class='text-gradient-4'>Create</span> crypto content to your liking"
         },
         "opine": {
           "title": "Share",
@@ -89,8 +89,8 @@
         }
       },
       "chat": {
-        "title": "We unite messaging with the <span class='text-gradient-8'>Blockchain</span>",
-        "text": "A different way to chat and fully decentralized, see the price and all token data in real time and without having to leave the token channel or group and also send tokens and trade from the same chat, we designed a new generation of apps to streamline your crypto workflow and keep you sane along your journey.",
+        "title": "We merge messaging with the <span class='text-gradient-8'>Blockchain</span>",
+        "text": "A different way to chat and fully decentralized, see the price and all token data in real time and without having to leave the token channel or group and also send tokens and trade from the same chat. We designed a new generation of apps to streamline your crypto workflow and keep you updated along your journey.",
         "cards": {
           "secure": {
             "title": "Avoid getting scammed",
@@ -111,8 +111,8 @@
         }
       },
       "experiences": {
-        "title": "New <span class='text-gradient-4'>Experiences</span>.<br/>Interface Of The Next Generation.",
-        "text": "We designed innovative tools and an easy to use and understand interface, updated in real time with all the information you need to know about a token or NFT.."
+        "title": "New <span class='text-gradient-4'>experiences</span>.<br/>Interface of the next generation.",
+        "text": "We designed innovative tools and an user friendly and understandable interface, updated in real time with all the information you need to know about a token or NFT."
       },
       "profile": {
         "items": {
@@ -130,7 +130,7 @@
           },
           "influencers": {
             "title": "Influencers",
-            "text": "Join and <span class='text-gradient-8'>groz</span> your community."
+            "text": "Join and <span class='text-gradient-8'>grow</span> your community."
           }
         }
       },
@@ -139,30 +139,30 @@
         "text": "The only app that allows you to consume live cryptocurrency content at any time of the day. Create your community of investors, send and receive donations, be the first to know about opportunities."
       },
       "profit": {
-        "title": "Take Profit"
+        "title": "Take profit"
       },
       "solutions": {
-        "title": "<span class='text-gradient-6'>Solucions</span> Tin Defi provides"
+        "title": "<span class='text-gradient-6'>Solutions</span> Tin Defi provides"
       },
       "scan": {
         "title": "<span class='text-gradient-6'>Backed up</span> by Scan DeFi"
       },
       "chief": {
-        "title": "Chief Officers"
+        "title": "Chief officers"
       },
       "team": {
-        "title": "Meet our Team"
+        "title": "Meet our team"
       },
       "advisor": {
-        "title": "Our Advisors"
+        "title": "Our advisors"
       },
       "partners": {
-        "title": "Our colaborators"
+        "title": "Our collaborators"
       }
     },
     "ico": {
       "world": {
-        "title": "Discover the la <span class='text-gradient-4'>Expansion</span>",
+        "title": "Discover the <span class='text-gradient-4'>Expansion</span>",
         "text": "A select group of countries strategically chosen to ensure the financial, media and legal success of Tin Defi."
       },
       "road": {
@@ -185,7 +185,7 @@
     },
     "about": {
       "title": "About us",
-      "text_1": "Tin Defi was born with the goal of becoming the decentralized social network par excellence. Able to unify the crypto world in an efficient, fun and practical way..",
+      "text_1": "Tin Defi was born with the goal of becoming the decentralized social network par excellence. Able to unify the crypto world in an efficient, fun and practical way.",
       "text_2": "From the very beginning, we have been working with the objective of offering the crypto sector a space reserved for all its stakeholders and investors.  Another of the main motivations is to encourage the maximum possible adoption. And to encourage innovation, freedom, anonymity among many other features of the blockchain within the application.",
       "text_3": "The team working behind the company contains the strength, innovation and creativity of the youngest. Combined with the experience, contacts and maturity of the older ones. This fact allows Tin Defi to have a solid and flexible balance point. In addition, it has the advantage of having worked as a team previously, and the extra of having acquired the know-how of the sector. This allows him to easily know each and every one of the existing needs of projects, investors, influencers and Venture capitals.",
       "text_4": "As if that were not enough, small doses of enormous value are added by the advisors. Successful professionals strategically selected to provide the greatest possible value, who together with their networks and knowledge will be of great help to further enhance the success of the company and its investors.",
@@ -194,7 +194,7 @@
         "title": "Factors that make us <span class='text-gradient-12'>Unique</span>"
       },
       "advantages": {
-        "title": "5 Advantages That Set Us Apart From the Rest"
+        "title": "5 Advantages that set us apart from the rest"
       },
       "chiefs": {
         "title": "Chief Officers"
@@ -211,7 +211,7 @@
         "title": "Premium",
         "items": {
           "investors": {
-            "title": "Inverstors",
+            "title": "Investors",
             "html": "<ul><li>Monthly project booster</li><li>Preferential access to launchpads</li><li>Exclusive chests</li><li>Increased chances of better rewards in chests</li><li>Marketplace discounts</li></ul>"
           },
           "projects": {
@@ -229,19 +229,31 @@
         }
       },
       "income": {
-        "title": "Generarate Income",
+        "title": "Generate Income",
         "items": {
           "content": {
             "title": "Content",
-            "html": "<ul><li>SCAN DeFi Verification</li><li>Verification of actual owner</li><li>Customized templates</li><li>Personalized stickers</li><li>Rankings</li><li>Tin worth</li></ul>"
+            "html": "Our revenue generation system will reward you for sharing posts on Vibes, streaming on Lives and uploading topical news stories."
           },
           "views": {
             "title": "Views",
-            "html": "<ul><li>Customized Skins</li><li>User level according to wallet balance</li><li>Badges</li><li>Tin worth (for VC)</li></ul>"
+            "html": "Depending on the interaction and the amount of views your content receives, your profile will be framed within a degree of viralisation. Thanks to our system you will be able to generate monthly income according to your degree of viralisation."
           },
           "subscriptions": {
-            "title": "Suscriptions",
-            "html": "<ul><li>Influencer levels according to number of collaborations</li><li>Tin worth</li><li>Badges (different social network verifications: IG, YT, Twitch... / badge of expert in a network for uploading a lot of content)</li></ul>"
+            "title": "Subscriptions",
+            "html": "Premium users with a minimum number of followers will have the ability to launch different monthly paid subscriptions to their followers who will only be able to access this content by purchasing this subscription."
+          },
+          "collaborations": {
+            "title": "Collaborations",
+            "html": "Our system allows Projects, Influencers and Venture Capitals to collaborate with each other. All of them will be able to make deals with each other that will allow them to scale their exposure to the public quickly."
+          },
+          "defi": {
+            "title": "Decentralisation",
+            "html": "This intermediation system is fully governed by Smart Contracts, so that both parties are guaranteed that the agreement will be fulfilled. Both parties must be satisfied for the other to receive what has been agreed."
+          },
+          "security": {
+            "title": "Security",
+            "html": "In case of dissatisfaction with the outcome of the agreement, the Tin DeFi team can be called upon to act as a judge to determine whether the terms of the agreement have been fully complied with."
           }
         }
       },
@@ -283,16 +295,17 @@
         "title": "Onchain Data",
         "items": {
           "stats": {
-            "title": "Statistics",
-            "html": "<ul><li>Visibility enhancement</li><li>Agency that provides them with monthly projects</li></ul>"
+            "title": "Advanced statistics",
+            "html": "Metrics developed by our team to give you the option to assess like an expert whether a project is at a good investment point."
+
           },
           "metrics": {
-            "title": "Metrics",
-            "html": "<ul><li>Advertisements</li><li>Agency that provides them with monthly influencers</li></ul>"
+            "title": "Key project metrics",
+            "html": "Basic project information so that you can fully understand the basics of a project and its objectives."
           },
-          "graphics": {
-            "title": "Gráficos",
-            "html": "<ul><li>Advertisements</li><li>Agency that provides them with monthly influencers</li></ul>"
+          "monitoring": {
+            "title": "Live monitoring",
+            "html": "Real-time information about price charts, transaction history, tracking wallet movements and much more."
           }
         }
       }
@@ -308,7 +321,7 @@
       },
       "slides": {
         "investors": {
-          "title": "Investorss",
+          "title": "Investors",
           "item_1": "Discover new projects",
           "item_2": "Protect your personal data",
           "item_3": "Chat through the best crypto interface",
@@ -351,7 +364,7 @@
     "solutions": {
       "item_1": {
         "title": "Abundance",
-        "text": "Tin Defi collects in a single application, all the valuable tools that the blockchain user needs, and saves time every day.."
+        "text": "Tin Defi collects in a single application, all the valuable tools that the blockchain user needs, and saves time every day."
       },
       "item_2": {
         "title": "Anonymity",
@@ -401,7 +414,7 @@
     "scan-backup": {
       "item_1": {
         "title": "Tracking list",
-        "text": "The watch list allows investors to receive instant information on events of their choice. For example:<br/><br/>If I know that in a project called SCAN, there are 2 wallets that have privileged information, great market exposure, are owners...etc. I want to be notified when they make a transaction, whether it is a purchase, sale or transfer.."
+        "text": "The watch list allows investors to receive instant information on events of their choice. For example:<br/><br/>If I know that in a project called SCAN, there are 2 wallets that have privileged information, great market exposure, are owners...etc. I want to be notified when they make a transaction, whether it is a purchase, sale or transfer."
       },
       "item_2": {
         "title": "Anti honey pot tool",
@@ -433,7 +446,7 @@
       },
       "item_9": {
         "title": "Wallets",
-        "text": "En esta sección la comunidad cuenta con un apartado para que pueda compartir mediante reportes, experiencias, opiniones o críticas acerca de los proyectos. In this way, a supportive community that works uniformly for a common goal is encouraged. Keeping the cryptocurrency sector safe, and facilitating its adoption, avoiding other users to fall into scams and unreliable projects.<br/><br/>In addition, alternatives are provided so that projects that have been reported without deserving it, can be removed from this list, and show in a transparent way with our community, that they are valuable projects."
+        "text": "In this section, the community has a section to share through reports, experiences, opinions or criticisms about the projects. In this way, a supportive community that works uniformly for a common goal is encouraged. Keeping the cryptocurrency sector safe, and facilitating its adoption, avoiding other users to fall into scams and unreliable projects.<br/><br/>In addition, alternatives are provided so that projects that have been reported without deserving it, can be removed from this list, and show in a transparent way with our community, that they are valuable projects."
       },
       "item_10": {
         "title": "Tokens",
@@ -457,7 +470,7 @@
       },
       "item_15": {
         "title": "Tokenomics Analysis",
-        "text": "During this section, information is stored on the history of burns, mints, commissions ups and downs, and number of tokens in contracts, together with their equivalent in terms of the project's liquidity."
+        "text": "During this section, information is stored on the history of burns, mints, commissions ups and downs, and number of tokens in contracts. Together with their equivalent in terms of the project's liquidity."
       },
       "item_16": {
         "title": "AUDITS",
@@ -494,12 +507,15 @@
       },
       "item_6": {
         "title": "Liquidity"
+      },
+      "item_7": {
+        "title": "Other expenses"
       }
     },
     "tokenomics": {
       "item_1": {
         "title": "Burn",
-        "text": "Refers to the maximum tokens distributed to ICO investors.."
+        "text": "Refers to the maximum tokens distributed to ICO investors."
       },
       "item_2": {
         "title": "ICO",
@@ -621,5 +637,9 @@
         "text": "We are concerned about the safety and confidence of our users, that is why we submit to the regulations of El Salvador, which provide an incomparable freedom with the rest of the countries."
       }
     }
+  },
+  "footer": {
+    "slogan": "Connecting all crypto stakeholders.",
+    "love": "Made by Tin Defi with ❤ for the cryptoworld️"
   }
 }

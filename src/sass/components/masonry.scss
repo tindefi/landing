@@ -1,10 +1,15 @@
 .tin-masonry{
+
   &__wrapper{
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  &__items{
+    overflow: hidden;
   }
 
   &__item{
@@ -15,7 +20,7 @@
     margin-bottom: 30px;
 
     &__title{
-      @include textGradient(1);
+      @include textGradient(8);
       // font-size: $font-size-4;
       font-size: 21px;
       font-weight: 700;
@@ -85,6 +90,7 @@
       margin-bottom: initial;
 
       &__title{
+        @include textGradient(1);
         margin-bottom: initial;
       }
 
@@ -111,7 +117,6 @@
       }
 
       &[data-index="0"]{
-      // &.is-active{
         // grid-column-start: 2;
         // grid-column-end: 5;
         // grid-row-start: 1;
@@ -128,14 +133,14 @@
         .tin-masonry__wrapper{
           flex-direction: row-reverse;
           text-align: left;
-          padding: 90px;
+          padding: 90px 50px;
           height: 100%;
         }
 
         .tin-masonry__item__title{
           @include textGradient(8);
           font-weight: 600;
-          font-size: $font-size-2;
+          font-size: 35px;
           margin-bottom: 18px;
         }
 

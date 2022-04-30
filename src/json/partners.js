@@ -10,6 +10,20 @@ const partners = [
       linkedin: "https://www.linkedin.com/in/scandefi",
     }
   },
+  {
+    size: "350",
+    logo: "escuela-crypto-es-long",
+    name: "Escuela Crypto ES",
+    social: {
+    }
+  },
+  {
+    size: "200",
+    logo: "torres",
+    name: "Torres",
+    social: {
+    }
+  },
 ]
 
 export { partners }

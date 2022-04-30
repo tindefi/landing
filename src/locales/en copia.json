@@ -1,0 +1,645 @@
+{
+  "forms": {
+    "back": "Back",
+    "second": "Seconds | Second | Seconds",
+    "minute": "Minutes | Minute | Minutes",
+    "hour": "Hours | Hour | Hours",
+    "day": "Days | Day | Days",
+    "week": "Weeks | Week | Weeks",
+    "month": "Months | Month | Months",
+    "year": "Years | Year | Years",
+    "roe": "ROE",
+    "download": "Downloads | Download | Downloads",
+    "loading": "Loading",
+    "exchange": "Exchanges | Exchange | Exchanges",
+    "country": "Countries | Country | Countries",
+    "influencer": "Influencers | Influencer | Influencers",
+    "project": "Projects | Project | Influencers",
+    "of": "out of"
+  },
+  "wallet": {
+    "connect": "Conect Wallet"
+  },
+  "navbar": {
+    "services": "Services",
+    "whitepaper": "Whitepaper",
+    "resources": "Resources",
+    "about": "About us",
+    "faq": "FAQ",
+    "join-ico": "Join ICO"
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "<strong>The first<br>descentralized</strong><br> social media to unify the crypto world",
+        "buttons": {
+          "business": "Business Plan",
+          "invest": "Invest"
+        },
+        "scroll": "Scroll"
+      },
+      "mission": {
+        "title": "Tin Defi's vital mission is to inform and connect every crypto sector, about the opportunities of this industry.",
+        "text": "Through a platform which optimizes your time and improves your results every day."
+      },
+      "quote": {
+        "title": "“The moment you know what you have to do and you don't do it, then you are worse off than at the beginning.”",
+        "author": "- Confucius -"
+      },
+      "features": {
+        "tins": {
+          "title": "Tins",
+          "text": "<span class='text-gradient-8'>Effectiveness</span> and efficiency"
+        },
+        "discover": {
+          "title": "Discover",
+          "text": "Achieve the<span class='text-gradient-6'>inmediacy</span> of content at all times"
+        },
+        "study": {
+          "title": "Study",
+          "text": "<span class='text-gradient-5'>Buy</span>, analyze and research without leaving the app"
+        },
+        "trade": {
+          "title": "Trade",
+          "text": "<span class='text-gradient-12'>Buy Tokens</span> Scan Swap and NFTs securely and quickly in the app"
+        },
+        "vc": {
+          "title": "Venture Capitals",
+          "text": "<span class='text-gradient-3'>Participate</span> in unique pre-sales"
+        },
+        "transmit": {
+          "title": "Transmit",
+          "text": "<span class='text-gradient-4'>Create</span> crypto content to your liking"
+        },
+        "opine": {
+          "title": "Share",
+          "text": "<span class='text-gradient-5'>Share</span> your opinion with other investors"
+        },
+        "collab": {
+          "title": "Collaborate",
+          "text": "Send <span class='text-gradient-6'>donations</span> to the best and earn NFT badges"
+        },
+        "follow": {
+          "title": "Follow",
+          "text": "<span class='text-gradient-7'>Follow</span> the day to day of your projects"
+        },
+        "viral": {
+          "title": "Viral",
+          "text": "You will not be left behind, you will be following the <span class='text-gradient-8'>trends</span>"
+        }
+      },
+      "chat": {
+        "title": "We merge messaging with the <span class='text-gradient-8'>Blockchain</span>",
+        "text": "A different way to chat and fully decentralized, see the price and all token data in real time and without having to leave the token channel or group and also send tokens and trade from the same chat. We designed a new generation of apps to streamline your crypto workflow and keep you updated along your journey.",
+        "cards": {
+          "secure": {
+            "title": "Avoid getting scammed",
+            "text": "Access to the official groups of the communities, thanks to our verification."
+          },
+          "hurry": {
+            "title": "There is no time to lose",
+            "text": "Trade tokens without leaving the chat."
+          },
+          "cryptum": {
+            "title": "Make a Cryptum",
+            "text": "Send money between your contacts without asking for wallets and networks."
+          },
+          "heavy": {
+            "title": "No hustle ",
+            "text": "Stop replying to the same old people, now they can see the price from the chat."
+          }
+        }
+      },
+      "experiences": {
+        "title": "New <span class='text-gradient-4'>experiences</span>.<br/>Interface of the next generation.",
+        "text": "We designed innovative tools and an user friendly and understandable interface, updated in real time with all the information you need to know about a token or NFT."
+      },
+      "profile": {
+        "items": {
+          "projects": {
+            "title": "Projects",
+            "text": "Be more visible, <span class='text-gradient-3'>share</span> your message more succesfully."
+          },
+          "user": {
+            "title": "User",
+            "text": "<span class='text-gradient-7'>Now</span>, all in one."
+          },
+          "vc": {
+            "title": "Venture capitals",
+            "text": "<span class='text-gradient-4'>Participate</span> in unique pre-sales."
+          },
+          "influencers": {
+            "title": "Influencers",
+            "text": "Join and <span class='text-gradient-8'>grow</span> your community."
+          }
+        }
+      },
+      "lives": {
+        "title": "Live Streams",
+        "text": "The only app that allows you to consume live cryptocurrency content at any time of the day. Create your community of investors, send and receive donations, be the first to know about opportunities."
+      },
+      "profit": {
+        "title": "Take profit"
+      },
+      "solutions": {
+        "title": "<span class='text-gradient-6'>Solutions</span> Tin Defi provides"
+      },
+      "scan": {
+        "title": "<span class='text-gradient-6'>Backed up</span> by Scan DeFi"
+      },
+      "chief": {
+        "title": "Chief officers"
+      },
+      "team": {
+        "title": "Meet our team"
+      },
+      "advisor": {
+        "title": "Our advisors"
+      },
+      "partners": {
+        "title": "Our collaborators"
+      }
+    },
+    "ico": {
+      "world": {
+        "title": "Discover the <span class='text-gradient-4'>Expansion</span>",
+        "text": "A select group of countries strategically chosen to ensure the financial, media and legal success of Tin Defi."
+      },
+      "road": {
+        "title": "Roadmap of <span class='text-gradient-7'>Downloads</span>",
+        "text": "Scheduled events, at each stage of Tin Defi's growth until the launch of the TIN token."
+      },
+      "financials": {
+        "title": "Distribution of <span class='text-gradient-6'>Financing</span> 2022"
+      },
+      "tokenomics": {
+        "title": "<span class='text-gradient-3'>Tokenomics</span>"
+      },
+      "goals": {
+        "title": "Goals <span class='text-gradient-5'>2O22</span>"
+      },
+      "utils": {
+        "title": "<span class='text-gradient-4'>$TIN</span> utilities",
+        "text": "The Tin Defi token is supported by a large number of utilities within the application. Being indispensable for most of the operations and payment methods. Besides having an incredible variety of options that will be added in the medium and long term. Some of the utilities to be highlighted are shown below:"
+      }
+    },
+    "about": {
+      "title": "About us",
+      "text_1": "Tin Defi was born with the goal of becoming the decentralized social network par excellence. Able to unify the crypto world in an efficient, fun and practical way.",
+      "text_2": "From the very beginning, we have been working with the objective of offering the crypto sector a space reserved for all its stakeholders and investors.  Another of the main motivations is to encourage the maximum possible adoption. And to encourage innovation, freedom, anonymity among many other features of the blockchain within the application.",
+      "text_3": "The team working behind the company contains the strength, innovation and creativity of the youngest. Combined with the experience, contacts and maturity of the older ones. This fact allows Tin Defi to have a solid and flexible balance point. In addition, it has the advantage of having worked as a team previously, and the extra of having acquired the know-how of the sector. This allows him to easily know each and every one of the existing needs of projects, investors, influencers and Venture capitals.",
+      "text_4": "As if that were not enough, small doses of enormous value are added by the advisors. Successful professionals strategically selected to provide the greatest possible value, who together with their networks and knowledge will be of great help to further enhance the success of the company and its investors.",
+      "text_5": "Finally, it is worth noting the wide variety of cultures within the team. This fact allows us to obtain broader points of view when making strategic decisions. If anything can represent the Tin Defi team, it is the commitment to the community, and especially to those investors who decide to trust and bet on this great venture.",
+      "unique": {
+        "title": "Factors that make us <span class='text-gradient-12'>Unique</span>"
+      },
+      "advantages": {
+        "title": "5 Advantages that set us apart from the rest"
+      },
+      "chiefs": {
+        "title": "Chief Officers"
+      },
+      "team": {
+        "title": "Meet our Team"
+      }
+    },
+    "faq": {
+      "title": "Frequent Questions"
+    },
+    "services": {
+      "premium": {
+        "title": "Premium",
+        "items": {
+          "investors": {
+            "title": "Investors",
+            "html": "<ul><li>Monthly project booster</li><li>Preferential access to launchpads</li><li>Exclusive chests</li><li>Increased chances of better rewards in chests</li><li>Marketplace discounts</li></ul>"
+          },
+          "projects": {
+            "title": "Projects",
+            "html": "<ul><li>Possibility to get free collaborations with influencers/vc in chests</li><li>Distinctive premium project badge</li><li>Trending + visibility Marketing package paid for by the company</li><li>Receive recommendations of the most suitable influencers according to the type of project.</li><li>Access to content monetization</li><li>Put events in the “Summary” section</li><li>Personalized Stickers</li></ul>"
+          },
+          "influencers": {
+            "title": "Influencers",
+            "html": "<ul><li>Exposure to projects with more capital</li><li>Customized collaboration offers</li><li>Possibility to have more than one group in the chat section</li><li>Access to content monetization</li></ul>"
+          },
+          "vc": {
+            "title": "Venture Capitals",
+            "html": "<ul><li>Exposure to projects with more capital</li><li>Customized collaboration offers</li><li>Possibility to have more than one group in the chat section</li><li>Access to content monetization</li></ul>"
+          }
+        }
+      },
+      "income": {
+        "title": "Generate Income",
+        "items": {
+          "content": {
+            "title": "Content",
+            "html": "Our revenue generation system will reward you for sharing posts on Vibes, streaming on Lives and uploading topical news stories."
+          },
+          "views": {
+            "title": "Views",
+            "html": "Depending on the interaction and the amount of views your content receives, your profile will be framed within a degree of viralisation. Thanks to our system you will be able to generate monthly income according to your degree of viralisation."
+          },
+          "subscriptions": {
+            "title": "Subscriptions",
+            "html": "Premium users with a minimum number of followers will have the ability to launch different monthly paid subscriptions to their followers who will only be able to access this content by purchasing this subscription."
+          },
+          "collaborations": {
+            "title": "Collaborations",
+            "html": "Our system allows Projects, Influencers and Venture Capitals to collaborate with each other. All of them will be able to make deals with each other that will allow them to scale their exposure to the public quickly."
+          },
+          "defi": {
+            "title": "Decentralisation",
+            "html": "This intermediation system is fully governed by Smart Contracts, so that both parties are guaranteed that the agreement will be fulfilled. Both parties must be satisfied for the other to receive what has been agreed."
+          },
+          "security": {
+            "title": "Security",
+            "html": "In case of dissatisfaction with the outcome of the agreement, the Tin DeFi team can be called upon to act as a judge to determine whether the terms of the agreement have been fully complied with."
+          }
+        }
+      },
+      "difference": {
+        "title": "Differentiation",
+        "items": {
+          "projects": {
+            "title": "Projects",
+            "html": "<ul><li>SCAN DeFi Verification</li><li>Verification of actual owner</li><li>Customized templates</li><li>Personalized stickers</li><li>Rankings</li><li>Tin worth</li></ul>"
+          },
+          "users": {
+            "title": "Users",
+            "html": "<ul><li>Customized skins.</li><li>User level according to wallet balance</li><li>Badges</li><li>Tin worth (for VC)</li></ul>"
+          },
+          "influencers": {
+            "title": "Influencers",
+            "html": "<ul><li>Influencer levels according to number of collaborations</li><li>Tin worth</li><li>Badges (different social network verifications: IG, YT, Twitch... / expert badge in a network for uploading a lot of content from this one)</li></ul>"
+          }
+        }
+      },
+      "exposition": {
+        "title": "Exposition",
+        "items": {
+          "influencers": {
+            "title": "Influencers",
+            "html": "<ul><li>Visibility enhancement</li><li>Agency that provides them with monthly projects</li></ul>"
+          },
+          "projects": {
+            "title": "Projects",
+            "html": "<ul><li>Advertisements</li><li>Agency that provides them with monthly influencers</li></ul>"
+          },
+          "vc": {
+            "title": "Venture Capitals",
+            "html": "<ul><li>Visibility enhancement</li><li>Agency that provides them with monthly potential projects</li></ul>"
+          }
+        }
+      },
+      "onchain": {
+        "title": "Onchain Data",
+        "items": {
+          "stats": {
+            "title": "Advanced statistics",
+            "html": "Metrics developed by our team to give you the option to assess like an expert whether a project is at a good investment point."
+
+          },
+          "metrics": {
+            "title": "Key project metrics",
+            "html": "Basic project information so that you can fully understand the basics of a project and its objectives."
+          },
+          "monitoring": {
+            "title": "Live monitoring",
+            "html": "Real-time information about price charts, transaction history, tracking wallet movements and much more."
+          }
+        }
+      }
+    }
+  },
+  "common": {
+    "profit": {
+      "filters": {
+        "investors": "Investors",
+        "influencers": "Influencers",
+        "projects": "Projects",
+        "vc": "Venture capitals"
+      },
+      "slides": {
+        "investors": {
+          "title": "Investors",
+          "item_1": "Discover new projects",
+          "item_2": "Protect your personal data",
+          "item_3": "Chat through the best crypto interface",
+          "item_4": "Book events of projects you follow",
+          "item_5": "Take advantage of unique opportunities",
+          "item_6": "Create a community and contacts of investors of all categories",
+          "item_7": "Receive information quickly on livestreams",
+          "item_8": "Unique customized statistics",
+          "item_9": "Global and unfiltered news",
+          "item_10": "Anonymity in your movements and searches"
+        },
+        "influencers": {
+          "title": "Influencers",
+          "item_1": "Share value and teach your community",
+          "item_2": "Extends new frontiers",
+          "item_3": "Gain collaborators and partners",
+          "item_4": "Receives greater exposure",
+          "item_5": "Forget about scam projects"
+        },
+        "projects": {
+          "title": "Projects",
+          "item_1": "Win free exposure",
+          "item_2": "Manage information in groups",
+          "item_3": "Differentiate yourself from other projects",
+          "item_4": "Show security to your investors, ask for Scan DeFi verification",
+          "item_5": "Find influencers based on your taste and your budget.",
+          "item_6": "Create your personalized campaigns to make yourself better known",
+          "item_7": "Keep your investors informed on a daily basis"
+        },
+        "vc": {
+          "title": "Venture Capitals",
+          "item_1": "Receive unique project opportunities",
+          "item_2": "Show your results to investors you are interested in",
+          "item_3": "Expand your network of investors",
+          "item_4": "Show professionalism in live streams",
+          "item_5": "Share value in private groups"
+        }
+      }
+    },
+    "solutions": {
+      "item_1": {
+        "title": "Abundance",
+        "text": "Tin Defi collects in a single application, all the valuable tools that the blockchain user needs, and saves time every day."
+      },
+      "item_2": {
+        "title": "Anonymity",
+        "text": "The application allows users' personal data to be protected, maintaining an anonymous and secure environment at all times."
+      },
+      "item_3": {
+        "title": "Transparency",
+        "text": "The dissemination of cryptographic content is allowed in a free and unrestricted manner. Being a social network with no strings attached"
+      },
+      "item_4": {
+        "title": "Advance",
+        "text": "High-value on-chain tools are provided, which fight for and support innovation at all times."
+      },
+      "item_5": {
+        "title": "Security",
+        "text": "Tin Defi is supported by SCAN DeFi, in charge of ensuring the security of each and every user within the blockchain."
+      },
+      "item_6": {
+        "title": "Scalability",
+        "text": "Tin Defi's goal is to become the only crypto social network capable of bringing together all existing parties within the application."
+      },
+      "item_7": {
+        "title": "Interoperability",
+        "text": "Marketing systems are developed by experts to enable interoperability between networks."
+      },
+      "item_8": {
+        "title": "Trust",
+        "text": "Influencers and projects have a system of smart contracts that allows them to make agreements with trust, thanks to the support of Tin Defi as an intermediary."
+      },
+      "item_9": {
+        "title": "Simplicity",
+        "text": "The design and development experts have “Make it easy” as their motto and deliver an optimal user interface"
+      },
+      "item_10": {
+        "title": "Proximity",
+        "text": "Supporting blockchain and proximity is possible, Tin Defi team will be available 24h for the user."
+      },
+      "item_11": {
+        "title": "Adoption",
+        "text": "The application will be available to any user, allowing access to all users, whether or not they have a digital wallet."
+      },
+      "item_12": {
+        "title": "Tranquility",
+        "text": "Legalized company backing up the application at all times"
+      }
+    },
+    "scan-backup": {
+      "item_1": {
+        "title": "Tracking list",
+        "text": "The watch list allows investors to receive instant information on events of their choice. For example:<br/><br/>If I know that in a project called SCAN, there are 2 wallets that have privileged information, great market exposure, are owners...etc. I want to be notified when they make a transaction, whether it is a purchase, sale or transfer."
+      },
+      "item_2": {
+        "title": "Anti honey pot tool",
+        "text": "This tool detects if the owners of the contract can restrict at any time the sale or purchase, otherwise ... It will be a sign of reliability for the investor."
+      },
+      "item_3": {
+        "title": "Reliability percentage",
+        "text": "Once as many variables as possible have been studied for each of the tokens, a reliability percentage is provided, which guides the user about the risks involved in investing in each specific asset."
+      },
+      "item_4": {
+        "title": "Correlation analysis with social networks",
+        "text": "Within this tool, it will be possible to analyze the correlations in the price when making public announcements by the project. This will bring us closer to knowing which wallets have privileged information and, therefore, a greater probability of winning over the rest of the investors."
+      },
+      "item_5": {
+        "title": "Superficial analysis of contract tokenomics",
+        "text": "Commissions, liquidity, ownership waiver, supply distribution, dangerous wallets for receiving unique or sustainable rewards over time... these are some of the points covered in this section."
+      },
+      "item_6": {
+        "title": "Contract efficiency analysis",
+        "text": "Thanks to knowing the standards of blockchain professionalism, within the efficiency analysis, a study is carried out that allows to know the degree of profession behind the creators of the token contract. In order to know replicas, failures and strange imperfections for a professional in the development area. This implies having a list of aspects in favor and others against."
+      },
+      "item_7": {
+        "title": "Internal analysis of holders",
+        "text": "In addition, SCAN DeFi offers an internal breakdown of the investors that belong to each token. And in that way to know if there is any correlation with wallets that have already been reported for different factors in particular, which allows to have a broader view on each asset."
+      },
+      "item_8": {
+        "title": "Analysis of sinister functions",
+        "text": "To finish with the examples, comes the analysis of the sinister functions within each token. Increasing or reducing holders' supply, burning or mining total supply, increasing or reducing such, transferring holders' tokens at any time, accessing wallets in any way... are some of the examples of sinister functions offered to investors."
+      },
+      "item_9": {
+        "title": "Wallets",
+        "text": "In this section, the community has a section to share through reports, experiences, opinions or criticisms about the projects. In this way, a supportive community that works uniformly for a common goal is encouraged. Keeping the cryptocurrency sector safe, and facilitating its adoption, avoiding other users to fall into scams and unreliable projects.<br/><br/>In addition, alternatives are provided so that projects that have been reported without deserving it, can be removed from this list, and show in a transparent way with our community, that they are valuable projects."
+      },
+      "item_10": {
+        "title": "Tokens",
+        "text": "On the other hand, wallet reports. Once we find a user who has participated in fraud, we have the opportunity to report him and prevent other users from carrying out any kind of direct link with him. In this way, we ensure that the authorities can intervene the wallets of people who have committed an illicit act."
+      },
+      "item_11": {
+        "title": "SCAN DEX",
+        "text": "A decentralized Exchange that connects the smart contracts of each project with the scanner, and thus. It allows the commercialization of only those assets that are safe for the community.<br/><br/>It will also offer the possibility of establishing order books, farming services, staking, and visualization of graphs and transactions, among other functionalities."
+      },
+      "item_12": {
+        "title": "SCAN CHECK",
+        "text": "Within SCAN CHECK, there will be a simple interface with information of high value for the investor. It allows you to know at all times the market situation, checking with a couple of clicks."
+      },
+      "item_13": {
+        "title": "Transaction analysis",
+        "text": "First of all, the investor will be able to know the number of purchases, sales and transfers within each token. He can also filter by wallet to know this information separately.<br/><br/>Secondly, the number of daily purchases and sales can be viewed in parallel, separately, together with their volume.<br/><br/>In addition, a time chart will be displayed in which we can observe the hours of most interaction with the market for each token over time.<br/><br/>Finally, the investor will know the amount of tokens entering and exiting exchanges on a time chart."
+      },
+      "item_14": {
+        "title": "Value analysis",
+        "text": "In the first graph we will show the average number of holders who are in profit, versus those who are in loss. It will also be possible to filter, in order to know the current result of a specific wallet within a token.<br/><br/>On the other hand, it shows a ranking with the wallets with more % of profit and loss, in which the amount of its result is also provided. With the possibility of following the wallet, to be informed of each transaction it may make.<br/><br/>Pen aggregate, the operations of the holders appear, and a ranking of successes and failures is made. Counting as a hit, those occasions in which an investor bought and sold the same amount with profit. In this way, investors will be offered the possibility of following a wallet that has a long history of successes within a token.<br/><br/>Finally, a ranking of wallets with the highest investment in USDT within the currency, together with their profit margin and number of purchases."
+      },
+      "item_15": {
+        "title": "Tokenomics Analysis",
+        "text": "During this section, information is stored on the history of burns, mints, commissions ups and downs, and number of tokens in contracts. Together with their equivalent in terms of the project's liquidity."
+      },
+      "item_16": {
+        "title": "AUDITS",
+        "text": "One of the most valuable implementations for Tin Defi is the possibility to show users those projects that have passed the SCAN DeFi audits, and therefore guarantee security for their users in terms of smarts contracts.<br/><br/>With this differentiation, the aim is to reduce the rate of fraud in the blockchain, and thus make the sector as secure as possible in the long term. So that more and more users adopt cryptocurrencies as a payment system in their daily lives."
+      }
+    },
+    "ico-rounds": {
+      "title": "Round {round}",
+      "listing-price": "Public sale",
+      "investor": "Investor | Inverstors",
+      "vesting": "Vesting"
+    },
+    "roadmap-downloads": {
+      "launch": "Application launch"
+    },
+    "financials": {
+      "item_1": {
+        "title": "Marketing",
+        "text": "Tin Defi's success will depend on its reach. Therefore, we allocate ⅓ directly to exploit our growth."
+      },
+      "item_2": {
+        "title": "I+D+I",
+        "text": "Tin Defi is a new generation social network, we will invest ⅓ to improve technologies and enlarge the advantage against our future competitors."
+      },
+      "item_3": {
+        "title": "Market Maker",
+        "text": "To ensure that Tin Defi's market is strong, liquidity will also be increased periodically from the company's earnings."
+      },
+      "item_4": {
+        "title": "Investment In Financial Tools"
+      },
+      "item_5": {
+        "title": "Team"
+      },
+      "item_6": {
+        "title": "Liquidity"
+      },
+      "item_7": {
+        "title": "Other expenses"
+      }
+    },
+    "tokenomics": {
+      "item_1": {
+        "title": "Burn",
+        "text": "Refers to the maximum tokens distributed to ICO investors."
+      },
+      "item_2": {
+        "title": "ICO",
+        "text": "Tin Defi is a new generation social network, we will invest ⅓ to improve technologies and enlarge the advantage against our future competitors."
+      },
+      "item_3": {
+        "title": "List"
+      },
+      "item_4": {
+        "title": "Finance"
+      },
+      "item_5": {
+        "title": "Marketing"
+      },
+      "item_6": {
+        "title": "Private sale"
+      },
+      "item_7": {
+        "title": "Operations"
+      },
+      "item_8": {
+        "title": "I+D+I"
+      },
+      "item_9": {
+        "title": "Rewards"
+      },
+      "item_10": {
+        "title": "Future investments"
+      },
+      "item_11": {
+        "title": "Advisors"
+      }
+    },
+    "goals": {
+      "show_info": "View info",
+      "x_of_y": "{x} of {y}",
+      "item_1": {
+        "title": "Financing",
+        "text": "Amount to be collected to strengthen the company"
+      },
+      "item_2": {
+        "title": "Donations",
+        "text": "Amount to be donated SCAN FUNDATION"
+      },
+      "item_3": {
+        "title": "Downloads",
+        "text": "Cantidad que se alcanzará entre iOS y Android"
+      },
+      "item_4": {
+        "title": "Team",
+        "text": "Number of members to cover the company"
+      },
+      "item_5": {
+        "title": "Exchanges",
+        "text": "Number of $TIN enlistments"
+      },
+      "item_6": {
+        "title": "Countries",
+        "text": "Number of countries where we will be"
+      },
+      "item_7": {
+        "title": "Venture Capitals",
+        "text": "Number of Ventures Capitals in the APP"
+      },
+      "item_8": {
+        "title": "Influencers",
+        "text": "Number of influencers in the APP"
+      },
+      "item_9": {
+        "title": "Projects",
+        "text": "Number of projects in the APP"
+      }
+    },
+    "values": {
+      "item_1": {
+        "title": "Being aware of the value we have and come to contribute",
+        "text": "This allows us to reject and face difficult moments that may come."
+      },
+      "item_2": {
+        "title": "Being dreamers",
+        "text": "This allows us to think big and make plans to turn our dreams into achievable goals."
+      },
+      "item_3": {
+        "title": "Be creative",
+        "text": "This gives us the opportunity to adapt to external changes instantaneously."
+      },
+      "item_4": {
+        "title": "Being workers",
+        "text": "This guarantees continuous progress day by day."
+      },
+      "item_5": {
+        "title": "Being visionaries",
+        "text": "This gives us a better view of the long term, even though we do not get instant results."
+      },
+      "item_6": {
+        "title": "Being optimistic",
+        "text": "This allows us to face all unforeseen events with open arms, with energy to receive new learning."
+      }
+    },
+    "utils": {
+      "item_1": {
+        "title": "Usability and common sense",
+        "text": "Our token offers a multitude of options for its holders, which will be expanded in the future. Always knowing the importance of supporting its adoption with real facts."
+      },
+      "item_2": {
+        "title": "Demonstrable experience",
+        "text": "Our team has been working on SCAN DEFI for many months, which has provided us with unique know-how, contacts, vision and problem solving."
+      },
+      "item_3": {
+        "title": "Deflationary token",
+        "text": "TIN is subject to a 50% reduction of its offer, offering the maximum possible support to investors."
+      },
+      "item_4": {
+        "title": "Unique business model",
+        "text": "It is not sufficient to allocate 50% of the supply for burning. Tin Defi will make periodic purchases of TIN, again destined for burning. In addition, many of its revenue sources will be counted as burns, not company revenues."
+      },
+      "item_5": {
+        "title": "Legality assured",
+        "text": "We are concerned about the safety and confidence of our users, that is why we submit to the regulations of El Salvador, which provide an incomparable freedom with the rest of the countries."
+      }
+    }
+  },
+  "footer": {
+    "slogan": "Connecting all crypto stakeholders.",
+    "love": "Made by Tin Defi with ❤ for the cryptoworld️"
+  }
+}

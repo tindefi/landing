@@ -1,7 +1,6 @@
 .tin-advisors{
   &__items{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 34px;
   }
 
@@ -46,6 +45,12 @@
         width: 20px;
         margin-right: 10px;
       }
+    }
+  }
+
+  @media(min-width:768px){
+    &__items{
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

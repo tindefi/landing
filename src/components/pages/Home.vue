@@ -17,35 +17,41 @@
 
     <section class="video-section container">
       <div class="video-section__container">
-        <video class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
-          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/intro.mp4" />
+        <video v-if="locale === 'es'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-es.mp4" />
+          <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+        </video>
+        <video v-if="locale === 'en'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-en.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
       </div>
     </section>
 
-    <section class="mission-section container">
-      <div class="mission-section__column smartphone-column">
-        <div class="mission-section__column__container">
-          <div class="mission-section__background"></div>
-          <div class="smartphone-container">
-            <img class="mission-section__img__coin appear fade-in fade-down" src="/images/eth-coin-color.png" alt="Tin Defi Ethereum coin" loading="lazy" />
-            <img class="mission-section__img__coin appear fade-in fade-down" src="/images/eth-coin-color.png" alt="Tin Defi Ethereum coin" loading="lazy" />
-            <img class="mission-section__img__coin appear fade-in fade-down" src="/images/eth-coin-color.png" alt="Tin Defi Ethereum coin" loading="lazy" />
-            <img class="smartphone-container__tins appear fade-in" src="/images/tins-cake.svg" alt="Tin Defi CAKE content" loading="lazy" />
-            <img class="mission-section__img appear fade-in" src="/images/smartphones/iphone-pro-tin.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
+    <section class="mission-section">
+      <div class="mission-section__wrapper container">
+        <div class="mission-section__column smartphone-column">
+          <div class="mission-section__column__container">
+            <div class="mission-section__background"></div>
+            <div class="smartphone-container">
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin1.png" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin2.png" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin3.png" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="smartphone-container__tins appear fade-in" src="/images/tins-cake.svg" alt="Tin Defi CAKE content" loading="lazy" />
+              <img class="mission-section__img appear fade-in" src="/images/smartphones/iphone-pro-tin.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="mission-section__column">
-        <div class="mission-section__column__container">
-          <img class="mission-section__logo" src="/tindefi-logo.svg" alt="Logo Tin Defi" loading="lazy" />
-          <h4 class="mission-section__title text-gradient-1"><strong>{{t('pages.home.mission.title')}}</strong></h4>
-          <p class="mission-section__text">{{t('pages.home.mission.text')}}</p>
-          <div class="mission-section__buttons">
-            <img src="/images/smartphones/appstore.svg" alt="Download Tin Defi Apple App Store" loading="lazy" />
-            <img src="/images/smartphones/googleplay.svg" alt="Download Tin Defi Androd Google Play" loading="lazy" />
+        <div class="mission-section__column">
+          <div class="mission-section__column__container">
+            <img class="mission-section__logo" src="/tindefi-logo.svg" alt="Logo Tin Defi" loading="lazy" />
+            <h4 class="mission-section__title text-gradient-1"><strong>{{t('pages.home.mission.title')}}</strong></h4>
+            <p class="mission-section__text">{{t('pages.home.mission.text')}}</p>
+            <div class="mission-section__buttons">
+              <img src="/images/smartphones/appstore.svg" alt="Download Tin Defi Apple App Store" loading="lazy" />
+              <img src="/images/smartphones/googleplay.svg" alt="Download Tin Defi Androd Google Play" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>
@@ -212,28 +218,28 @@
       <div class="profile-section__wrapper">
         <div class="profile-section__items">
           <article class="profile-section__item">
-            <div class="profile-section__item__container appear fade-in fade-right delay-500">
+            <div class="profile-section__item__container appear fade-in">
               <h4 class="profile-section__item__title">{{t('pages.home.profile.items.projects.title')}}</h4>
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.projects.text')"></h2>
             </div>
           </article>
 
           <article class="profile-section__item">
-            <div class="profile-section__item__container appear fade-in fade-right delay-500">
+            <div class="profile-section__item__container appear fade-in">
               <h4 class="profile-section__item__title">{{t('pages.home.profile.items.user.title')}}</h4>
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.user.text')"></h2>
             </div>
           </article>
 
           <article class="profile-section__item">
-            <div class="profile-section__item__container appear fade-in fade-right delay-500">
+            <div class="profile-section__item__container appear fade-in">
               <h4 class="profile-section__item__title">{{t('pages.home.profile.items.vc.title')}}</h4>
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.vc.text')"></h2>
             </div>
           </article>
 
           <article class="profile-section__item">
-            <div class="profile-section__item__container appear fade-in fade-right delay-500">
+            <div class="profile-section__item__container appear fade-in">
               <h4 class="profile-section__item__title">{{t('pages.home.profile.items.influencers.title')}}</h4>
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.influencers.text')"></h2>
             </div>
@@ -241,7 +247,7 @@
         </div>
         <div class="profile-section__video-container">
           <video class="profile-section__video" tabindex="0" autobuffer="autobuffer" preload="preload">
-            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/15s.mp4" />
+            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/experiences.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
         </div>
@@ -252,8 +258,8 @@
       <div class="tin-lives__wrapper">
         <div class="tin-lives__video-container appear fade-in fade-down delay-300">
           <video class="tin-lives__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
-            <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/videos/lives.webm" />
-            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/lives.mp4" />
+            <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/videos/home/lives.webm" />
+            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/lives.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
         </div>
@@ -318,7 +324,7 @@
   import Advisors from '@/components/common/Advisors.vue'
   import Partners from '@/components/common/Partners.vue'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   const featuresInViewport = ref(false);
 

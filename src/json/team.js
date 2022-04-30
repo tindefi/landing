@@ -1,11 +1,73 @@
 const team = [
   {
+    avatar: "juan-gasca",
+    name: "Juan Gasca",
+    position: "Head of Public Relations and Capital Investment",
+    social: {
+      tindefi: "https://tindefi.net/users/juangasca",
+      linkedin: "https://www.linkedin.com/in/juan-gasca",
+      instagram: "https://www.instagram.com/juan_gasca2/",
+      telegram: "https://t.me/juanG_scandefi",
+    }
+  },
+  {
     avatar: "tello-hernandez",
     name: "Tello Hernandez",
     position: "Design Project Manager",
     social: {
       tindefi: "https://tindefi.net/users/tellohernandez",
       linkedin: "https://www.linkedin.com/in/tello-hernandez"
+    }
+  },
+  {
+    avatar: "juan-cervantes",
+    name: "Juancer",
+    position: "Product Manager",
+    social: {
+      tindefi: "https://tindefi.net/users/juancer",
+      github: "https://github.com/juancer",
+      linkedin: "https://www.linkedin.com/in/juancer"
+    }
+  },
+  {
+    avatar: "javier-rodriguez",
+    name: "Javier Rodríguez",
+    position: "Information & Efficiency",
+    social: {
+      tindefi: "https://tindefi.net/users/javirodriguez",
+      github: "https://github.com/Javi-Ro",
+      linkedin: "https://www.linkedin.com/in/javirodrigueez/",
+      twitter: "https://twitter.com/rodriguezz_javi"
+    }
+  },
+  {
+    avatar: "altair-ramirez",
+    name: "Altair Ramírez",
+    position: "Digital Marketing Specialist",
+    social: {
+      tindefi: "https://tindefi.net/users/altramirez",
+      linkedin: "https://www.linkedin.com/in/altairramirez/",
+   }
+  },
+  {
+    avatar: "david-fuentes",
+    name: "David Fuentes Pita",
+    position: "Education and Talent Management",
+    social: {
+      tindefi: "https://tindefi.net/users/davfuentes",
+      linkedin: "http://www.linkedin.com/in/david-alejandro-fuentes",
+      twitter: "https://twitter.com/davfuentes"
+    }
+  },
+  {
+    avatar: "adrian-berenguer",
+    name: "Adrián Berenguer",
+    position: "Team management Specialist & Consultancy specialist",
+    social: {
+      tindefi: "https://tindefi.net/users/adriberenguer",
+      github: "https://github.com/berengueradrian",
+      linkedin: "https://www.linkedin.com/in/adrián-berenguer-agulló/",
+      twitter: "https://twitter.com/adriberenguer10"
     }
   },
   {
@@ -95,17 +157,6 @@ const team = [
     }
   },
   {
-    avatar: "adrian-berenguer",
-    name: "Adrián Berenguer",
-    position: "Team management Specialist & Consultancy specialist",
-    social: {
-      tindefi: "https://tindefi.net/users/adriberenguer",
-      github: "https://github.com/berengueradrian",
-      linkedin: "https://www.linkedin.com/in/adrián-berenguer-agulló/",
-      twitter: "https://twitter.com/adriberenguer10"
-    }
-  },
-  {
     avatar: "pau-perello",
     name: "Pau Perelló",
     position: "Advisory & Consultancy",
@@ -126,17 +177,6 @@ const team = [
     }
   },
   {
-    avatar: "javier-rodriguez",
-    name: "Javier Rodríguez",
-    position: "Information & Efficiency",
-    social: {
-      tindefi: "https://tindefi.net/users/javirodriguez",
-      github: "https://github.com/Javi-Ro",
-      linkedin: "https://www.linkedin.com/in/javirodrigueez/",
-      twitter: "https://twitter.com/rodriguezz_javi"
-    }
-  },
-  {
     avatar: "ilya-slyusarchuk",
     name: "Ilya Slyusarchuk",
     position: "Software Engineer & Web Developer",
@@ -146,15 +186,6 @@ const team = [
       linkedin: "https://www.linkedin.com/in/ilya-slyusarchuk",
       twitter: "https://twitter.com/_ilyaan"
     }
-  },
-  {
-    avatar: "altair-ramirez",
-    name: "Altair Ramírez",
-    position: "Digital Marketing Specialist",
-    social: {
-      tindefi: "https://tindefi.net/users/altramirez",
-      linkedin: "https://www.linkedin.com/in/altairramirez/",
-   }
   },
   {
     avatar: "valentina-rangel",
@@ -222,26 +253,6 @@ const team = [
     }
   },
   {
-    avatar: "juan-cervantes",
-    name: "Juancer",
-    formation: "Product Manager",
-    social: {
-      tindefi: "https://tindefi.net/users/juancer",
-      github: "https://github.com/juancer",
-      linkedin: "https://www.linkedin.com/in/juancer"
-    }
-  },
-  {
-    avatar: "david-fuentes",
-    name: "David Fuentes Pita",
-    position: "Education and Talent Management",
-    social: {
-      tindefi: "https://tindefi.net/users/davfuentes",
-      linkedin: "http://www.linkedin.com/in/david-alejandro-fuentes",
-      twitter: "https://twitter.com/davfuentes"
-    }
-  },
-  {
     avatar: "ignacio-gonzalez",
     name: "Ignacio Gonzalez",
     position: "Sales & Marketing representative",
@@ -253,7 +264,7 @@ const team = [
     }
   },
   {
-    avatar: "alejo-miguez",
+    avatar: "alejo-daniel-miguez",
     name: "Alejo Daniel Miguez",
     formation: "Community Manager",
     social: {
@@ -263,24 +274,13 @@ const team = [
     }
   },
   {
-    avatar: "brayan-armando",
+    avatar: "bryan-armando-guzman-juarez",
     name: "Brayan Armando Guzmán Juárez",
-    formation: "marketing assistant",
+    formation: "Marketing assistant",
     social: {
       tindefi: "https://tindefi.net/users/ArmandoJ",
       linkedin: "https://www.linkedin.com/in/brayan-armando-guzm",
       instagram: "https://www.instagram.com/b.armando_juarezs/"
-    }
-  },
-  {
-    avatar: "juan-gasca",
-    name: "Juan Gasca",
-    position: "Head of Public Relations and Capital Investment",
-    social: {
-      tindefi: "https://tindefi.net/users/juangasca",
-      linkedin: "https://www.linkedin.com/in/juan-gasca",
-      instagram: "https://www.instagram.com/juan_gasca2/",
-      telegram: "https://t.me/juanG_scandefi",
     }
   },
   {

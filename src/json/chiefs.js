@@ -14,6 +14,7 @@ const chiefs = [
     name: "Manuel Martínez",
     position: "CMM",
     social: {
+      instagram: " https://instagram.com/rmanuelsanchez",
     }
   },
   {
