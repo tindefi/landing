@@ -4,7 +4,6 @@
       <article class="video-section__container">
         <video class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop poster="/images/about/video.png">
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/about.mp4" />
-          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/about.m4v" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
       </article>
