@@ -17,13 +17,10 @@
 
       <MenuItemDropdown :title="t('navbar.resources')">
         <div class="tin-navbar__dropdown_item">
-          <router-link to="/services/web"><TinIcon name="download" size="23px" /> {{t('navbar.whitepaper')}}</router-link>
+          <a :href="`/downloads/business-plan-1-${locale}.pdf`" target="_blank" class="tin-navbar__item"><TinIcon name="download" size="23px" /> {{t('pages.home.hero.buttons.business')}}</a>
         </div>
         <div class="tin-navbar__dropdown_item">
-          <router-link to="/services/design"><TinIcon name="eye" size="23px" /> {{t('navbar.whitepaper')}}</router-link>
-        </div>
-        <div class="tin-navbar__dropdown_item">
-          <router-link to="/services/videos"><TinIcon name="resources" size="23px" /> {{t('navbar.resources')}}</router-link>
+          <a :href="`/downloads/pitch-deck-1-${locale}.pdf`" target="_blank" class="tin-navbar__item"><TinIcon name="download" size="23px" /> {{t('pages.home.hero.buttons.pitch')}}</a>
         </div>
       </MenuItemDropdown>
 

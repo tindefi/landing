@@ -18,7 +18,10 @@
   text-fill-color: transparent;
 }
 
-@mixin textGradient($index: 1) {
+@mixin textGradient($index: 0) {
+  @if $index == 0 {
+    background: linear-gradient(90deg, $warning-color 0%, $danger-color 33%, $purple-color 66%, $info-color 100%);
+  }
   @if $index == 1 {
     background: linear-gradient(180deg, #EBECF0 0%, #707A8A 100%);
   }
@@ -65,10 +68,40 @@
   text-fill-color: transparent;
 }
 
-$indexes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 12);
+$indexes: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12);
 
 @each $index in $indexes {
   .text-gradient-#{$index} {
     @include textGradient($index);
+  }
+}
+
+@mixin scrollbar($background: $background-color, $color1: $warning-color, $color2: $info-color, $color3: $purple-color, $color4: $danger-color, $width: 7px) {
+  /* Customize website's scrollbar like Mac OS Not supports in Firefox and IE */
+  /* total width */
+  &::-webkit-scrollbar{
+    background-color: $background;
+    width: $width;
+  }
+
+  /* background of the scrollbar except button or resizer */
+  &::-webkit-scrollbar-track{
+    background-color: $background;
+  }
+
+  /* scrollbar itself */
+  &::-webkit-scrollbar-thumb{
+    background-color: $color1;
+    background-image: linear-gradient(0, $color1 0%, $color2 33%, $color3 66%, $color4 100%);
+    background: linear-gradient(0, #FC7A42 0%, #E340A1 33%, #664AD6 66%, $info-color 100%);
+    background: linear-gradient(0, $warning-color 0%, $danger-color 33%, $purple-color 66%, $info-color 100%);
+    // background-image: linear-gradient(0, $warning-color 20%, $info-color 40%, $purple-color 60%, $danger-color 80%, $gray-color 100%);
+    border-radius: 999px;
+    border: 2px solid $background;
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  &::-webkit-scrollbar-button{
+    display: none;
   }
 }

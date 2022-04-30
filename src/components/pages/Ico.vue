@@ -86,6 +86,7 @@
   const { t } = useI18n()
 
   onMounted(() => {
-    sketch(document.querySelector('.phases-section'), false)
+    sketch(document.querySelector('.phases-section'))
+    sketch(document.querySelector('.goals-section'))
   })
 </script>

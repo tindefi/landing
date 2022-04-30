@@ -34,7 +34,8 @@
         "title": "<strong>The first<br>descentralized</strong><br> social media to unify the crypto world",
         "buttons": {
           "business": "Business Plan",
-          "invest": "Invest"
+          "invest": "Invest",
+          "pitch": "Pitch deck"
         },
         "scroll": "Scroll"
       },

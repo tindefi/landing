@@ -7,10 +7,16 @@
           <p class="tin-footer__slogan"><small>{{t('footer.slogan')}}</small></p>
         </div>
         <div class="tin-footer__social">
-          <a href="/">
+          <a href="#">
             <TinIcon class="tin-footer__rrss" name="rrss/tindefi" size="23px" />
+          </a>
+          <a :href="filteredSocial.github" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/github" size="23px" />
+          </a>
+          <a :href="filteredSocial.telegram" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
+          </a>
+          <a :href="filteredSocial.twitter" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/twitter" size="23px" />
           </a>
         </div>
@@ -45,9 +51,14 @@
 
 <script setup>
   import TinIcon from '@/components/tin/TinIcon.vue'
+  import { social } from '@/json/social'
 
   import { useWalletStore } from '@/stores/wallet'
   const walletStore = useWalletStore()
 
   const { t, locale } = useI18n()
+
+  const filteredSocial = computed(() => {
+    return social[locale.value]
+  })
 </script>

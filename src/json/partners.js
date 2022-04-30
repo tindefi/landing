@@ -15,6 +15,7 @@ const partners = [
     logo: "escuela-crypto-es-long",
     name: "Escuela Crypto ES",
     social: {
+      website: "https://escuelacryptoes.com",
     }
   },
   {

@@ -16,10 +16,12 @@
           </div>
           <div class="tin-ico__item__header__right">
             <div class="last-buy">
-              <img src="https://avatars.dicebear.com/api/identicon/davidosuna.svg?colorLevel=100" alt="Avatar" class="last-buy__avatar" loading="lazy" />
-              <span class="last-buy__address">0x846...67gl</span>
-              <span class="last-buy__amount">$ 10,000.00 BUSD</span>
-              <span class="last-buy__time">10 min ago</span>
+              <div class="last-buy__user">
+                <img src="https://avatars.dicebear.com/api/identicon/davidosuna.svg?colorLevel=100" alt="Avatar" class="last-buy__avatar" loading="lazy" />
+                <span class="last-buy__address">0x846...67gl</span>
+              </div>
+              <div class="last-buy__amount">$ 10,000.00 BUSD</div>
+              <div class="last-buy__time">10 min ago</div>
             </div>
           </div>
         </header>

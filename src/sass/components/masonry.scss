@@ -149,6 +149,7 @@
           // margin-bottom: auto;
           height: 100%;
           overflow: auto;
+          @include scrollbar($background-color-light, $background-color);
         }
 
         .tin-masonry__item__text{

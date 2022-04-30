@@ -7,6 +7,7 @@ import Faq from '@/components/pages/Faq.vue'
 import FaqItem from '@/components/pages/FaqItem.vue'
 import About from '@/components/pages/About.vue'
 import Services from '@/components/pages/Services.vue'
+import NotFound from '@/components/pages/NotFound.vue'
 
 const routes = [
   {
@@ -38,6 +39,15 @@ const routes = [
     path: '/services',
     name: 'services',
     component: Services
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    beforeEnter: (to, from, next) => { next('/404') }
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: NotFound
   },
 ]
 

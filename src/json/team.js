@@ -73,7 +73,7 @@ const team = [
   {
     avatar: "armando-jimenez",
     name: "Armando Jimenez",
-    position: "Motion Grapchis Designer",
+    position: "Motion Graphics Designer",
     social: {
       tindefi: "https://tindefi.net/users/armandojimenez",
       linkedin: "www.linkedin.com/in/armando-jimenez-"
