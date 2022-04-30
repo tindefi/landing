@@ -42,7 +42,7 @@
     quarter: null,
   })
 
-  const map = ref([
+  const map = [
     {
       year: 2022,
       quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
@@ -56,7 +56,7 @@
       year: 2025,
       quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
     }
-  ])
+  ]
 
   const isPhaseActive = (year, quarter) => {
     return filters.value.year === year && filters.value.quarter === quarter
