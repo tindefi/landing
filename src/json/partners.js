@@ -11,9 +11,9 @@ const partners = [
     }
   },
   {
-    size: "350",
-    logo: "escuela-crypto-es-long",
-    name: "Escuela Crypto ES",
+    size: "300",
+    logo: "chain-capitals",
+    name: "Chain Capitals",
     social: {
     }
   },
@@ -24,6 +24,14 @@ const partners = [
     social: {
     }
   },
+  {
+    size: "350",
+    logo: "escuela-crypto-es-long",
+    name: "Escuela Crypto ES",
+    social: {
+      website: "https://escuelacryptoes.com",
+    }
+  }
 ]
 
 export { partners }

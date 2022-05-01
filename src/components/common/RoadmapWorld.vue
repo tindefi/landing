@@ -26,7 +26,7 @@
     </nav>
 
     <section class="tin-map">
-      <img src="/icons/lang/es.svg" width="23" class="tin-map__country tin-map__country__es" />
+      <img v-for="country in filteredCountries" :key="country" :src="`/icons/countries/${country}.svg`" width="23" :class="[`tin-map__country tin-map__country__${country}`]" />
       <WorldMap class="tin-map__map" />
     </section>
   </section>
@@ -45,16 +45,16 @@
   const map = [
     {
       year: 2022,
-      quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
+      quarters: { q1: [], q2: ['sv', 'es', 'gb', 'lu'], q3: ['sv', 'es', 'gb', 'lu', 'sg'], q4: ['sv', 'es', 'gb', 'lu', 'sg', 'us'] }
     },{
       year: 2023,
-      quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
+      quarters: { q1: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae'], q2: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in'], q3: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch'], q4: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'] }
     },{
       year: 2024,
-      quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
+      quarters: { q1: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q2: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q3: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q4: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'] }
     },{
       year: 2025,
-      quarters: { q1: ['es'], q2: ['es', 'pt'], q3: ['es', 'pt', 'fr'], q4: ['es', 'pt', 'fr', 'gb'] }
+      quarters: { q1: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q2: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q3: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'], q4: ['sv', 'es', 'gb', 'lu', 'sg', 'us', 'ae', 'in', 'ch', 'mx'] }
     }
   ]
 
@@ -95,6 +95,12 @@
     quarter = Number(String(quarter).match(/\d+/)[0])
     return moment().year(year).quarter(quarter).endOf('quarter').isBefore(moment())
   }
+
+  const filteredCountries = computed(() => {
+    return map.find(o => o.year === filters.value.year)?.quarters[filters.value.quarter]
+  })
+
+  console.info(filteredCountries)
 
   onMounted(() => {
     setYearFilter(moment().format('YYYY'))

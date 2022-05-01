@@ -25,9 +25,11 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue'
+  import { ref, computed, onMounted } from 'vue'
   import { useRoute } from 'vue-router'
   import { faqs } from '@/json/faqs.js'
+  import { sketch } from '@/modules/sketch'
+
   const { t } = useI18n()
 
   const route = useRoute()
@@ -41,4 +43,8 @@
   const toggle = (event) => {
     event.target.closest('.faq-item__item').classList.toggle('is-opened')
   }
+
+  onMounted(() => {
+    sketch(document.querySelector('.faq-item-page'), false)
+  })
 </script>

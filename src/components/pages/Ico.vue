@@ -87,5 +87,6 @@
 
   onMounted(() => {
     sketch(document.querySelector('.phases-section'), false)
+    sketch(document.querySelector('.goals-section'))
   })
 </script>

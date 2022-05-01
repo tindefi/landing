@@ -34,7 +34,7 @@ const faqs = {
         },
         {
           question: `¿Cuánta experiencia tiene el equipo en el sector?`,
-          answer: `A día de hoy hemos adquirido un know how muy valioso gracias a la experiencia de haber desarrollado SCAN DeFi. El equipo cuenta con experiencia en el sector demostrable y algo todavía más importante. Experiencia previa trabajando en equipo.`
+          answer: `A día de hoy hemos adquirido un know how muy valioso gracias a la experiencia de haber desarrollado SCAN DeFi. El equipo cuenta con experiencia en el sector demostrable y algo todavía más importante, experiencia previa trabajando en equipo.`
         },
         {
           question: `¿Por qué el equipo no tiene tokens?`,
@@ -108,18 +108,15 @@ const faqs = {
       title: `Colaboraciones`,
       faqs: [
         {
-          question: `¿Cómo puedo crear acuerdos preferentes como token o dueño de proyectos?`,
-          answer: `Para crear acuerdos preferentes se necesita el plan premium de la aplicación ¿Que son acuerdos preferentes?`,
-        },
-        {
           question: `¿Cómo puedo hacer que Tin DeFi se integre en mi blockchain?`,
           answer: `Contacta con <a href="mailto:marketing@tindefi.net" target="_blank">marketing@tindefi.net</a> para colaborar con nosotros y analizar la viabilidad de la integración.`,
         },
         {
           question: `¿Qué beneficios tendré por ser Venture Capital?`,
-          answer: `<p>Early adopter</p>
-                    <p>Exposición a proyectos que quieran contar con su inversión</p>
-                    <p>Creación de comunidad</p>
+          answer: `<p>Entre otros, se destacan los siguientes beneficios:</p>
+                    <p>Early adopter</p>
+                    <p>Exposición a grandess proyectos que quieran contar con su inversión</p>
+                    <p>Creación de comunidad a gran escala</p>
                     <p>Diferenciación por ser inversor de gran capital</p>`,
         },
         {
@@ -135,7 +132,7 @@ const faqs = {
           answer: `Contacta con <a href="mailto:headoffice@tindefi.net" target="_blank">headoffice@tindefi.net</a>`,
         },
         {
-          question: `¿Cómo puedo colaborar con el proyecto para otras colaboraciones?`,
+          question: `¿Cómo puedo contactar con el proyecto para otras colaboraciones?`,
           answer: `Contacta con <a href="mailto:hello@tindefi.net" target="_blank">hello@tindefi.net</a>`,
         },
       ]
@@ -159,7 +156,7 @@ const faqs = {
           },
           {
               question: `¿Cuánto es el mínimo para invertir en la ICO?`,
-              answer: `No hay mínimo.`,
+              answer: `La inversión mínima dependerá de la ronda. Algunas fases no contarán con inversión mínima.`,
           },
           {
               question: `¿Cuánto es el máximo para invertir en la ICO?`,
@@ -187,11 +184,11 @@ const faqs = {
           },
           {
               question: `¿Me beneficia de alguna manera ser poseedor de $TIN?`,
-              answer: `Ver utilidades (redirección)`,
+              answer: `Ver utilidades (se encuentran al final de la página de la ICO)`,
           },
           {
               question: `¿Cómo se repartirán los tokens?`,
-              answer: `Ver tokenomics (redirección)`,
+              answer: `Ver tokenomics (se encuentran en la página de la ICO)`,
           },
           {
               question: `¿Qué significa hacer una quema de tokens?`,
@@ -266,24 +263,22 @@ const faqs = {
           },
           {
               question: `¿Cómo podré impulsar mi proyecto en la aplicación?`,
-              answer: `<p>Posibilidad de realizar campañas de marketing con influencers y anuncios.</p></br>
+              answer: `<p>Al crearte una cuenta de proyecto podrás disfrutar de los siguientes mecanismos de expansión:</p>
+              <p>Posibilidad de realizar campañas de marketing con influencers y anuncios.</p></br>
               <p>Mostrar la información más relevante acerca del proyecto.</p></br>
               <p>Difundir las actualizaciones que va desarrollando su proyecto.</p></br>
-              <p>Contacta con <a href="mailto:partnerships@tindefi.net" target="_blank">partnerships@tindefi.net</a>.</p>`,
+              <p>Contacta con <a href="mailto:partnerships@tindefi.net" target="_blank">partnerships@tindefi.net</a>para más información.</p>`,
           },
           {
               question: `¿Cómo podré encontrar los mejores proyectos como inversor?`,
-              answer: `<p>Nuestra aplicación ofrece un sistema de información dónde puedes consultar estadísticas avanzadas para realizar el análisis más completo posible de un proyecto. Además ofrece métricas de valoración como el “Tin Worth” que te permite saber la liquidez total de los inversores que hay detrás de un proyecto y así saber la fuerza real de este.</p></br>
-              <p>Valoración de proyectos según su “Tin Worth” (suma de balances de las wallets que siguen activamente a un proyecto)</p></br>
-              <p>Filtrado de proyectos por tags (“Tokens”, “NFTs”, “Metaverse”...)</p></br>
-              <p>Obtención de recompensas</p></br>
-              <p>Contacta con <a href="mailto:hello@tindefi.net" target="_blank">hello@tindefi.net</a></p>`,
+              answer: `Nuestra aplicación ofrece un sistema de información dónde puedes consultar estadísticas avanzadas para realizar el análisis más completo posible de un proyecto. Además ofrece métricas de valoración como el “Tin Worth” que te permite saber la liquidez total de los inversores que hay detrás de un proyecto y así saber la fuerza real de este.`,
           },
           {
               question: `¿Qué ventajas tendré como Venture Capital?`,
-              answer: `<p>Facilidad de uso de la aplicación a la hora de contactar con usuarios, influencers o proyectos.</p></br>
+              answer: `<p>Entre otras las ventajas son las siguientes:</p></br>
+              <p>Facilidad de uso de la aplicación a la hora de contactar con usuarios, influencers o proyectos par más información.</p></br>
               <p>Monetización del contenido.</p></br>
-              <p>Contacta con <a href="mailto:investments@tindefi.net" target="_blank">investments@tindefi.net</a></p>`,
+              <p>Contacta con <a href="mailto:investments@tindefi.net" target="_blank">investments@tindefi.net</a> para más información.</p>`,
           },
           {
               question: `¿Qué ventajas tendré como Influencer?`,
@@ -343,7 +338,7 @@ const faqs = {
               answer: `La implementación de la blockchain para las publicaciones supondría una barrera de entrada para muchos usuarios, además de implicar comisiones por cada interacción pública que se quisiese realizar. Lo que no consideramos oportuno en estos momentos.`,
           },
           {
-              question: `He encontrado un bug en la aplicación, ¿Cómo puedo informar acerca de esto? / ¿Qué puedo hacer?`,
+              question: `He encontrado un bug en la aplicación, ¿Cómo puedo informar acerca de esto?`,
               answer: `<p>Puedes enviar un correo electrónico a <a href="mailto:help@tindefi.net" target="_blank">help@tindefi.net</a> e informarnos del error.</p>`,
           },
           {
@@ -352,7 +347,7 @@ const faqs = {
           },
           {
               question: `¿Qué es Cryptum?`,
-              answer: `Se entiende como cryptum, el envío de crypto a entre usuarios de la forma más sencilla posible. Sin pedir wallets o redes del receptor.`,
+              answer: `Se entiende como cryptum, el envío de crypto a entre usuarios de la forma más sencilla posible. Sin necesidad de pedir la wallet del receptor.`,
           },
           {
               question: `¿Se pueden intercambiar unos tokens por otros dentro de Tin DeFi?`,
@@ -453,7 +448,7 @@ const faqs = {
       faqs: [
           {
               question: `¿Dónde se encuentra la sede de TINDEFI?`,
-              answer: `Dirección Fiscal (El Salvador )`,
+              answer: `Dirección Fiscal (El Salvador)`,
           },
           {
               question: `¿Es Tin DeFi una empresa centralizada o descentralizada?`,
@@ -461,7 +456,9 @@ const faqs = {
           },
           {
               question: `¿Cuáles son las redes sociales oficiales de Tin DeFi?`,
-              answer: ``,
+              answer: `<p>Twitter: <a href=" https://twitter.com/tindefi" target="_blank">https://twitter.com/tindefi</a>
+              <p>Instagram: <a href="https://instagram.com/tindefi" target="_blank">https://instagram.com/tindefi</a>
+              <p>Telegram: <a href="https://t.me/tin_defi" target="_blank">https://t.me/tin_defi</a>`,
           },
           {
               question: `¿Puedo contactar directamente con el equipo directivo de Tin DeFi?`,
@@ -488,7 +485,7 @@ const faqs = {
               answer: `Con todos y cada uno de los miembros del equipo, en especial con los administradores. Ya que dispondrán de una mayor disponibilidad para responder.`,
           },
           {
-              question: `Tengo una sugerencia que aportar, ¿dónde puedo realizarla? / Sugerencias / ¿Cómo contacto con vosotros?
+              question: `Tengo una sugerencia que aportar, ¿cómo contacto con vosotros?
               `,
               answer: `Desde cualquiera de las redes sociales disponibles en la web. Siendo <a href="mailto:hello@tindefi.net" target="_blank">hello@tindefi.net</a> o a <a href="mailto:help@tindefi.net">help@tindefi.net</a> las preferentes.`,
           },
@@ -592,7 +589,7 @@ const faqs = {
     financials: {
       icon: `invest`, // No se traduce
       slug: `financials`, // No se traduce
-      title: `Financiación`,
+      title: `Funding`,
       faqs: [
         {
           question: `How can I invest in the project?`,
@@ -605,19 +602,16 @@ const faqs = {
     collabs: {
       icon: `lovely`, // No se traduce
       slug: `collabs`, // No se traduce
-      title: `Colaboraciones`,
+      title: `Collaborations`,
       faqs: [
-        {
-          question: `How can I create preferential agreements as a token or project owner?`,
-          answer: `To create Preferred Agreements you need the premium plan of the application. What are Preferred Agreements?`,
-        },
         {
           question: `How can I get Tin DeFi to integrate into my blockchain?`,
           answer: `Contact with <a href="mailto:marketing@tindefi.net" target="_blank">marketing@tindefi.net</a> to collaborate with us and analyze the feasibility of integration.`,
         },
         {
           question: `What benefits will I get for being a Venture Capital?`,
-          answer: `<p>Early adopter</p>
+          answer: `Among others, the following stand out:
+                    <p>Early adopter</p>
                     <p>Exposure to projects that want to count on your investment</p>
                     <p>Community creation</p>
                     <p>Differentiation by being a large cap investor</p>`,
@@ -659,7 +653,7 @@ const faqs = {
           },
           {
               question: `What is the minimum amount to invest in the ICO?`,
-              answer: `There is no minimum.`,
+              answer: `The minimum investment will depend on the round. Some phases will have no minimum investment.`,
           },
           {
               question: `What is the maximum amount to invest in the ICO?`,
@@ -687,11 +681,11 @@ const faqs = {
           },
           {
               question: `Does it benefit me in any way to be a $TIN holder?`,
-              answer: `See utilities (redirection)`,
+              answer: `See utilities (at the end of the ICO page)`,
           },
           {
               question: `How will the tokens be distributed?`,
-              answer: `See tokenomics (redirection)`,
+              answer: `See tokenomics (ubicated in the ICO page)`,
           },
           {
               question: `What does it mean to do a token burn?`,
@@ -773,15 +767,12 @@ const faqs = {
           },
           {
               question: `How can I find the best projects as an investor?`,
-              answer: `<p>Our application offers an information system where you can consult advanced statistics to perform the most complete analysis of a project. It also offers valuation metrics such as "Tin Worth" that allows you to know the total liquidity of the investors behind a project and thus know the real strength of the project.</p></br>
-              <p>Valuation of projects according to their "Tin Worth" (sum of balances of wallets actively following a project).</p></br>
-              <p>Project filtering by tags ("Tokens", "NFTs", "Metaverse"...)</p></br>
-              <p>Obtaining rewards</p></br>
-              <p>Contact with <a href="mailto:hello@tindefi.net" target="_blank">hello@tindefi.net</a></p>`,
+              answer: `Our application offers an information system where you can consult advanced statistics to perform the most complete analysis of a project. It also offers valuation metrics such as "Tin Worth" that allows you to know the total liquidity of the investors behind a project and thus know the real strength of the project`,
           },
           {
               question: `What advantages will I have as Venture Capital?`,
-              answer: `<p>Ease of use of the application when contacting users, influencers or projects.</p></br>
+              answer: `Among others, the main advantages are the next:</p></br>
+              <p>Ease of use of the application when contacting users, influencers or projects.</p></br>
               <p>Content monetization.</p></br>
               <p>Contact with <a href="mailto:investments@tindefi.net" target="_blank">investments@tindefi.net</a></p>`,
           },
@@ -842,7 +833,7 @@ const faqs = {
               answer: `The implementation of the blockchain for publications would be a barrier to entry for many users, in addition to implying commissions for each public interaction. Which we do not consider appropriate at this time.`,
           },
           {
-              question: `I have found a bug in the application, how can I report this? / what can I do?`,
+              question: `I have found a bug in the application, how can I report this?`,
               answer: `<p>You can send an email to <a href="mailto:help@tindefi.net" target="_blank">help@tindefi.net</a> and inform us of the error.</p>`,
           },
           {
@@ -851,7 +842,7 @@ const faqs = {
           },
           {
               question: `What is Cryptum?`,
-              answer: `It is understood as cryptum, the sending of crypto between users in the simplest possible way. Without asking for wallets or networks of the receiver.`,
+              answer: `It is understood as cryptum, the sending of crypto between users in the simplest possible way. Without the need of asking for the wallet of the receiver.`,
           },
           {
               question: `Can tokens be exchanged for other tokens within Tin DeFi?`,
@@ -925,7 +916,7 @@ const faqs = {
     security: {
       icon: `lock`, // No se traduce
       slug: `security`, // No se traduce
-      title: `Seguridad`,
+      title: `Security`,
       faqs: [
           {
               question: `How do we maintain your privacy / How do we protect your data?`,
@@ -988,7 +979,7 @@ const faqs = {
               answer: `With each and every member of the team, especially with the administrators. They will be more available to respond.`,
           },
           {
-              question: `I have a suggestion to make, where can I make it / Suggestions / How do I contact you?`,
+              question: `I have a suggestion to make, How do I contact you?`,
               answer: `From any of the social networks available on the web. By going to <a href="mailto:hello@tindefi.net" target="_blank">hello@tindefi.net</a> or to <a href="mailto:help@tindefi.net">help@tindefi.net</a> the preferred.`,
           },
           {

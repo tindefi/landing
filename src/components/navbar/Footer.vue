@@ -7,25 +7,31 @@
           <p class="tin-footer__slogan"><small>{{t('footer.slogan')}}</small></p>
         </div>
         <div class="tin-footer__social">
-          <a href="/">
+          <a href="#">
             <TinIcon class="tin-footer__rrss" name="rrss/tindefi" size="23px" />
-            <TinIcon class="tin-footer__rrss" name="rrss/github" size="23px" />
+          </a>
+          <a :href="filteredSocial.instagram" target="_blank">
+            <TinIcon class="tin-footer__rrss" name="rrss/instagram" size="23px" />
+          </a>
+          <a :href="filteredSocial.telegram" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
+          </a>
+          <a :href="filteredSocial.twitter" target="_blank">
             <TinIcon class="tin-footer__rrss" name="rrss/twitter" size="23px" />
           </a>
         </div>
       </div>
       <div class="tin-footer__right">
         <div class="tin-footer__column">
-          <router-link to="/services" class="tin-footer__link">{{t('navbar.services')}}</router-link>
+          <a href="/downloads/terminos-y-condiciones-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.terms')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/about" class="tin-footer__link">{{t('navbar.about')}}</router-link>
+          <a href="/downloads/politica-de-privacidad-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.privacy')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/faq" class="tin-footer__link">{{t('navbar.faq')}}</router-link>
+          <a href="/downloads/politica-de-cookies-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.cookies')}}</a>
         </div>
 
         <div class="tin-footer__column">
@@ -45,9 +51,14 @@
 
 <script setup>
   import TinIcon from '@/components/tin/TinIcon.vue'
+  import { social } from '@/json/social'
 
   import { useWalletStore } from '@/stores/wallet'
   const walletStore = useWalletStore()
 
   const { t, locale } = useI18n()
+
+  const filteredSocial = computed(() => {
+    return social[locale.value]
+  })
 </script>

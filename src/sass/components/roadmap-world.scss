@@ -129,10 +129,66 @@
   &__country{
     position: absolute;
     pointer-events: none;
+    border-radius: 999px;
 
     &__es{
       top: 49.6%;
       left: 45%;
+      // color: yellow;
+    }
+
+    &__sv{
+      top: 61.9%;
+      left: 21.3%;
+      // color: yellow;
+    }
+
+    &__lu{
+      top: 43.8%;
+      left: 47.7%;
+      // color: green;
+    }
+
+    &__gb{
+      top: 41.6%;
+      left: 45.5%;
+      // color: yellow;
+    }
+
+    &__sg{
+      top: 67%;
+      left: 74.8%;
+      // color: green;
+    }
+
+    &__us{
+      top: 49.6%;
+      left: 18.5%;
+      // color: blue;
+    }
+
+    &__ae{
+      top: 57.5%;
+      left: 61%;
+      // color: green;
+    }
+
+    &__in{
+      top: 58.2%;
+      left: 67.8%;
+      // color: yellow;
+    }
+
+    &__ch{
+      top: 45.2%;
+      left: 48.1%;
+      // color: green;
+    }
+
+    &__mx{
+      top: 58.3%;
+      left: 17.8%;
+      // color: yellow
     }
   }
 }

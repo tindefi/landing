@@ -15,7 +15,8 @@
     "country": "Paises | País | Paises",
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Proyectos | Proyecto | Influencers",
-    "of": "de"
+    "of": "de",
+    "comingsoon": "Próximamente"
   },
   "wallet": {
     "connect": "Conectar billetera"
@@ -29,12 +30,16 @@
     "join-ico": "Únete a la ICO"
   },
   "pages": {
+    "not-found": {
+      "text": "página no encontrada"
+    },
     "home": {
       "hero": {
         "title": "<strong>La primera red social<br>descentralizada</strong><br>en unificar el mundo crypto",
         "buttons": {
           "business": "Business Plan",
-          "invest": "Invertir"
+          "invest": "Invertir",
+          "pitch": "Informe de inversión"
         },
         "scroll": "Scroll"
       },
@@ -61,7 +66,7 @@
         },
         "trade": {
           "title": "Trade",
-          "text": "<span class='text-gradient-12'>Compra tokens</span> Scan Swap y NFTs de forma segura y rápida en la app"
+          "text": "<span class='text-gradient-12'>Compra</span> tokens del Scan Swap y NFTs de forma segura y rápida en la app"
         },
         "vc": {
           "title": "Venture Capitals",
@@ -106,7 +111,7 @@
           },
           "heavy": {
             "title": "Sin pesados",
-            "text": "Deja de responder a los mismos de siempre, ahora pueden ver el precio desde el chat."
+            "text": "Deja de responder a los mismos de siempre, ahora pueden ver el precio y comprar desde el chat."
           }
         }
       },
@@ -135,11 +140,11 @@
         }
       },
       "lives": {
-        "title": "Live Streams",
+        "title": "Directos en vivo",
         "text": "La única aplicación que te permite consumir contenido en directo de criptomonedas a cualquier hora del día. Crea tu comunidad de inversores, envía y recibe donativos, sé el primero en enterarte de las oportunidades."
       },
       "profit": {
-        "title": "Take Profit"
+        "title": "Tomar beneficios"
       },
       "solutions": {
         "title": "<span class='text-gradient-6'>Soluciones</span> que aporta Tin Defi"
@@ -148,7 +153,7 @@
         "title": "<span class='text-gradient-6'>Respaldados</span> por Scan DeFi"
       },
       "chief": {
-        "title": "Jefes de equipo"
+        "title": "Dirección del equipo"
       },
       "team": {
         "title": "Conoce a nuestro equipo"
@@ -167,7 +172,7 @@
       },
       "road": {
         "title": "Roadmap de <span class='text-gradient-7'>Descargas</span>",
-        "text": "Los eventos programados, en cada etapa de crecimiento de Tin Defi hasta el lanzamiento del token TIN."
+        "text": "Los eventos programados, en cada etapa de crecimiento de Tin Defi hasta el lanzamiento del token $TIN."
       },
       "financials": {
         "title": "Distribución de la <span class='text-gradient-6'>Financiación</span> 2022"
@@ -200,7 +205,7 @@
         "title": "Chief Officers"
       },
       "team": {
-        "title": "Meet our Team"
+        "title": "Conoce a nuestro equipo"
       }
     },
     "faq": {
@@ -233,7 +238,7 @@
         "items": {
           "content": {
             "title": "Contenido",
-            "html": "Nuestro sistema de generación de ingresos te recompensará por compartir publicaciones en los Vibes,hacer streamings en los Lives y subir noticias de actualidad"
+            "html": "Nuestro sistema de generación de ingresos te recompensará por compartir publicaciones en los Vibes, hacer streamings en los Lives y subir noticias de actualidad"
           },
           "views": {
             "title": "Visualizaciones",
@@ -330,7 +335,7 @@
           "item_4": "Reserva eventos de proyectos a los que sigues",
           "item_5": "Aprovecha oportunidades únicas",
           "item_6": "Crea comunidad y contactos de inversores de todas las categorías",
-          "item_7": "Recibe la información rápidamente en los livestreams",
+          "item_7": "Recibe la información rápidamente en los Lives",
           "item_8": "Estadísticas únicas personalizadas",
           "item_9": "Noticias globales y sin filtros",
           "item_10": "Anonimato en tus movimientos y búsquedas"
@@ -419,7 +424,7 @@
         "text": "La lista de seguimiento permite a los inversores recibir información instantánea de aquellos sucesos que decidan. Por ejemplo:<br/><br/>Si conozco que en un proyecto llamado SCAN, hay 2 billeteras que poseen información privilegiada, gran exposición del mercado, son de los owners…etc me interesa que se me notifique al momento en que realicen una transacción, ya sea compra, venta o transferencia."
       },
       "item_2": {
-        "title": "Herramienta anti honey pot",
+        "title": "Herramienta anti honeypot",
         "text": "En esta herramienta se detecta si los propietarios del contrato, pueden restringir en algún momento la venta o compra, de lo contrario… Será un indicio de fiabilidad para el inversor."
       },
       "item_3": {
@@ -460,7 +465,7 @@
       },
       "item_12": {
         "title": "SCAN CHECK",
-        "text": "Dentro de SCAN CHECK, se tendrá una interfaz sencilla con información de alto valor para el inversor. Que le permita conocer en todo momento la situación del mercado, revisando con un par de clicas."
+        "text": "Dentro de SCAN CHECK, se tendrá una interfaz sencilla con información de alto valor para el inversor que le permita conocer en todo momento la situación del mercado, revisando con un par de clicks."
       },
       "item_13": {
         "title": "Análisis de transacciones",
@@ -468,14 +473,14 @@
       },
       "item_14": {
         "title": "Análisis de valor",
-        "text": "En el primer gráfico mostraremos la media de holders que se encuentran en ganancias, frente a los que se encuentran en pérdidas. También se podrá filtrar, con el objetivo de conocer el resultado actual de una billetera en concreto dentro de un token.<br/><br/>PPor otra parte, se muestra un ranking con las billeteras con más % de beneficio y pérdida, en el que se aporta también la cantidad de su resultado. Con la posibilidad de seguir a la billetera, para estar informado por cada transacción que pudiese realizar.<br/><br/>PEn agregado, aparecen las operaciones de los holders, y se realiza un ranking de aciertos y fallos. Contando como acierto, aquellas ocasiones en las que un inversor compró y vendió una misma cantidad con beneficio. De esa manera se le ofrecerá a los inversores la posibilidad de seguir una billetera que cuente con un gran historial de aciertos a sus espaldas dentro de un token.<br/><br/>Finalmente, un ranking de billeteras con mayor inversión en usdt dentro de la moneda, junto a su margen de resultado y cantidad de compras."
+        "text": "En el primer gráfico mostraremos la media de holders que se encuentran en ganancias, frente a los que se encuentran en pérdidas. También se podrá filtrar, con el objetivo de conocer el resultado actual de una billetera en concreto dentro de un token.<br/><br/>Por otra parte, se muestra un ranking con las billeteras con más % de beneficio y pérdida, en el que se aporta también la cantidad de su resultado. Con la posibilidad de seguir a la billetera, para estar informado por cada transacción que pudiese realizar.<br/><br/>En agregado, aparecen las operaciones de los holders, y se realiza un ranking de aciertos y fallos. Contando como acierto, aquellas ocasiones en las que un inversor compró y vendió una misma cantidad con beneficio. De esa manera se le ofrecerá a los inversores la posibilidad de seguir una billetera que cuente con un gran historial de aciertos a sus espaldas dentro de un token.<br/><br/>Finalmente, un ranking de billeteras con mayor inversión en usdt dentro de la moneda, junto a su margen de resultado y cantidad de compras."
       },
       "item_15": {
         "title": "Análisis de Tokenomics",
         "text": "Durante esta sección, se almacena información destinada a los historiales de quemas, minteos, subidas y bajadas en las comisiones, y cantidad de tokens en contratos, junto a su equivalente respecto a la liquidez del proyecto."
       },
       "item_16": {
-        "title": "AUDITORÍAS",
+        "title": "Auditorías",
         "text": "Una de las implementaciones de mayor valor para Tin Defi, es la posibilidad de mostrar a los usuarios, aquellos proyectos que hayan pasado las auditorías de SCAN DeFi, y por lo tanto garanticen la seguridad para sus usuarios en cuanto a smarts contracts se refiere.<br/><br/>Con dicha diferenciación, se aspira a reducir el índice estafas en la blockchain, y de ese modo volver el sector lo más seguro posible de cara al largo plazo. Para que cada vez sean más los usuarios que adopten las criptomonedas como sistema de pago en su día a día."
       }
     },
@@ -491,11 +496,11 @@
     "financials": {
       "item_1": {
         "title": "Marketing",
-        "text": "El éxito de Tin Defi dependerá del alcance que tenga. Por lo tanto, destinamos ⅓ directamente a explotar nuestro crecimiento."
+        "text": "El éxito de Tin Defi dependerá del alcance que tenga. Por lo tanto, destinamos un % directamente a explotar nuestro crecimiento."
       },
       "item_2": {
         "title": "I+D+I",
-        "text": "Tin Defi es una red social de nueva generación, se invertirá ⅓ a mejorar las tecnologías y agrandar la ventaja frente a nuestros futuros competidores."
+        "text": "Tin Defi es una red social de nueva generación, se invertirá capital en mejorar las tecnologías y agrandar la ventaja frente a nuestros futuros competidores."
       },
       "item_3": {
         "title": "Market Maker",
@@ -521,7 +526,7 @@
       },
       "item_2": {
         "title": "ICO",
-        "text": "Tin Defi es una red social de nueva generación, se invertirá ⅓ a mejorar las tecnologías y agrandar la ventaja frente a nuestros futuros competidores."
+        "text": "Tin Defi es una red social de nueva generación, se invertirá un % en mejorar las tecnologías y agrandar la ventaja frente a nuestros futuros competidores."
       },
       "item_3": {
         "title": "Listado"
@@ -572,7 +577,7 @@
       },
       "item_5": {
         "title": "Exchanges",
-        "text": "Número de alistamientos de $TIN"
+        "text": "Número de listamientos de $TIN"
       },
       "item_6": {
         "title": "Paises",
@@ -628,11 +633,11 @@
       },
       "item_3": {
         "title": "Token deflacionario",
-        "text": "TIN se encuentra sometido a un 50% de reducción de sus oferta, ofreciendo el máximo apoyo posible a los inversores."
+        "text": "$TIN se encuentra sometido a un 50% de reducción de sus oferta, ofreciendo el máximo apoyo posible a los inversores."
       },
       "item_4": {
         "title": "Modelo de negocio único",
-        "text": "No siendo suficiente destinar el 50% del supply para quemas. La compañía Tin Defi realizará compras periódicas de TIN, destinadas de nuevo a su quema. Y además, muchas de sus fuentes de ingreso serán contabilizadas como quemas, y no ingresos de la compañía."
+        "text": "No siendo suficiente destinar el 50% del supply para quemas. La compañía Tin Defi realizará compras periódicas de $TIN, destinadas de nuevo a su quema. Y además, muchas de sus fuentes de ingreso serán contabilizadas como quemas, y no ingresos de la compañía."
       },
       "item_5": {
         "title": "Legalidad asegurada",
@@ -642,6 +647,9 @@
   },
   "footer": {
     "slogan": "Conectando todas las partes del mundo cripto.",
-    "love": "Hecho por Tin Defi con ❤ para el mundo cripto"
+    "love": "Hecho por Tin Defi con ❤ para el mundo cripto",
+    "terms": "Términos y condiciones",
+    "cookies": "Política de cookies",
+    "privacy": "Política de privacidad"
   }
 }
