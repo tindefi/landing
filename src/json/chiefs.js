@@ -4,7 +4,7 @@ const chiefs = [
     name: "Álex Miralles",
     position: "CEO & Founder",
     social: {
-      tindefi: "https://tindefi.net/users/alex",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/alex-miralles-rodriguez",
       instagram: "https://instagram.com/alexmirallles"
     }
@@ -12,8 +12,9 @@ const chiefs = [
   {
     avatar: "manuel-martinez",
     name: "Manuel Martínez",
-    position: "CMM",
+    position: "CFO",
     social: {
+      tindefi: "#",
       instagram: " https://instagram.com/rmanuelsanchez",
     }
   },
@@ -22,7 +23,7 @@ const chiefs = [
     name: "Gonzalo Álvarez",
     position: "COO",
     social: {
-      tindefi: "https://tindefi.net/users/argonzalo",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/gonzalo-alvarezri",
       telegram: "https://t.me/cootindefi",
     }
@@ -32,7 +33,7 @@ const chiefs = [
     name: "Jose Manuel Arroyo",
     position: "CMO",
     social: {
-      tindefi: "https://tindefi.net/users/arroyo",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/jose-manuel-arroyo/",
       instagram: "https://www.instagram.com/arroyo.10/",
     }
@@ -42,7 +43,7 @@ const chiefs = [
     name: "Nicolás Vanni",
     position : "CCO",
     social: {
-      tindefi: "https://tindefi.net/users/",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/nicolas-vanni",
     }
   },
@@ -51,7 +52,7 @@ const chiefs = [
     name: "Robert Albornoz",
     position : "CSO",
     social: {
-      tindefi: "https://tindefi.net/users/RobertAlbornoz",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/robertalbornoz",
       instagram: "https://www.instagram.com/robertjourney"
     }
@@ -61,7 +62,7 @@ const chiefs = [
     name: "David Osuna",
     position: "CTO",
     social: {
-      tindefi: "https://tindefi.net/users/david",
+      tindefi: "#",
       github: "https://github.com/davidosuna1987",
       linkedin: "https://www.linkedin.com/in/david-osuna",
       twitter: "https://twitter.com/dosunamond87"
@@ -72,7 +73,7 @@ const chiefs = [
     name: "Isaac Eustaquio",
     position: "CDO",
     social: {
-      tindefi: "https://tindefi.net/users/isaaceustaquio",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/isaaceustaquio",
       twitter: "https://twitter.com/Isaac_eustaquio",
     }

@@ -13,7 +13,7 @@ const advisors = [
     imgLink: "https://scontent-bcn1-1.cdninstagram.com/v/t51.2885-19/142083887_107278498036726_7106738063090894636_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-bcn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=cOCojR3NrUcAX92GlEi&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT91oj_c2i0vl6lq1mckZRVRKCJp7ze6eqGczG9BFzZsLA&oe=6274EB59&_nc_sid=7bff83",
     avatar: "victoria-rodriguez",
     name: "Victoria Rodríguez",
-    position: "Legal advisor",
+    position: "Legal Advisor",
     social: {
       tindefi: "https://tindefi.net/users/victoriaRodríguez",
       linkedin: "https://www.linkedin.com/in/victoria-rodr%C3%ADguez-blanco-9847791a/",
@@ -23,7 +23,7 @@ const advisors = [
     imgLink: "https://media-exp1.licdn.com/dms/image/C4D03AQEnjHYm5e7BNQ/profile-displayphoto-shrink_400_400/0/1594047180612?e=1656547200&v=beta&t=qLXVSk6K6hMRnVqNuyxWFoJOhv_nKXFREWTu8rD7AWM",
     avatar: "emilio-hurtado",
     name: "Emilio Hurtado",
-    position: "Business advisor",
+    position: "Business Advisor",
     social: {
       tindefi: "https://tindefi.net/users/emilio-hurtado",
       linkedin: "https://www.linkedin.com/in/emiliohurtadoruiz/",
@@ -33,7 +33,7 @@ const advisors = [
     imgLink: "https://yt3.ggpht.com/ytc/AKedOLQAi2bJNHv4Aa2X2pzzKnpW_NOvuNgYoRAmn2-R=s176-c-k-c0x00ffffff-no-rj",
     avatar: "levs",
     name: "Levs",
-    position: "Blockchain advisor",
+    position: "Blockchain Advisor",
     social: {
       tindefi: "https://tindefi.net/users/levs",
       youtube: "https://youtube.com/channel/UCOxMq4HD0ybJbhAy4vUjIwA",
@@ -53,7 +53,7 @@ const advisors = [
     imgLink: "https://pbs.twimg.com/profile_images/1507031061011836942/dqyEYZ1m_400x400.jpg",
     avatar: "degen",
     name: "Degen",
-    position: "Blockchain advisor",
+    position: "Blockchain Advisor",
     social: {
       tindefi: "https://tindefi.net/users/degen",
       twitter: "https://twitter.com/degen0xbdc",
@@ -104,7 +104,7 @@ const advisors = [
     imgLink: "https://cdn4.telegram-cdn.org/file/lh_hU_zbFD617W_fo8GwnKWXQBQiDH0dIpBXPHjCexoWEiETyU4S_K0BE78dgk5YLvEejUCWIQQQ5nWXE3j1jL-FaQTIefbfuNH_KGhtLt4Ukj9sMkixQ28rAi_q4QRZ-XJlLANw-d0EEzzqZkqBd4ofJjwE1vvgUSpI6FOjv5gmoc-sxtQ7EF_TlZW9_re1WrK0VSSM2OcwoUZ5287bf2Yb9t01XlWfnA0K4BJBH5rlQy4x-V7xl6YFAB6lR-QMPGQ-0g6HtwUszieCY-vELHT5S4od0nKXwOeqCJccpJgGy2Uf1Rhs2iXeUXZ4kg8rHNH46o8eMV4M_jKNFqhyAg.jpg",
     avatar: "chain-capitals",
     name: "Chain Capitals",
-    position: "Investment advisor",
+    position: "Investment Advisor",
     social: {
       tindefi: "https://tindefi.net/users/chain-capitals",
       telegram: "https://t.me/chaincapitals",
