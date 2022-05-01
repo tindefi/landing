@@ -82,7 +82,7 @@ const team = [
   {
     avatar: "jose-romero",
     name: "Jose Romero Diaz",
-    position: "Video Eitor & 3D Motion Designer",
+    position: "Video Editor & 3D Motion Designer",
     social: {
       tindefi: "#",
       linkedin: "https://www.linkedin.com/in/joseromerodiaz",

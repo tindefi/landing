@@ -465,6 +465,7 @@
       max-width: 65vw;
       width: 300px;
       opacity: 0;
+      pointer-events: none;
       transition: all 300ms ease-in-out;
 
       &.is-in-viewport{
