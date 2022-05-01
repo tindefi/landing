@@ -61,7 +61,7 @@
       height: 100%;
       display: grid;
       grid-template-rows: 1fr auto;
-      background: linear-gradient(180deg, rgba($background-color-light, 0.5) 0%, $background-color-light 100%);
+      background: linear-gradient(180deg, rgba($background-color-light, 0.1) 60%, $background-color-light 100%)
     }
 
     &__background{

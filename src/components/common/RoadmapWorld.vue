@@ -26,7 +26,7 @@
     </nav>
 
     <section class="tin-map">
-      <img src="/icons/lang/es.svg" width="23" class="tin-map__country tin-map__country__es" />
+      <img v-for="country in filteredCountries" :key="country" :src="`/icons/countries/${country}.svg`" width="23" :class="[`tin-map__country tin-map__country__${country}`]" />
       <WorldMap class="tin-map__map" />
     </section>
   </section>
@@ -95,6 +95,12 @@
     quarter = Number(String(quarter).match(/\d+/)[0])
     return moment().year(year).quarter(quarter).endOf('quarter').isBefore(moment())
   }
+
+  const filteredCountries = computed(() => {
+    return map.find(o => o.year === filters.value.year)?.quarters[filters.value.quarter]
+  })
+
+  console.info(filteredCountries)
 
   onMounted(() => {
     setYearFilter(moment().format('YYYY'))

@@ -67,8 +67,9 @@
         <div class="smartphone-container appear fade-in fade-down">
           <div class="smartphone-container__radial-background"></div>
           <div class="smartphone-container__background"></div>
-          <img class="smartphone-container__tins" src="/images/tins-bayc.svg" alt="tindefi BAYC content" loading="lazy" />
-          <img class="smartphone-container__img" src="/images/smartphones/android-tin.svg" alt="Tin Defi Android shape" loading="lazy" />
+          <!-- <img class="smartphone-container__tins" src="/images/tins-bayc.svg" alt="tindefi BAYC content" loading="lazy" /> -->
+          <!-- <img class="smartphone-container__img" src="/images/smartphones/android-tin.svg" alt="Tin Defi Android shape" loading="lazy" /> -->
+          <img class="smartphone-container__img" src="/images/android-tin.svg" alt="Tin Defi Android shape" loading="lazy" />
         </div>
         <div class="tin-features__radial-gradient"></div>
       </div>
@@ -207,6 +208,91 @@
       </div>
     </section>
 
+    <!-- <section class="tin-features container">
+      <div class="tin-features__background">
+        <div class="smartphone-container appear fade-in fade-down">
+          <video class="" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/experiences.mp4" />
+            <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+          </video>
+        </div>
+        <div class="tin-features__radial-gradient"></div>
+      </div>
+
+
+      <div class="tin-features__items" :class="{'is-in-viewport':featuresInViewport}">
+        <div class="tin-features__item">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.tins.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.tins.text')"></div>
+        </div>
+
+        <div class="tin-features__item">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.discover.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.discover.text')"></div>
+        </div>
+
+        <div class="tin-features__item">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.study.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.study.text')"></div>
+        </div>
+
+        <div class="tin-features__item">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.trade.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.trade.text')"></div>
+        </div>
+
+        <div class="tin-features__item">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.vc.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.vc.text')"></div>
+        </div>
+
+        <div class="tin-features__item is-right">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.transmit.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.transmit.text')"></div>
+        </div>
+
+        <div class="tin-features__item is-right">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.opine.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.opine.text')"></div>
+        </div>
+
+        <div class="tin-features__item is-right">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.collab.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.collab.text')"></div>
+        </div>
+
+        <div class="tin-features__item is-right">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.follow.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.follow.text')"></div>
+        </div>
+
+        <div class="tin-features__item is-right">
+          <div class="tin-features__item__header">
+            <p class="tin-features__item__title fz-4 fw-700 has-text-light">{{t('pages.home.features.viral.title')}}</p>
+          </div>
+          <div class="tin-features__item__text fz-2 fw-600 has-text-lighter" v-html="t('pages.home.features.viral.text')"></div>
+        </div>
+      </div>
+    </section> -->
+
     <section class="experiences-section container">
       <div class="experiences-section__header">
         <h2 class="experiences-section__title text-gradient-1" v-html="t('pages.home.experiences.title')"></h2>
@@ -215,12 +301,27 @@
     </section>
 
     <section class="profile-section container">
+      <div class="profile-section__video-container">
+        <div class="profile-section__video-wrapper" :class="{'is-in-viewport':profileInViewport}">
+          <video class="profile-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/experiences.mp4" />
+            <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+          </video>
+        </div>
+      </div>
       <div class="profile-section__wrapper">
         <div class="profile-section__items">
           <article class="profile-section__item">
             <div class="profile-section__item__container appear fade-in">
               <h4 class="profile-section__item__title">{{t('pages.home.profile.items.projects.title')}}</h4>
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.projects.text')"></h2>
+            </div>
+          </article>
+
+          <article class="profile-section__item">
+            <div class="profile-section__item__container appear fade-in">
+              <h4 class="profile-section__item__title">{{t('pages.home.profile.items.influencers.title')}}</h4>
+              <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.influencers.text')"></h2>
             </div>
           </article>
 
@@ -237,19 +338,6 @@
               <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.vc.text')"></h2>
             </div>
           </article>
-
-          <article class="profile-section__item">
-            <div class="profile-section__item__container appear fade-in">
-              <h4 class="profile-section__item__title">{{t('pages.home.profile.items.influencers.title')}}</h4>
-              <h2 class="profile-section__item__text" v-html="t('pages.home.profile.items.influencers.text')"></h2>
-            </div>
-          </article>
-        </div>
-        <div class="profile-section__video-container">
-          <video class="profile-section__video" tabindex="0" autobuffer="autobuffer" preload="preload">
-            <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/experiences.mp4" />
-            <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
-          </video>
         </div>
       </div>
     </section>
@@ -327,16 +415,24 @@
   const { t, locale } = useI18n()
 
   const featuresInViewport = ref(false);
+  const profileInViewport = ref(false);
 
   const handleScroll = (event) => {
     const features = document.querySelector('.tin-features')
     featuresInViewport.value = isInViewport(features).visible
+
+    const profile = document.querySelector('.profile-section')
+    profileInViewport.value = isInViewport(profile, 300).inside || isInViewport(profile, 300).full
+
+    var viewportOffset = profile.getBoundingClientRect();
+    // these are relative to the viewport, i.e. the window
+    var top = viewportOffset.top;
   }
 
   onMounted(() => {
     document.addEventListener('scroll', handleScroll, { passive: true });
     sketch(document.querySelector('.hero-section'))
-    scrollPlay('.profile-section__video', '.profile-section__video-container', 700)
+    // scrollPlay('.profile-section__video', '.profile-section__video-container', 700)
   })
 </script>
 

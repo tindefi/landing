@@ -1,5 +1,7 @@
 <template>
   <section class="tin-ico">
+    <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
+
     <section class="tin-ico__items">
       <article class="tin-ico__item">
         <header class="tin-ico__item__header">
@@ -18,7 +20,7 @@
             <div class="last-buy">
               <div class="last-buy__user">
                 <img src="https://avatars.dicebear.com/api/identicon/davidosuna.svg?colorLevel=100" alt="Avatar" class="last-buy__avatar" loading="lazy" />
-                <span class="last-buy__address">0x846...67gl</span>
+                <span class="last-buy__address">0x846...67gL</span>
               </div>
               <div class="last-buy__amount">$ 10,000.00 BUSD</div>
               <div class="last-buy__time">10 min ago</div>

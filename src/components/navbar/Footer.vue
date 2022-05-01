@@ -23,15 +23,15 @@
       </div>
       <div class="tin-footer__right">
         <div class="tin-footer__column">
-          <router-link to="/services" class="tin-footer__link">{{t('navbar.services')}}</router-link>
+          <a href="/downloads/terminos-y-condiciones-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.terms')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/about" class="tin-footer__link">{{t('navbar.about')}}</router-link>
+          <a href="/downloads/politica-de-privacidad-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.privacy')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <router-link to="/faq" class="tin-footer__link">{{t('navbar.faq')}}</router-link>
+          <a href="/downloads/politica-de-cookies-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.cookies')}}</a>
         </div>
 
         <div class="tin-footer__column">

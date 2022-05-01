@@ -4,7 +4,7 @@ const team = [
     name: "Juan Gasca",
     position: "Head of Public Relations and Capital Investment",
     social: {
-      tindefi: "https://tindefi.net/users/juangasca",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/juan-gasca",
       instagram: "https://www.instagram.com/juan_gasca2/",
       telegram: "https://t.me/juanG_scandefi",
@@ -15,7 +15,7 @@ const team = [
     name: "Tello Hernandez",
     position: "Design Project Manager",
     social: {
-      tindefi: "https://tindefi.net/users/tellohernandez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/tello-hernandez"
     }
   },
@@ -24,7 +24,7 @@ const team = [
     name: "Juancer",
     position: "Product Manager",
     social: {
-      tindefi: "https://tindefi.net/users/juancer",
+      tindefi: "#",
       github: "https://github.com/juancer",
       linkedin: "https://www.linkedin.com/in/juancer"
     }
@@ -34,7 +34,7 @@ const team = [
     name: "Javier Rodríguez",
     position: "Information & Efficiency",
     social: {
-      tindefi: "https://tindefi.net/users/javirodriguez",
+      tindefi: "#",
       github: "https://github.com/Javi-Ro",
       linkedin: "https://www.linkedin.com/in/javirodrigueez/",
       twitter: "https://twitter.com/rodriguezz_javi"
@@ -45,16 +45,16 @@ const team = [
     name: "Altair Ramírez",
     position: "Digital Marketing Specialist",
     social: {
-      tindefi: "https://tindefi.net/users/altramirez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/altairramirez/",
    }
   },
   {
     avatar: "david-fuentes",
     name: "David Fuentes Pita",
-    position: "Education and Talent Management",
+    position: "Education & Talent Management",
     social: {
-      tindefi: "https://tindefi.net/users/davfuentes",
+      tindefi: "#",
       linkedin: "http://www.linkedin.com/in/david-alejandro-fuentes",
       twitter: "https://twitter.com/davfuentes"
     }
@@ -62,9 +62,9 @@ const team = [
   {
     avatar: "adrian-berenguer",
     name: "Adrián Berenguer",
-    position: "Team management Specialist & Consultancy specialist",
+    position: "Team Management Specialist & Consultancy Specialist",
     social: {
-      tindefi: "https://tindefi.net/users/adriberenguer",
+      tindefi: "#",
       github: "https://github.com/berengueradrian",
       linkedin: "https://www.linkedin.com/in/adrián-berenguer-agulló/",
       twitter: "https://twitter.com/adriberenguer10"
@@ -75,16 +75,16 @@ const team = [
     name: "Armando Jimenez",
     position: "Motion Graphics Designer",
     social: {
-      tindefi: "https://tindefi.net/users/armandojimenez",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/armando-jimenez-"
     }
   },
   {
     avatar: "jose-romero",
     name: "Jose Romero Diaz",
-    position: "Video Editor & 3D Motion Designer",
+    position: "Video Eitor & 3D Motion Designer",
     social: {
-      tindefi: "https://tindefi.net/users/joseromerodiaz",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/joseromerodiaz",
       twitter: "https://twitter.com/joseromeromedia"
     }
@@ -94,7 +94,7 @@ const team = [
     name: "Gian Carlos Chavez",
     position: "Postproductor & Motion Designer",
     social: {
-      tindefi: "https://tindefi.net/users/giancarlosglavez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/gian-carlos-chavez"
     }
   },
@@ -103,7 +103,7 @@ const team = [
     name: "Ricardo Perez",
     position: "Creative Graphic Designer",
     social: {
-      tindefi: "https://tindefi.net/users/ricardoperez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/ricardoperezsierra/",
       twitter: "https://twitter.com/ricardoperez_s"
     }
@@ -111,18 +111,18 @@ const team = [
   {
     avatar: "aleh-huacan",
     name: "Aleh Huacan",
-    position: "Senior designer",
+    position: "Senior Designer",
     social: {
-      tindefi: "https://tindefi.net/users/alehaleh",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/aleh-huacan/"
     }
   },
   {
     avatar: "jose-villacrez",
     name: "Jose Villacrez",
-    position: "Branding Designer & Ilustrator",
+    position: "Branding Designer & Illustrator",
     social: {
-      tindefi: "https://tindefi.net/users/josevillacrez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/josé-villacrez-lopez",
       twitter: "https://twitter.com/jose-villacrez"
     }
@@ -132,7 +132,7 @@ const team = [
     name: "Fernanda Neyra",
     position: "Graphic Content Designer for Brand Social Networks",
     social: {
-      tindefi: "https://tindefi.net/users/neyrafer",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/fernanda-neyra",
       twitter: "https://twitter.com/fernandaneyra1"
     }
@@ -140,9 +140,9 @@ const team = [
   {
     avatar: "florencia-robinson",
     name: "Florencia Robinson",
-    position: "UX/UI Designer and 3D modeler",
+    position: "UX/UI Designer and 3D Modeler",
     social: {
-      tindefi: "https://tindefi.net/users/florencia-robinson",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/florencia-robinson/",
     }
   },
@@ -151,7 +151,7 @@ const team = [
     name: "Juanmi Bassa",
     position: "Graphic Designer",
     social: {
-      tindefi: "https://tindefi.net/users/juanmibassa",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/juanmi-bassa-pericas/",
       twitter: "https://twitter.com/xflugox"
     }
@@ -161,7 +161,7 @@ const team = [
     name: "Pau Perelló",
     position: "Advisory & Consultancy",
     social: {
-      tindefi: "https://tindefi.net/users/pautindefi",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/pau-perello/",
       twitter: "https://twitter.com/pauperello_"
     }
@@ -171,7 +171,7 @@ const team = [
     name: "Christopher Mendoza",
     position: "Advisory & Consultancy",
     social: {
-      tindefi: "https://tindefi.net/users/christfmr",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/christfmr",
       twitter: "https://twitter.com/christfmr"
     }
@@ -181,7 +181,7 @@ const team = [
     name: "Ilya Slyusarchuk",
     position: "Software Engineer & Web Developer",
     social: {
-      tindefi: "https://tindefi.net/users/_ilyaan",
+      tindefi: "#",
       github: "https://github.com/ilyanSD",
       linkedin: "https://www.linkedin.com/in/ilya-slyusarchuk",
       twitter: "https://twitter.com/_ilyaan"
@@ -192,7 +192,7 @@ const team = [
     name: "Valentina Rangel",
     position: "Copywriter",
     social: {
-      tindefi: "https://tindefi.net/users/valerangel",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/Valentina-Rangel",
    }
   },
@@ -201,7 +201,7 @@ const team = [
     name: "Keiberlyn Cordero",
     position: "Social ads Specialist",
     social: {
-      tindefi: "https://tindefi.net/users/keicordero",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/keiberlyn-cordero",
 
     }
@@ -211,7 +211,7 @@ const team = [
     name: "Lluis Camacho",
     position : "Business Advisor",
     social: {
-      tindefi: "https://tindefi.net/users/",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/lluis-camacho",
     }
   },
@@ -221,7 +221,7 @@ const team = [
     name: "Dylan Ferrer",
     position : "Business Executive",
     social: {
-      tindefi: "https://tindefi.net/users/dylanferrer17",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/dylan-ferrer",
     }
   },
@@ -230,7 +230,7 @@ const team = [
     name: "Ismael Rodriguez",
     position : "Business Executive",
     social: {
-      tindefi: "https://tindefi.net/users/ismaelrodriguez",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/ismaelrodriguezcastello",
     }
   },
@@ -239,7 +239,7 @@ const team = [
     name: "Antonio Perandones",
     position : "Business Executive",
     social: {
-      tindefi: "https://tindefi.net/users/aperandones",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/Antonio-Perandones-Gasca",
     }
   },
@@ -248,7 +248,7 @@ const team = [
     name: "Jaime Soto",
     position: "Head of Investors",
     social: {
-      tindefi: "https://tindefi.net/users/jaimesoto",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/jaime-soto-oncina-",
     }
   },
@@ -257,7 +257,7 @@ const team = [
     name: "Ignacio Gonzalez",
     position: "Sales & Marketing representative",
     social: {
-      tindefi: "https://tindefi.net/users/WayneStatic",
+      tindefi: "#",
       linkedin: "http://www.linkedin.com/in/WayneStatic",
       twitter: "https://twitter.com/WayneSCrypto",
       instagram: "https://www.Instagram.com/Wayne.Static.Crypto"
@@ -266,9 +266,9 @@ const team = [
   {
     avatar: "alejo-daniel-miguez",
     name: "Alejo Daniel Miguez",
-    formation: "Community Manager",
+    position: "Community Manager",
     social: {
-      tindefi: "https://tindefi.net/users/AlejoMiguez",
+      tindefi: "#",
       linkedin: " https://www.linkedin.com/in/alejodanielmiguez/",
       instagram: "https://www.instagram.com/Miguez.Alejo/"
     }
@@ -276,9 +276,9 @@ const team = [
   {
     avatar: "bryan-armando-guzman-juarez",
     name: "Brayan Armando Guzmán Juárez",
-    formation: "Marketing assistant",
+    position: "Marketing assistant",
     social: {
-      tindefi: "https://tindefi.net/users/ArmandoJ",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/brayan-armando-guzm",
       instagram: "https://www.instagram.com/b.armando_juarezs/"
     }
@@ -288,7 +288,7 @@ const team = [
     name: "Alejandro Bassa",
     position: "Sales & Marketing representative",
     social: {
-      tindefi: "https://tindefi.net/users/alejandrobassa",
+      tindefi: "#",
       linkedin: "https://www.linkedin.com/in/alejandro-scandefi/",
       twitter: "https://twitter.com/ComunidadCRIPTO"
     }
@@ -298,7 +298,7 @@ const team = [
     name: "Cayetano Re Palao",
     position: "Business Executive",
     social: {
-      tindefi: "https://tindefi.net/users/crpalao",
+      tindefi: "#",
       linkedin: "www.linkedin.com/in/cayetano-re-palao"
     }
   },

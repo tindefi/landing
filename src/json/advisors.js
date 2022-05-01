@@ -53,7 +53,7 @@ const advisors = [
     imgLink: "https://pbs.twimg.com/profile_images/1507031061011836942/dqyEYZ1m_400x400.jpg",
     avatar: "degen",
     name: "Degen",
-    position: "Advisor position",
+    position: "Blockchain advisor",
     social: {
       tindefi: "https://tindefi.net/users/degen",
       twitter: "https://twitter.com/degen0xbdc",
@@ -63,7 +63,7 @@ const advisors = [
     imgLink: "https://scontent-bcn1-1.cdninstagram.com/v/t51.2885-19/241314879_1175570832948178_6288527873770190393_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-bcn1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=IN5sstpe4GkAX8LpXY-&tn=L3RDjBt06_jpWRoD&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT_tlxr1mwkjydmFQVBLSg3W8317Ld1YwfuWVeJFLHIl8A&oe=62746E87&_nc_sid=7bff83",
     avatar: "marco-banderas",
     name: "Marco Banderas",
-    position: "Cantante & networking",
+    position: "Singer & networking",
     social: {
       tindefi: "https://tindefi.net/users/marco-banderas",
       instagram: "https://www.instagram.com/marcobanderasbcn/?hl=es",
@@ -96,7 +96,8 @@ const advisors = [
     position: "Social Skill Expert",
     social: {
       tindefi: "https://tindefi.net/users/alvaro-reyes",
-      instagram: "https://www.instagram.com/alvarodaygame/?hl=es",
+      instagram: "https://www.instagram.com/alvarodaygame",
+      youtube: "https://youtube.com/c/alvarodaygame"
     }
   },
   {

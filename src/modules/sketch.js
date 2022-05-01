@@ -1,4 +1,4 @@
-const _clrs = ["#5A47D3", "#35DF4B", "#FFB200", "#EF18AE", "#5A47D3"];
+const _clrs = ["#ffac5f", "#ff1183", "#ad00ff", "#00a3ff", "#648f98"];
 
 const _blobs = [];
 const _speed = 0.00005; // 0005

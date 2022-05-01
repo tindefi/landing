@@ -242,6 +242,10 @@
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -o-sticky;
+      position: -ms-sticky;
       position: sticky;
       top: 0;
       display: flex;
@@ -259,7 +263,8 @@
         position: absolute;
         width: 275px;
         height: 100%;
-        background: url(/images/bayc.gif);
+        // background: url(/images/bayc.gif);
+        background: url(/images/tins-vibes.gif);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -415,6 +420,8 @@
   }
 
   .profile-section{
+    position: relative;
+
     &__wrapper{
       display: flex;
       flex-direction: column-reverse;
@@ -422,6 +429,7 @@
 
     &__items{
       display: grid;
+      height: 100%;
     }
 
     &__item{
@@ -429,6 +437,10 @@
       // height: 1000px;
 
       &__container {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
         position: sticky;
         top: 33.33%;
         margin-bottom: 200px;
@@ -445,20 +457,30 @@
       }
     }
 
-    &__video{
-      position: sticky;
+    &__video-wrapper{
+      position: fixed;
       top: 33.33%;
       margin-left: 50%;
-      transform: translate(-50%, -25%);
+      transform: translate(0%, -25%);
       max-width: 65vw;
+      width: 300px;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+
+      &.is-in-viewport{
+        opacity: 1;
+      }
+    }
+
+    &__video{
+      width: 100%;
     }
 
     @media(min-width:768px){
       margin-bottom: 250px;
 
-      &__wrapper{
+      &__item__wrapper{
         display: grid;
-        grid-template-columns: 1fr 1fr;
       }
 
       &__container{

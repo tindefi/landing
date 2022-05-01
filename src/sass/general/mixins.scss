@@ -7,6 +7,7 @@
 
 @mixin blurBackground($background) {
   backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   background: rgba($background, 0.15);
 }
 

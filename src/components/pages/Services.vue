@@ -48,17 +48,17 @@
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.subscriptions.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/images/services/i_item_1.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_4.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.collaborations.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.collaborations.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/images/services/i_item_2.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_5.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.defi.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.defi.html')"></div>
           </article>
           <article class="tin-services__item">
-            <img class="tin-services__item__img" src="/images/services/i_item_3.svg" loading="lazy" />
+            <img class="tin-services__item__img" src="/images/services/i_item_6.svg" loading="lazy" />
             <p class="tin-services__item__title fz-4 fw-700 has-text-lighter">{{t('pages.services.income.items.security.title')}}</p>
             <div class="tin-services__item__content" v-html="t('pages.services.income.items.security.html')"></div>
           </article>

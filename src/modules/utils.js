@@ -15,6 +15,8 @@ const isInViewport = function(elm, threshold, mode) {
   var visibleBottom = rect.bottom - viewHeight - threshold <= 0 &&
                       rect.bottom - viewHeight >= -viewHeight;
 
+                      // console.info(rect.top, rect.bottom, window.innerHeight)
+
 
   const result = {
     visible: visibleTop || visibleBottom,
@@ -23,6 +25,8 @@ const isInViewport = function(elm, threshold, mode) {
     full: visibleTop && visibleBottom,
     above: above,
     below: below,
+    inside: rect.top + window.innerHeight - threshold < window.innerHeight  && rect.bottom - window.innerHeight + threshold >= 0
+
   };
 
   return result;
