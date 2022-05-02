@@ -1,4 +1,4 @@
-<template>
+x<template>
   <section class="tin-ico">
     <widget-container-modal />
     <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
@@ -125,10 +125,11 @@
   import { openModal } from "jenesius-vue-modal"
 
   import TinIcon from '@/components/tin/TinIcon.vue'
+  import Modal from '@/components/common/Modal.vue'
 
   const { t } = useI18n()
 
-  const { address, balance, loading } = storeToRefs(useWalletStore())
+  const { address, balances, loading } = storeToRefs(useWalletStore())
 
 
   const totalBought = ref(37075.50)
@@ -144,6 +145,8 @@
     return formatMoney(supply.value)
   })
 
+  //console.log(this.balances);
+
   const showRangeValue = (value = null) => {
     value = value ?? totalBought.value;
     const rangeLabelContainer = document.querySelector(".tin-range__label-container")
@@ -154,7 +157,10 @@
   }
 
   const invest = () => {
-    openModal(TinIcon, {name:'diamond'})
+    walletStore.getBalance(address.value).then(response => {
+      balances.value.busd = response
+      openModal(Modal, {})
+    })
   }
 
   watch(totalBought, async (newVal, oldVal) => {

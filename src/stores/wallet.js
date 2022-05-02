@@ -8,7 +8,18 @@ export const useWalletStore = defineStore('wallet', {
   state: () => {
     return {
       web3: null,
+      busd: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
       web3modal: null,
+      minABI: [
+        // balanceOf
+        {
+          "constant":true,
+          "inputs":[{"name":"_owner","type":"address"}],
+          "name":"balanceOf",
+          "outputs":[{"name":"balance","type":"uint256"}],
+          "type":"function"
+        },
+      ],
       chain: {
         id: null,
         name: null,
@@ -18,6 +29,7 @@ export const useWalletStore = defineStore('wallet', {
       address: null,
       balances: {
         ether: 0,
+        busd: 0
       },
       loading: false,
     };
@@ -121,6 +133,10 @@ export const useWalletStore = defineStore('wallet', {
         this.disconnect();
       });
     },
+    async getBalance(walletAddress) {
+      let contract = new this.web3.eth.Contract(this.minABI, this.busd);
+      return await contract.methods.balanceOf(walletAddress).call();
+    },
     async setData() {
       if(!this.provider) return;
 
@@ -149,7 +165,7 @@ export const useWalletStore = defineStore('wallet', {
         }
 
         this.address = res[0];
-        this.getEtherBalance();
+        //this.getEtherBalance();
 
         this.web3.eth.subscribe('newBlockHeaders', () => {
         });
@@ -179,12 +195,13 @@ export const useWalletStore = defineStore('wallet', {
       this.chain.name = null;
       this.provider = null;
       this.address = null;
-      this.balances.ether = 0;
+      this.balances.busd = 0;
       this.loading = false;
     },
-    async getEtherBalance() {
-      const res = await this.web3.eth.getBalance(this.address);
-      this.balances.ether = res;
+    async getEtherBalance(walletAddress) {
+      let web3 = new Web3(this.web3.provider);
+      let contract = new web3.eth.Contract(this.minABI, this.busd);
+      this.balances.busd = await contract.methods.balanceOf(walletAddress).call();
     },
     async getChains() {
       await axios.get('https://chainid.network/chains.json').then(response => {
