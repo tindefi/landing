@@ -1,5 +1,6 @@
 <template>
   <section class="tin-ico">
+    <widget-container-modal />
     <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
 
     <section class="tin-ico__items">
@@ -76,7 +77,7 @@
             </article>
           </div>
           <div class="tin-ico__footer__right">
-            <button v-if="walletStore.address" class="tin-button is-success big-shadow has-text-darker tin-ico__button" @click.prevent="walletStore.disconnect()">Invertir</button>
+            <button v-if="walletStore.address" class="tin-button is-success big-shadow has-text-darker tin-ico__button" @click.prevent="invest()">Invertir</button>
             <button v-else class="tin-button is-success has-text-darker tin-ico__button" @click.prevent="walletStore.connect()">{{walletStore.loading ? 'Loading' : 'Connect wallet'}}</button>
           </div>
         </footer>
@@ -119,7 +120,9 @@
   import { ref, computed, watch, onMounted } from 'vue'
   import { formatMoney } from '@/modules/utils'
   import { useWalletStore } from '@/stores/wallet'
-  import { storeToRefs } from 'pinia';
+  import { storeToRefs } from 'pinia'
+
+  import { openModal } from "jenesius-vue-modal"
 
   import TinIcon from '@/components/tin/TinIcon.vue'
 
@@ -148,6 +151,10 @@
     const labelPosition = (value  * 100) / supply.value
     rangeLabelContainer.style.left = labelPosition + "%"
     rangeInputMarker.style.left = labelPosition + "%"
+  }
+
+  const invest = () => {
+    openModal(TinIcon, {name:'diamond'})
   }
 
   watch(totalBought, async (newVal, oldVal) => {
