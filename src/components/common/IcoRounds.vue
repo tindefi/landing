@@ -9,8 +9,8 @@ x<template>
           <div class="tin-ico__item__header__left">
             <h3 class="tin-ico__item__title">{{t('common.ico-rounds.title', {round: icoInfo.round.index})}}</h3>
             <div class="tin-ico__item__label-text">
-              <label class="tin-ico__item__label">{{t('forms.roe')}}</label>
-              <p class="tin-ico__item__text has-text-success" :class="{'is-blurred':loadings.roe}">+{{icoInfo.round.roe}}%</p>
+              <label class="tin-ico__item__label">{{t('forms.roi')}}</label>
+              <p class="tin-ico__item__text has-text-success" :class="{'is-blurred':loadings.roi}">+{{icoInfo.round.roi}}%</p>
             </div>
             <div class="tin-ico__item__label-text">
               <label class="tin-ico__item__label">{{t('common.ico-rounds.listing-price')}}</label>
@@ -136,7 +136,7 @@ x<template>
   const TIN_PUBLIC_PRICE = 50
 
   const loadings = ref({
-    roe: true,
+    roi: true,
     raised: true,
     target: true,
     price: true,
@@ -153,6 +153,7 @@ x<template>
       buyers: 0,
       pricePerToken: 0,
       target: '0',
+      referralCodeRequired: true,
     },
     totalRaised: 0,
   })
@@ -169,7 +170,7 @@ x<template>
         buyers: formatNumber(ICO.value.round.buyers, true),
         pricePerToken: formatMoney(ICO.value.round.pricePerToken),
         target: formatMoney(web3.utils.fromWei(String(ICO.value.round.target))),
-        roe: formatNumber(TIN_PUBLIC_PRICE / ICO.value.round.pricePerToken * 100),
+        roi: formatNumber(TIN_PUBLIC_PRICE / ICO.value.round.pricePerToken * 100),
       },
       totalRaised: formatNumber(web3.utils.fromWei(String(ICO.value.totalRaised)))
     }
@@ -186,7 +187,7 @@ x<template>
   }
 
   const invest = () => {
-    openModal(IcoModal)
+    openModal(IcoModal, {referralCodeRequired: ICO.value.round.referralCodeRequired})
   }
 
   const reloadPhaseInfo = () => {
@@ -230,7 +231,7 @@ x<template>
     await walletStore.pricePerTokenPerPhase(ICO.value.round.index).then(res => {
       ICO.value.round.pricePerToken = res
       loadings.value.price = false
-      loadings.value.roe = false
+      loadings.value.roi = false
     })
   }
 

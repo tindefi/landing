@@ -65,7 +65,7 @@ export const useWalletStore = defineStore('wallet', {
       }
 
       this.web3modal = new Web3Modal({
-          network: "mainnet", // optional
+          network: "localhost", // optional
           cacheProvider: true, // optional
           providerOptions, // required
           disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.
@@ -224,7 +224,8 @@ export const useWalletStore = defineStore('wallet', {
 
       const web3 = new Web3(this.provider)
       let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token)
-      return await contract.methods.balanceOf(wallet).call()
+      return await contract.methods.balanceOf(wallet).call().catch(alert)
+      console.info(wallet, token)
     },
     async getChains() {
       await axios.get('https://chainid.network/chains.json').then(response => {
@@ -284,6 +285,11 @@ export const useWalletStore = defineStore('wallet', {
       let web3 = new Web3(this.provider);
       const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
       return await TIN_ICO_CONTRACT.methods.totalRaised().call()
+    },
+    async getReferral(code) {
+      let web3 = new Web3(this.provider);
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      return await TIN_ICO_CONTRACT.methods.getReferral(code).call()
     },
 
 
