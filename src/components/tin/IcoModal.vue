@@ -157,11 +157,13 @@
     }
 
     loading.value = true
-    await walletStore.buyTinICOTokens(amountWei.value, referralCode.value).then(res => {
+    await walletStore.buyTinICOTokens(TINAmountWei.value, referralCode.value).then(res => {
       getBUSDBalance()
       amount.value = ''
       referralCode.value = ''
       emit('invest', res)
+      alert(t('pages.ico.modal.success'))
+      location.reload()
     }).catch(console.info).finally(() => {
       loading.value = false
     })
@@ -190,6 +192,12 @@
   const TINAmount = computed(() => {
     if(!amount.value || !CURRENT_ROUND_TIN_PRICE.value) return 0
     return formatNumber(amount.value / CURRENT_ROUND_TIN_PRICE.value)
+  })
+
+  const TINAmountWei = computed(() => {
+    if(!amount.value || !CURRENT_ROUND_TIN_PRICE.value) return 0
+    const web3 = new Web3(provider)
+    return web3.utils.toWei(String(amount.value / CURRENT_ROUND_TIN_PRICE.value))
   })
 
   const getCurrentPhase = async () => {

@@ -65,7 +65,7 @@ export const useWalletStore = defineStore('wallet', {
       }
 
       this.web3modal = new Web3Modal({
-          network: "localhost", // optional
+          network: "mainnet", // optional
           cacheProvider: true, // optional
           providerOptions, // required
           disableInjectedProvider: false, // optional. For MetaMask / Brave / Opera.

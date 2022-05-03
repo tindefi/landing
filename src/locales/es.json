@@ -200,7 +200,8 @@
         "amount": "Cantidad a invertir",
         "buycode": "Código de compra",
         "invalidcode": "Código no válido",
-        "invalidcodealert": "El código proporcionado no es válido"
+        "invalidcodealert": "El código proporcionado no es válido",
+        "success": "Tu inversión se ha procesado correctamente."
       }
     },
     "about": {

@@ -195,12 +195,13 @@
         "text": "The Tin Defi token is supported by a large number of utilities within the application. Being indispensable for most of the operations and payment methods. Besides having an incredible variety of options that will be added in the medium and long term. Some of the utilities to be highlighted are shown below:"
       },
       "modal": {
-        "participate": "Participar en la ICO",
-        "busd": "La moneda requerida para invertir en la ICO es BUSD.",
-        "amount": "Cantidad a invertir",
-        "buycode": "Código de compra",
-        "invalidcode": "Código no válido",
-        "invalidcodealert": "El código proporcionado no es válido"
+        "participate": "Participate in the ICO",
+        "busd": "The currency required to invest in the ICO is BUSD.",
+        "amount": "Amount to invest",
+        "buycode": "Purchase code",
+        "invalidcode": "Invalid code",
+        "invalidcodealert": "The provided code is invalid",
+        "success": "Your purchase has been successfully processed."
       }
     },
     "about": {
