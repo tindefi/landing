@@ -10,7 +10,7 @@ x<template>
             <h3 class="tin-ico__item__title">{{t('common.ico-rounds.title', {round: icoInfo.round.index})}}</h3>
             <div class="tin-ico__item__label-text">
               <label class="tin-ico__item__label">{{t('forms.roe')}}</label>
-              <p class="tin-ico__item__text has-text-success">+{{icoInfo.round.roe}}%</p>
+              <p class="tin-ico__item__text has-text-success" :class="{'is-blurred':loadings.roe}">+{{icoInfo.round.roe}}%</p>
             </div>
             <div class="tin-ico__item__label-text">
               <label class="tin-ico__item__label">{{t('common.ico-rounds.listing-price')}}</label>
@@ -32,14 +32,14 @@ x<template>
         <div class="tin-range">
           <div class="tin-range__slider">
             <div class="tin-range__label-container">
-              <h4 class="tin-range__label">{{icoInfo.round.raised.busd}}</h4>
+              <h4 class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{icoInfo.round.raised.busd}}</h4>
             </div>
             <div class="tin-range__input">
               <div class="tin-range__input__marker"></div>
             </div>
           </div>
           <div class="box-minmax">
-            <span>$ 0.00</span><span>{{icoInfo.round.target}}</span>
+            <span>$ 0.00</span><span><div :class="{'is-blurred':loadings.target}">{{icoInfo.round.target}}</div></span>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ x<template>
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">{{t('common.ico-rounds.investor', 369)}}</span>
-                <span class="tin-value">{{icoInfo.round.buyers}}</span>
+                <span class="tin-value" :class="{'is-blurred':loadings.buyers}">{{icoInfo.round.buyers}}</span>
               </div>
             </article>
 
@@ -213,6 +213,7 @@ x<template>
   const getTargetICOPerPhase = async () => {
     await walletStore.targetICOPerPhase(ICO.value.round.index).then(res => {
       ICO.value.round.target = res
+      loadings.value.target = false
     })
   }
 
@@ -220,19 +221,23 @@ x<template>
     await walletStore.raisedPerPhase(ICO.value.round.index).then(res => {
       ICO.value.round.raised.busd = res['busdRaised']
       ICO.value.round.raised.tin = res['tokensBought']
-      showRangeValue()
+      loadings.value.raised = false
+      setTimeout(() => showRangeValue(), 10)
     })
   }
 
   const getPricePerTokenPerPhase = async () => {
     await walletStore.pricePerTokenPerPhase(ICO.value.round.index).then(res => {
       ICO.value.round.pricePerToken = res
+      loadings.value.price = false
+      loadings.value.roe = false
     })
   }
 
   const getBuyersPerPhase = async () => {
     await walletStore.buyersPerPhase(ICO.value.round.index).then(res => {
       ICO.value.round.buyers = res
+      loadings.value.buyers = false
     })
   }
 
