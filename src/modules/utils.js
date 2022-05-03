@@ -48,4 +48,11 @@ const formatMoney = (amount, currency = 'USD', removeZeros = false, emptyDefault
   return formatted;
 }
 
-export { isInViewport, formatMoney }
+const formatNumber = (amount, removeZeros = false, emptyDefault = null) => {
+  if((!amount || parseFloat(amount) <= 0) && emptyDefault) return emptyDefault;
+
+  const money = formatMoney(amount, 'USD', removeZeros, emptyDefault)
+  return money.slice(2)
+}
+
+export { isInViewport, formatMoney, formatNumber }

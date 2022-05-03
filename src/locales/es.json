@@ -16,10 +16,13 @@
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Proyectos | Proyecto | Influencers",
     "of": "de",
-    "comingsoon": "Próximamente"
+    "comingsoon": "Próximamente",
+    "invest": "Invertir"
   },
   "wallet": {
-    "connect": "Conectar billetera"
+    "connect": "Conectar billetera",
+    "approve": "Aprovar",
+    "balance": "Balance"
   },
   "navbar": {
     "services": "Servicios",

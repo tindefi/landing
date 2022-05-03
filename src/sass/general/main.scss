@@ -85,3 +85,11 @@ strong{
 .icon-white{
   filter: brightness(0) invert(1);
 }
+
+::placeholder{
+  color: $text-color-dark;
+}
+
+.is-blurred{
+  filter: blur(5px)
+}

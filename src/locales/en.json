@@ -16,10 +16,13 @@
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Projects | Project | Influencers",
     "of": "out of",
-    "comingsoon": "Coming soon"
+    "comingsoon": "Coming soon",
+    "invest": "Invest"
   },
   "wallet": {
-    "connect": "Connect Wallet"
+    "connect": "Connect Wallet",
+    "approve": "Approve",
+    "balance": "Balance"
   },
   "navbar": {
     "services": "Services",

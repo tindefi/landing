@@ -7,14 +7,14 @@ x<template>
       <article class="tin-ico__item">
         <header class="tin-ico__item__header">
           <div class="tin-ico__item__header__left">
-            <h3 class="tin-ico__item__title">{{t('common.ico-rounds.title', {round: 1})}}</h3>
+            <h3 class="tin-ico__item__title">{{t('common.ico-rounds.title', {round: icoInfo.round.index})}}</h3>
             <div class="tin-ico__item__label-text">
               <label class="tin-ico__item__label">{{t('forms.roe')}}</label>
-              <p class="tin-ico__item__text has-text-success">+1,000%</p>
+              <p class="tin-ico__item__text has-text-success">+{{icoInfo.round.roe}}%</p>
             </div>
             <div class="tin-ico__item__label-text">
               <label class="tin-ico__item__label">{{t('common.ico-rounds.listing-price')}}</label>
-              <p class="tin-ico__item__text">$ 50.00</p>
+              <p class="tin-ico__item__text">{{formatMoney(TIN_PUBLIC_PRICE)}}</p>
             </div>
           </div>
           <div class="tin-ico__item__header__right">
@@ -32,15 +32,14 @@ x<template>
         <div class="tin-range">
           <div class="tin-range__slider">
             <div class="tin-range__label-container">
-              <h4 class="tin-range__label">{{totalBoughtFormatted}}</h4>
+              <h4 class="tin-range__label">{{icoInfo.round.raised.busd}}</h4>
             </div>
-            <!-- <input v-model="totalBought" class="tin-range__input" type="range" step="0.01" min="0" :max="supply"> -->
             <div class="tin-range__input">
               <div class="tin-range__input__marker"></div>
             </div>
           </div>
           <div class="box-minmax">
-            <span>$ 0.00</span><span>{{supplyFormatted}}</span>
+            <span>$ 0.00</span><span>{{icoInfo.round.target}}</span>
           </div>
         </div>
 
@@ -52,7 +51,7 @@ x<template>
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">1 TIN</span>
-                <span class="tin-value">≈ $ 5.00</span>
+                <span class="tin-value" :class="{'is-blurred':loadings.price}">≈ {{icoInfo.round.pricePerToken}}</span>
               </div>
             </article>
 
@@ -62,7 +61,7 @@ x<template>
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">{{t('common.ico-rounds.investor', 369)}}</span>
-                <span class="tin-value">369</span>
+                <span class="tin-value">{{icoInfo.round.buyers}}</span>
               </div>
             </article>
 
@@ -77,8 +76,8 @@ x<template>
             </article>
           </div>
           <div class="tin-ico__footer__right">
-            <button v-if="walletStore.address" class="tin-button is-success big-shadow has-text-darker tin-ico__button" @click.prevent="invest()">Invertir</button>
-            <button v-else class="tin-button is-success has-text-darker tin-ico__button" @click.prevent="walletStore.connect()">{{walletStore.loading ? 'Loading' : 'Connect wallet'}}</button>
+            <button v-if="walletStore.address" class="tin-button is-success big-shadow has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+            <button v-else class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="walletStore.connect()">{{t('wallet.connect')}}</button>
           </div>
         </footer>
       </article>
@@ -91,7 +90,7 @@ x<template>
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">1 TIN</span>
-                <span class="tin-value">≈ $ 7.00</span>
+                <span class="tin-value" :class="{'is-blurred':loadings.price}">≈ {{formatMoney(Number(ICO.round.pricePerToken) + 2)}}</span>
               </div>
             </article>
           </div>
@@ -106,7 +105,7 @@ x<template>
               </div>
               <div class="tin-ico__footer__item__content">
                 <span class="tin-label">1 TIN</span>
-                <span class="tin-value">≈ $ 9.00</span>
+                <span class="tin-value" :class="{'is-blurred':loadings.price}">≈ {{formatMoney(Number(ICO.round.pricePerToken) + 4)}}</span>
               </div>
             </article>
           </div>
@@ -118,57 +117,126 @@ x<template>
 
 <script setup>
   import { ref, computed, watch, onMounted } from 'vue'
-  import { formatMoney } from '@/modules/utils'
+  import { formatMoney, formatNumber } from '@/modules/utils'
   import { useWalletStore } from '@/stores/wallet'
   import { storeToRefs } from 'pinia'
+  import Web3 from 'web3/dist/web3.min.js'
 
   import { openModal } from "jenesius-vue-modal"
 
   import TinIcon from '@/components/tin/TinIcon.vue'
-  import Modal from '@/components/common/Modal.vue'
+  import IcoModal from '@/components/tin/IcoModal.vue'
 
   const { t } = useI18n()
 
-  const { address, balances, loading } = storeToRefs(useWalletStore())
-
-
-  const totalBought = ref(37075.50)
-  const supply = ref(100000.00)
+  const { loading, provider } = storeToRefs(useWalletStore())
 
   const walletStore = useWalletStore()
 
-  const totalBoughtFormatted = computed(() => {
-    return formatMoney(totalBought.value)
+  const TIN_PUBLIC_PRICE = 50
+
+  const loadings = ref({
+    roe: true,
+    raised: true,
+    target: true,
+    price: true,
+    buyers: true,
   })
 
-  const supplyFormatted = computed(() => {
-    return formatMoney(supply.value)
+  const ICO = ref({
+    round: {
+      index: 0,
+      raised: {
+        busd: 0,
+        tin: 0,
+      },
+      buyers: 0,
+      pricePerToken: 0,
+      target: '0',
+    },
+    totalRaised: 0,
   })
 
-  //console.log(this.balances);
+  const icoInfo = computed(() => {
+    const web3 = new Web3(provider)
+    return {
+      round: {
+        index: Number(ICO.value.round.index) + 1,
+        raised: {
+          busd: formatMoney(web3.utils.fromWei(String(ICO.value.round.raised.busd))),
+          tin: formatMoney(web3.utils.fromWei(String(ICO.value.round.raised.tin))),
+        },
+        buyers: formatNumber(ICO.value.round.buyers, true),
+        pricePerToken: formatMoney(ICO.value.round.pricePerToken),
+        target: formatMoney(web3.utils.fromWei(String(ICO.value.round.target))),
+        roe: formatNumber(TIN_PUBLIC_PRICE / ICO.value.round.pricePerToken * 100),
+      },
+      totalRaised: formatNumber(web3.utils.fromWei(String(ICO.value.totalRaised)))
+    }
+  })
 
   const showRangeValue = (value = null) => {
-    value = value ?? totalBought.value;
+    const web3 = new Web3(provider)
+    value = value ?? Number(web3.utils.fromWei(ICO.value.round.raised.busd))
     const rangeLabelContainer = document.querySelector(".tin-range__label-container")
     const rangeInputMarker = document.querySelector(".tin-range__input__marker")
-    const labelPosition = (value  * 100) / supply.value
+    const labelPosition = (value  * 100) / Number(web3.utils.fromWei(ICO.value.round.target))
     rangeLabelContainer.style.left = labelPosition + "%"
     rangeInputMarker.style.left = labelPosition + "%"
   }
 
   const invest = () => {
-    walletStore.getBalance(address.value).then(response => {
-      balances.value.busd = response
-      openModal(Modal, {})
+    openModal(IcoModal)
+  }
+
+  const reloadPhaseInfo = () => {
+    getCurrentPhase()
+    getTotalRaised()
+  }
+
+  const getTotalRaised = async () => {
+    await walletStore.totalRaised().then(res => {
+      ICO.value.totalRaised = res
     })
   }
 
-  watch(totalBought, async (newVal, oldVal) => {
-    showRangeValue(newVal)
-  })
+  const getCurrentPhase = async () => {
+    await walletStore.currentPhase().then(res => {
+      ICO.value.round.index = res
+      getRaisedPerPhase()
+      getTargetICOPerPhase()
+      getPricePerTokenPerPhase()
+      getBuyersPerPhase()
+    })
+  }
 
-  onMounted(() => {
-    showRangeValue()
-    // setTimeout(() => {totalBought.value = 37075.50}, 2000)
+  const getTargetICOPerPhase = async () => {
+    await walletStore.targetICOPerPhase(ICO.value.round.index).then(res => {
+      ICO.value.round.target = res
+    })
+  }
+
+  const getRaisedPerPhase = async () => {
+    await walletStore.raisedPerPhase(ICO.value.round.index).then(res => {
+      ICO.value.round.raised.busd = res['busdRaised']
+      ICO.value.round.raised.tin = res['tokensBought']
+      showRangeValue()
+    })
+  }
+
+  const getPricePerTokenPerPhase = async () => {
+    await walletStore.pricePerTokenPerPhase(ICO.value.round.index).then(res => {
+      ICO.value.round.pricePerToken = res
+    })
+  }
+
+  const getBuyersPerPhase = async () => {
+    await walletStore.buyersPerPhase(ICO.value.round.index).then(res => {
+      ICO.value.round.buyers = res
+    })
+  }
+
+  watch(provider, async (newVal, oldVal) => {
+    if(newVal && !oldVal) reloadPhaseInfo()
   })
 </script>
