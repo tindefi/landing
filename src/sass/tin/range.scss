@@ -124,6 +124,7 @@
         user-select: none;
 
         span{
+            white-space: nowrap;
             display: block;
             position: relative;
             color: $text-color-light;

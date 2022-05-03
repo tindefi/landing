@@ -9,6 +9,7 @@
     "month": "Months | Month | Months",
     "year": "Years | Year | Years",
     "roe": "ROE",
+    "roi": "ROI",
     "download": "Downloads | Download | Downloads",
     "loading": "Loading",
     "exchange": "Exchanges | Exchange | Exchanges",
@@ -16,10 +17,16 @@
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Projects | Project | Influencers",
     "of": "out of",
-    "comingsoon": "Coming soon"
+    "comingsoon": "Coming soon",
+    "invest": "Invest",
+    "apply": "Apply",
+    "skip": "Skip",
+    "max": "max"
   },
   "wallet": {
-    "connect": "Connect Wallet"
+    "connect": "Connect Wallet",
+    "approve": "Approve",
+    "balance": "Balance"
   },
   "navbar": {
     "services": "Services",
@@ -186,6 +193,15 @@
       "utils": {
         "title": "<span class='text-gradient-4'>$TIN</span> utilities",
         "text": "The Tin Defi token is supported by a large number of utilities within the application. Being indispensable for most of the operations and payment methods. Besides having an incredible variety of options that will be added in the medium and long term. Some of the utilities to be highlighted are shown below:"
+      },
+      "modal": {
+        "participate": "Participate in the ICO",
+        "busd": "The currency required to invest in the ICO is BUSD.",
+        "amount": "Amount to invest",
+        "buycode": "Purchase code",
+        "invalidcode": "Invalid code",
+        "invalidcodealert": "The provided code is invalid",
+        "success": "Your purchase has been successfully processed."
       }
     },
     "about": {

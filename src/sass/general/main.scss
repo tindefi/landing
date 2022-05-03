@@ -60,6 +60,11 @@ h6, .is-size-6, .fz-6, small{ font-size: $font-size-6 }
 .fw-900{ font-weight: 900 }
 
 .has-text-success{ color: $success-color !important }
+.has-text-danger{ color: $danger-color !important }
+.has-text-warning{ color: $warning-color !important }
+.has-text-info{ color: $info-color !important }
+.has-text-purple{ color: $purple-color !important }
+.has-text-gray{ color: $gray-color !important }
 .has-text-light{ color: $text-color-light !important }
 .has-text-lighter{ color: $text-color-lighter !important }
 .has-text-dark{ color: $text-color-dark !important }
@@ -84,4 +89,12 @@ strong{
 
 .icon-white{
   filter: brightness(0) invert(1);
+}
+
+::placeholder{
+  color: $text-color-dark;
+}
+
+.is-blurred{
+  filter: blur(5px)
 }

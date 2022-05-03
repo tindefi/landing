@@ -10,8 +10,9 @@ const messages = Object.fromEntries(
 )
 
 const i18n = createI18n({
-  // legacy: false,
+  legacy: false,
   locale: localStorage.getItem('locale') || 'en',
+  warnHtmlMessage: false,
   fallbackLocale: 'en',
   messages,
 })

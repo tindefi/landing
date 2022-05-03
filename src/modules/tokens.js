@@ -1,0 +1,4 @@
+const TIN = '0x673a2fe4ba1bb89415d494fa78ce9fde47f859d6'
+const BUSD = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
+
+export { TIN, BUSD }

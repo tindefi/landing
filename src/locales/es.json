@@ -9,6 +9,7 @@
     "month": "Meses | Mes | Meses",
     "year": "Años | Año | Años",
     "roe": "ROE",
+    "roi": "ROI",
     "download": "Descargas | Descarga | Descargas",
     "loading": "Cargando",
     "exchange": "Exchanges | Exchange | Exchanges",
@@ -16,10 +17,16 @@
     "influencer": "Influencers | Influencer | Influencers",
     "project": "Proyectos | Proyecto | Influencers",
     "of": "de",
-    "comingsoon": "Próximamente"
+    "comingsoon": "Próximamente",
+    "invest": "Invertir",
+    "apply": "Aplicar",
+    "skip": "Pasar",
+    "max": "max"
   },
   "wallet": {
-    "connect": "Conectar billetera"
+    "connect": "Conectar billetera",
+    "approve": "Aprobar",
+    "balance": "Balance"
   },
   "navbar": {
     "services": "Servicios",
@@ -186,6 +193,15 @@
       "utils": {
         "title": "<span class='text-gradient-4'>$TIN</span> utilidades",
         "text": "El token de Tin Defi se encuentra respaldado por un gran número de utilidades dentro de la aplicación. Siendo indispensable para la mayoría de las operaciones y métodos de pago. Además de contar con una increíble variedad de opciones que se agregarán en el mediano y largo plazo. Algunas de las utilidades a destacar se muestran a continuación:"
+      },
+      "modal": {
+        "participate": "Participar en la ICO",
+        "busd": "La moneda requerida para invertir en la ICO es BUSD.",
+        "amount": "Cantidad a invertir",
+        "buycode": "Código de compra",
+        "invalidcode": "Código no válido",
+        "invalidcodealert": "El código proporcionado no es válido",
+        "success": "Tu inversión se ha procesado correctamente."
       }
     },
     "about": {
