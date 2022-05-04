@@ -504,7 +504,8 @@
       "title": "Ronda {round}",
       "listing-price": "Venta pública",
       "investor": "Inversor | Inversores",
-      "vesting": "Vesting"
+      "vesting": "Vesting",
+      "seed": "Fase semilla"
     },
     "roadmap-downloads": {
       "launch": "Salida de la aplicación"
