@@ -42,8 +42,8 @@
     </div>
     <footer>
       <div class="button-container">
-        <button v-if="enoughAllowance" class="tin-button is-success" :class="{'is-loading':submitLoading || loading, 'is-disabled':!Number(amount)}" @click.prevent="invest()">{{t('forms.invest')}}</button>
-        <button v-else class="tin-button is-success" :class="{'is-loading':submitLoading || loading}" @click.prevent="approve">{{t('wallet.approve')}}</button>
+        <button class="tin-button is-success" :class="{'is-loading':submitLoading || loading, 'is-disabled':enoughAllowance}" @click.prevent="approve">{{t('wallet.approve')}}</button>
+        <button class="tin-button is-success" :class="{'is-loading':submitLoading || loading, 'is-disabled':!Number(amount) || !enoughAllowance}" @click.prevent="invest()">{{t('forms.invest')}}</button>
       </div>
     </footer>
   </div>
