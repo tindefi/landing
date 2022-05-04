@@ -23,7 +23,8 @@
             height: 15px;
             position: absolute;
             background: $success-color;
-            left: 0%;
+            // left: 0%;
+            left: 50.3%;
             bottom: -7px;
             border-radius: 999px;
             z-index: 1;
@@ -98,7 +99,8 @@
         padding: 10px 25px;
         margin-top: 20px;
         transform: translateX(-50%);
-        left: attr(value);
+        // left: attr(value);
+        left: 50%;
 
         .tin-range__label{
             font-weight: 500;

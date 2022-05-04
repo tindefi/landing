@@ -97,6 +97,10 @@
     return loadings.value.code
   })
 
+  const referrerTax = computed(() => {
+    return referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
+  })
+
   const setAmountPercent = (percent) => {
     const web3 = new Web3(provider)
     const newval = String(web3.utils.fromWei(balances.value.busd) * percent / 100)
@@ -181,17 +185,17 @@
   })
 
   const ROIAmount = computed(() => {
-    const AMOUNT = amount.value * TIN_PUBLIC_PRICE / CURRENT_ROUND_TIN_PRICE.value
+    const AMOUNT = amount.value * TIN_PUBLIC_PRICE / CURRENT_ROUND_TIN_PRICE.value * referrerTax.value
     return formatMoney(AMOUNT, 'USD', false, '$ 0.00')
   })
 
   const ROIPercent = computed(() => {
-    return formatNumber(TIN_PUBLIC_PRICE / CURRENT_ROUND_TIN_PRICE.value * 100)
+    return formatNumber(TIN_PUBLIC_PRICE / CURRENT_ROUND_TIN_PRICE.value * 100 * referrerTax.value)
   })
 
   const TINAmount = computed(() => {
     if(!amount.value || !CURRENT_ROUND_TIN_PRICE.value) return 0
-    return formatNumber(amount.value / CURRENT_ROUND_TIN_PRICE.value)
+    return formatNumber(amount.value / CURRENT_ROUND_TIN_PRICE.value * referrerTax.value)
   })
 
   const TINAmountWei = computed(() => {

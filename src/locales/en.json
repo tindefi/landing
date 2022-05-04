@@ -502,7 +502,8 @@
       "title": "Round {round}",
       "listing-price": "Public sale",
       "investor": "Investor | Investors",
-      "vesting": "Vesting"
+      "vesting": "Vesting",
+      "seed": "Seed phase"
     },
     "roadmap-downloads": {
       "launch": "Application launch"

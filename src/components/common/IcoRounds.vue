@@ -32,7 +32,8 @@ x<template>
         <div class="tin-range">
           <div class="tin-range__slider">
             <div class="tin-range__label-container">
-              <h4 class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{icoInfo.round.raised.busd}}</h4>
+              <!-- <h4 class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{icoInfo.round.raised.busd}}</h4> -->
+              <h4 class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{t('common.ico-rounds.seed')}}</h4>
             </div>
             <div class="tin-range__input">
               <div class="tin-range__input__marker"></div>
@@ -223,7 +224,7 @@ x<template>
       ICO.value.round.raised.busd = res['busdRaised']
       ICO.value.round.raised.tin = res['tokensBought']
       loadings.value.raised = false
-      setTimeout(() => showRangeValue(), 10)
+      // setTimeout(() => showRangeValue(), 10)
     })
   }
 
