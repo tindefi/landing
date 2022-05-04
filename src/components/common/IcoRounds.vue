@@ -246,4 +246,8 @@ x<template>
   watch(provider, async (newVal, oldVal) => {
     if(newVal && !oldVal) reloadPhaseInfo()
   })
+
+  onMounted(() => {
+    if(provider) reloadPhaseInfo()
+  })
 </script>
