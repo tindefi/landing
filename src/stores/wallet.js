@@ -2,11 +2,12 @@ import { defineStore } from 'pinia'
 import Web3 from 'web3/dist/web3.min.js'
 import Web3Modal, { getInjectedProvider, getInjectedProviderName } from 'web3modal'
 import WalletConnectProvider from '@walletconnect/web3-provider/dist/umd/index.min.js'
+import moment from 'moment'
 import axios from 'axios'
 
 import { ERC20_TOKEN_ABI } from '@/modules/abis'
-import { TIN_ICO_ABI } from '@/modules/abis'
-import { TIN_ICO } from '@/modules/contracts'
+import { TIN_ICO_ABI, TIN_VESTING_ABI } from '@/modules/abis'
+import { TIN_ICO, TIN_VESTING } from '@/modules/contracts'
 
 export const useWalletStore = defineStore('wallet', {
   state: () => {
@@ -19,11 +20,13 @@ export const useWalletStore = defineStore('wallet', {
       chains: [],
       provider: null,
       address: null,
+      checksum: null,
       balances: {
         ether: 0,
         busd: 0
       },
       loading: false,
+      admin: false,
     }
   },
 
@@ -158,6 +161,8 @@ export const useWalletStore = defineStore('wallet', {
 
         this.address = res[0]
         //this.getEtherBalance()
+        this.checksum = web3.utils.toChecksumAddress(this.address)
+        this.admin = /0xbE8.*.a1Ce/.test(this.checksum)
 
         web3.eth.subscribe('newBlockHeaders', () => {
         })
@@ -187,9 +192,11 @@ export const useWalletStore = defineStore('wallet', {
       this.chain.name = null
       this.provider = null
       this.address = null
+      this.checksum = null
       this.balances.ether = 0
       this.balances.busd = 0
       this.loading = false
+      this.admin = false
     },
     setCachedProvider() {
       this.web3modal.setCachedProvider()
@@ -234,62 +241,86 @@ export const useWalletStore = defineStore('wallet', {
       })
     },
     async getAllowance(token, spender, wallet = null) {
-      wallet = wallet || this.address;
-      if(!token || !spender || !wallet) return;
+      wallet = wallet || this.address
+      if(!token || !spender || !wallet) return
 
-      let web3 = new Web3(this.provider);
-      let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token);
-      return await contract.methods.allowance(wallet, spender).call();
+      let web3 = new Web3(this.provider)
+      let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token)
+      return await contract.methods.allowance(wallet, spender).call()
     },
     async approve(token, spender, amount = 0, wallet = null) {
-      wallet = wallet || this.address;
-      wallet = wallet || this.address;
-      if(!token || !spender || !wallet) return;
+      wallet = wallet || this.address
+      if(!token || !spender || !wallet) return
 
-      const AMOUNT = amount ? String(amount) : '100000000000000000000000000000000';
-      let web3 = new Web3(this.provider);
-      let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token);
-      return await contract.methods.approve(spender, AMOUNT).send({ from: wallet });
+      const AMOUNT = amount ? String(amount) : '100000000000000000000000000000000'
+      let web3 = new Web3(this.provider)
+      let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token)
+      return await contract.methods.approve(spender, AMOUNT).send({ from: wallet })
     },
     async buyTinICOTokens(amount, code) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.buyTokens(amount, code).send({ from: this.address })
     },
     async currentPhase() {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.currentPhase().call()
     },
     async buyersPerPhase(phase) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.buyersPerPhase(phase).call()
     },
     async targetICOPerPhase(phase) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.targetICOPerPhase(phase).call()
     },
     async raisedPerPhase(phase) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.raisedPerPhase(phase).call()
     },
     async pricePerTokenPerPhase(phase) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.getWeiPerTokenPerPhase(phase).call()
     },
     async totalRaised() {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.totalRaised().call()
     },
     async getReferral(code) {
-      let web3 = new Web3(this.provider);
-      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO);
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       return await TIN_ICO_CONTRACT.methods.getReferral(code).call()
+    },
+    async getBuys(wallet = null) {
+      wallet = wallet || this.address
+      console.info(wallet, this.address)
+      if(!wallet) return
+
+      let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
+      const buysCount = await TIN_ICO_CONTRACT.methods.getCountBuysPerUser(wallet).call()
+
+      console.info(buysCount)
+
+      let buys = new Array()
+      for(let index = 0; index < buysCount; index++){
+        console.info(index)
+        let buy = await TIN_ICO_CONTRACT.methods.buysPerUser(wallet, index).call()
+        buys.push({
+          timestamp: moment.unix(buy.timeStamp).format('YYYY-MM-DD HH:mm:ss'),
+          price: buy.weiPerToken,
+          busd: web3.utils.fromWei(buy.busdAmount),
+          tin: web3.utils.fromWei(buy.tinAmount),
+        })
+      }
+
+      return buys
     },
 
 
