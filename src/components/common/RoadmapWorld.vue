@@ -26,7 +26,7 @@
     </nav>
 
     <section class="tin-map">
-      <img src="/icons/lang/es.svg" width="23" class="tin-map__country tin-map__country__es" />
+      <img v-for="country in countries" :key="country" :src="`/icons/countries/${country}.svg`" width="23" class="tin-map__country" :class="[`tin-map__country__${country}`]" />
       <WorldMap class="tin-map__map" />
     </section>
   </section>
@@ -82,6 +82,11 @@
     filters.value.year = year
     filters.value.quarter = quarter
   }
+
+  const countries = computed(() => {
+    if(!map || !filters.value.year || !filters.value.quarter) return []
+    return map.find(o => o.year === filters.value.year).quarters[filters.value.quarter]
+  })
 
   const setQuarterFilter = (quarter) => {
     filters.value.quarter = quarter
