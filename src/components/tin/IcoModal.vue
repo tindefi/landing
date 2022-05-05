@@ -1,5 +1,5 @@
 <template>
-  <div class="tin-ico-modal">
+  <div class="tin-ico-modal" :class="{'is-loading':somethingLoading}">
     <header>
       <h2 class="header-title">{{t('pages.ico.modal.participate')}}</h2>
       <h4 class="header-text">{{t('pages.ico.modal.busd')}}</h4>
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="return-amount-container">
-        <div class="return-amount-text">ROI esperado al precio de listado</div>
+        <div class="return-amount-text">{{t('pages.ico.modal.expectedroi')}}</div>
         <div class="return-amount-amount">
           <input v-model="ROIAmount" readonly>
         </div>
@@ -32,8 +32,9 @@
       </div>
       <div class="return-amount-container">
         <div class="return-amount-text">{{t('pages.ico.modal.buycode')}}</div>
-        <div class="return-amount-amount">
+        <div class="return-amount-amount tin-input-container" :class="{'is-loading':loadings.code}">
           <input v-model="referralCode" class="code-input" placeholder="_ _ _ _ _ _ _ _ _" maxlength="9">
+          <span class="tin-input-spinner"></span>
         </div>
         <div v-if="referrer?.refType === CODE_TYPE_ERROR" class="return-amount-utils">
           <span class="return-amount-utils-tin has-text-danger">{{t('pages.ico.modal.invalidcode')}}</span>
@@ -42,8 +43,8 @@
     </div>
     <footer>
       <div class="button-container">
-        <button class="tin-button is-success" :class="{'is-loading':submitLoading || loading, 'is-disabled':enoughAllowance}" @click.prevent="approve">{{t('wallet.approve')}}</button>
-        <button class="tin-button is-success" :class="{'is-loading':submitLoading || loading, 'is-disabled':!Number(amount) || !enoughAllowance}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+        <button class="tin-button is-success" :class="{'is-loading':loadings.approve, 'is-disabled':enoughAllowance}" @click.prevent="approve">{{t('wallet.approve')}}</button>
+        <button class="tin-button is-success" :class="{'is-loading':loadings.invest, 'is-disabled':!Number(amount) || !enoughAllowance}" @click.prevent="invest()">{{t('forms.invest')}}</button>
       </div>
     </footer>
   </div>
@@ -90,15 +91,19 @@
   })
 
   const loadings = ref({
-    code: false
+    code: false,
+    approve: false,
+    invest: false,
   })
 
-  const submitLoading = computed(() => {
-    return loadings.value.code
+  const somethingLoading = computed(() => {
+    if(loadings.value.approve) return true
+    if(loadings.value.invest) return true
+    // return Object.values(loadings.value).some(o => o)
   })
 
   const referrerTax = computed(() => {
-    return referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
+    return referrer && referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
   })
 
   const setAmountPercent = (percent) => {
@@ -114,7 +119,6 @@
       balances.value.busd = res
       textBalances.value.busd = formatNumber(web3.utils.fromWei(res))
     })
-    console.info('UNO')
   }
 
   const getAllowance = async () => {
@@ -127,40 +131,26 @@
   }
 
   const approve = async () => {
-    loading.value = true
+    loadings.value.approve = true
     await walletStore.approve(BUSD, TIN_ICO, amountWei.value).then(res => {
       getAllowance()
     }).catch(console.info).finally(() => {
-      loading.value = false
+      loadings.value.approve = false
     })
   }
 
   const invest = async () => {
     if(!Number(amount.value)) return
 
-    if(props.referralCodeRequired){
-      loadings.value.code = true
+    validateReferralCode()
+    if(!referralCodeValiation.value) return
 
-      await getReferral(referralCode.value).then((res) => {
-        referrer.value = {
-          refType: res.refType,
-          reciever: res.reciever,
-          totalPerc: res.totalPerc,
-          percTokens: res.percTokens,
-          percBUSD: res.percBUSD,
-          active: res.active,
-        }
-      }).catch(console.info).finally(() => {
-        loadings.value.code = false
-      })
-
-      if(!referrer.value.active || referrer.value.refType == CODE_TYPE_ERROR){
-        alert(t('pages.ico.modal.invalidcodealert'))
-        return
-      }
+    if(amountWei.value > balances.value.busd){
+      alert('You have not enough BUSD in your wallet')
+      return
     }
 
-    loading.value = true
+    loadings.value.invest = true
     await walletStore.buyTinICOTokens(TINAmountWei.value, referralCode.value).then(res => {
       getBUSDBalance()
       amount.value = ''
@@ -169,8 +159,27 @@
       alert(t('pages.ico.modal.success'))
       location.reload()
     }).catch(console.info).finally(() => {
-      loading.value = false
+      loadings.value.invest = false
     })
+  }
+
+  const referralCodeValiation = computed(() => {
+    const valid = referrer?.value?.active && referrer?.value?.refType != CODE_TYPE_ERROR
+    return props.referralCodeRequired ? referrer?.value && valid : valid
+  })
+
+  const validateReferralCode = () => {
+    if(props.referralCodeRequired){
+      if(!referrer?.value){
+        alert(t('pages.ico.modal.coderequired'))
+        return
+      }
+
+      if(!referrer?.value?.active || referrer?.value?.refType == CODE_TYPE_ERROR){
+        alert(t('pages.ico.modal.invalidcodealert'))
+        return
+      }
+    }
   }
 
   const enoughAllowance = computed(() => {
@@ -217,7 +226,19 @@
   }
 
   const getReferral = async (code) => {
-    return await walletStore.getReferral(code)
+    loadings.value.code = true
+    await walletStore.getReferral(code).then((res) => {
+      referrer.value = {
+        refType: res.refType,
+        reciever: res.reciever,
+        totalPerc: res.totalPerc,
+        percTokens: res.percTokens,
+        percBUSD: res.percBUSD,
+        active: res.active,
+      }
+    }).catch(console.info).finally(() => {
+      loadings.value.code = false
+    })
   }
 
   watch(address, (val) => {
@@ -231,6 +252,17 @@
       amount.value = oldValue
       return
     }
+  })
+
+  const timeout = ref(null)
+  watch(referralCode, (newVal, oldVal) => {
+    clearTimeout(timeout.value);
+
+    if(newVal && newVal.length < 3) referrer.value = null
+
+    timeout.value = setTimeout(function () {
+      if(newVal && newVal.length >= 3) getReferral(newVal)
+    }, 500);
   })
 
   onMounted(() => {
