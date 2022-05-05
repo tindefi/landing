@@ -126,3 +126,24 @@ strong{
     }
   }
 }
+
+.tin-spinner{
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+
+  &:after{
+    animation: spin 500ms infinite linear;
+    border: 2px solid $text-color-light;
+    border-radius: 290486px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1em;
+    width: 1em;
+    left: calc(50% - (1em / 2));
+    top: calc(50% - (1em / 2));
+    position: absolute !important;
+  }
+}

@@ -32,8 +32,8 @@ x<template>
         <div class="tin-range">
           <div class="tin-range__slider">
             <div class="tin-range__label-container">
-              <!-- <h4 class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{icoInfo.round.raised.busd}}</h4> -->
-              <h4 class="tin-range__label">{{t('common.ico-rounds.seed')}}</h4>
+              <h4 v-if="walletStore.admin" class="tin-range__label" :class="{'is-blurred':loadings.raised}">{{icoInfo.round.raised.busd}}</h4>
+              <h4 v-else class="tin-range__label">{{t('common.ico-rounds.seed')}}</h4>
             </div>
             <div class="tin-range__input">
               <div class="tin-range__input__marker"></div>
@@ -113,6 +113,38 @@ x<template>
         </footer>
       </article>
     </section>
+
+    <section class="tin-ico__history">
+      <header class="tin-ico__history__header">
+        <p class="fz-4 fw-700 has-text-white">Order history</p>
+        <div class="tin-ico__history__header__vesting">
+          <div class="tin-ico__footer__item__icon">
+            <TinIcon name="calendar" />
+          </div>
+          <div class="tin-ico__footer__item__content">
+            <span class="tin-label">{{t('common.ico-rounds.vesting')}}</span>
+          </div>
+          <TinIcon name="info" size="14px" style="margin-left:3px" />
+        </div>
+      </header>
+      <div class="tin-ico__history__items">
+        <header class="tin-ico__history__item is-header">
+          <span>Fecha</span>
+          <span>Precio</span>
+          <span>Cantidad (BUSD)</span>
+          <span>Total (TIN)</span>
+        </header>
+        <template v-if="!loadings.buys">
+          <div v-for="buy in BUYS" :key="buy.timestamp" class="tin-ico__history__item">
+            <span>{{buy.timestamp}}</span>
+            <span>{{buy.price}}</span>
+            <span class="has-text-light fw-400">{{formatMoney(buy.busd)}}</span>
+            <span class="has-text-light fw-400">{{formatNumber(buy.tin)}}</span>
+          </div>
+        </template>
+      </div>
+      <div v-if="loadings.buys" class="tin-spinner"></div>
+    </section>
   </section>
 </template>
 
@@ -130,7 +162,7 @@ x<template>
 
   const { t } = useI18n()
 
-  const { loading, provider } = storeToRefs(useWalletStore())
+  const { loading, provider, address } = storeToRefs(useWalletStore())
 
   const walletStore = useWalletStore()
 
@@ -142,7 +174,10 @@ x<template>
     target: true,
     price: true,
     buyers: true,
+    buys: true,
   })
+
+  const BUYS = ref([])
 
   const ICO = ref({
     round: {
@@ -196,6 +231,14 @@ x<template>
     getTotalRaised()
   }
 
+  const getBuys = async () => {
+    loadings.value.buys = true
+    await walletStore.getBuys().then(res => {
+      BUYS.value = res
+    })
+    loadings.value.buys = false
+  }
+
   const getTotalRaised = async () => {
     await walletStore.totalRaised().then(res => {
       ICO.value.totalRaised = res
@@ -245,6 +288,10 @@ x<template>
 
   watch(provider, async (newVal, oldVal) => {
     if(newVal && !oldVal) reloadPhaseInfo()
+  })
+
+  watch(address, async (newVal, oldVal) => {
+    if(newVal && !oldVal) getBuys()
   })
 
   onMounted(() => {
