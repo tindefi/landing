@@ -124,7 +124,7 @@
       }
 
       .return-amount-amount {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.2em;
         margin-top: 0.4em;
         color: white;
         font-weight: 500;
@@ -165,6 +165,18 @@
         padding: 0.75em;
         width: 100%;
       }
+    }
+  }
+
+  &.is-loading{
+    header{
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .main-content{
+      opacity: 0.3;
+      pointer-events: none;
     }
   }
 }

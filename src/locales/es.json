@@ -201,7 +201,9 @@
         "buycode": "Código de compra",
         "invalidcode": "Código no válido",
         "invalidcodealert": "El código proporcionado no es válido",
-        "success": "Tu inversión se ha procesado correctamente."
+        "success": "Tu inversión se ha procesado correctamente.",
+        "coderequired": "El código de compra es requerido para continuar",
+        "expectedroi": "ROI esperado al precio de listado"
       }
     },
     "about": {

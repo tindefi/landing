@@ -98,3 +98,31 @@ strong{
 .is-blurred{
   filter: blur(5px)
 }
+
+.tin-input-container{
+  &.is-loading{
+    position: relative;
+    pointer-events: none;
+    opacity: 0.3;
+
+    input{
+      &::placeholder{
+        color: transparent !important;
+      }
+    }
+
+    .tin-input-spinner{
+      animation: spin 500ms infinite linear;
+      border: 2px solid #dbdbdb;
+      border-radius: 290486px;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      display: block;
+      height: 0.7em;
+      width: 0.7em;
+      left: calc(50% - (0.7em / 2));
+      top: calc(50% - (0.7em / 2));
+      position: absolute !important;
+    }
+  }
+}

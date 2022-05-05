@@ -201,7 +201,9 @@
         "buycode": "Purchase code",
         "invalidcode": "Invalid code",
         "invalidcodealert": "The provided code is invalid",
-        "success": "Your purchase has been successfully processed."
+        "success": "Your purchase has been successfully processed.",
+        "coderequired": "Buy code is required to continue",
+        "expectedroi": "Expected ROI at launch price"
       }
     },
     "about": {
