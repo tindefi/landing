@@ -116,7 +116,7 @@ x<template>
 
     <section class="tin-ico__history">
       <header class="tin-ico__history__header">
-        <p class="fz-4 fw-700 has-text-white">{{t('pages.ico-round.history.title')}}</p>
+        <p class="fz-4 fw-700 has-text-white">{{t('common.ico-rounds.history.title')}}</p>
         <div class="tin-ico__history__header__vesting">
           <div class="tin-ico__footer__item__icon">
             <TinIcon name="calendar" />
