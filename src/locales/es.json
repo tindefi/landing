@@ -21,7 +21,11 @@
     "invest": "Invertir",
     "apply": "Aplicar",
     "skip": "Pasar",
-    "max": "max"
+    "max": "max",
+    "date": "Fecha",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "total": "Total"
   },
   "wallet": {
     "connect": "Conectar billetera",
@@ -507,7 +511,10 @@
       "listing-price": "Venta pública",
       "investor": "Inversor | Inversores",
       "vesting": "Vesting",
-      "seed": "Fase semilla"
+      "seed": "Fase semilla",
+      "history": {
+        "title": "Historial de compras"
+      }
     },
     "roadmap-downloads": {
       "launch": "Salida de la aplicación"

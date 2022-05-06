@@ -21,7 +21,11 @@
     "invest": "Invest",
     "apply": "Apply",
     "skip": "Skip",
-    "max": "max"
+    "max": "max",
+    "date": "Date",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total"
   },
   "wallet": {
     "connect": "Connect Wallet",
@@ -505,7 +509,10 @@
       "listing-price": "Public sale",
       "investor": "Investor | Investors",
       "vesting": "Vesting",
-      "seed": "Seed phase"
+      "seed": "Seed phase",
+      "history": {
+        "title": "Order history"
+      }
     },
     "roadmap-downloads": {
       "launch": "Application launch"
