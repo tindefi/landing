@@ -1,4 +1,4 @@
-x<template>
+<template>
   <section class="tin-ico">
     <widget-container-modal />
     <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
@@ -18,12 +18,12 @@ x<template>
             </div>
           </div>
           <div class="tin-ico__item__header__right">
-            <div class="last-buy">
+            <div class="last-buy" :class="{'is-blurred':loadings.lastbuy}">
               <div class="last-buy__user">
-                <img src="https://avatars.dicebear.com/api/identicon/davidosuna.svg?colorLevel=100" alt="Avatar" class="last-buy__avatar" loading="lazy" />
-                <span class="last-buy__address">0x846...67gL</span>
+                <img :src="`https://avatars.dicebear.com/api/identicon/${LAST_BUY.address}.svg?colorLevel=100`" alt="Avatar" class="last-buy__avatar" loading="lazy" />
+                <span class="last-buy__address">{{shortAddress(LAST_BUY.address)}}</span>
               </div>
-              <div class="last-buy__amount">$ 10,000.00 BUSD</div>
+              <div class="last-buy__amount">{{formatMoney(Number(LAST_BUY.tokens) * Number(ICO.round.pricePerToken))}} BUSD</div>
               <div class="last-buy__time">10 min ago</div>
             </div>
           </div>
@@ -126,31 +126,38 @@ x<template>
           </div>
           <TinIcon name="info" size="14px" style="margin-left:3px" />
         </div>
+        {{loadings.buys}}
       </header>
-      <div class="tin-ico__history__items">
-        <header class="tin-ico__history__item is-header">
-          <span>{{t('forms.date')}}</span>
-          <span>{{t('forms.price')}}</span>
-          <span class="text-right">{{t('forms.quantity')}} (BUSD)</span>
-          <span class="text-right">{{t('forms.total')}} (TIN)</span>
-        </header>
-        <template v-if="!loadings.buys">
-          <div v-for="buy in BUYS" :key="buy.timestamp" class="tin-ico__history__item">
-            <span>{{buy.timestamp}}</span>
-            <span>{{formatMoney(buy.price)}}</span>
-            <span class="has-text-light fw-400 text-right">{{formatMoney(buy.busd)}}</span>
-            <span class="has-text-light fw-400 text-right">{{formatNumber(buy.tin)}}</span>
-          </div>
-        </template>
-      </div>
       <div v-if="loadings.buys" class="tin-spinner"></div>
+      <template v-else>
+        <div v-if="BUYS?.length" class="tin-ico__history__items">
+          <header class="tin-ico__history__item is-header">
+            <span>{{t('forms.date')}}</span>
+            <span>{{t('forms.price')}}</span>
+            <span class="text-right">{{t('forms.quantity')}} (BUSD)</span>
+            <span class="text-right">{{t('forms.total')}} (TIN)</span>
+          </header>
+          <template>
+            <div v-for="buy in BUYS" :key="buy.timestamp" class="tin-ico__history__item">
+              <span>{{buy.timestamp}}</span>
+              <span>{{formatMoney(buy.price)}}</span>
+              <span class="has-text-light fw-400 text-right">{{formatMoney(buy.busd)}}</span>
+              <span class="has-text-light fw-400 text-right">{{formatNumber(buy.tin)}}</span>
+            </div>
+          </template>
+        </div>
+        <div v-else class="tin-ico__history__invest">
+          <button v-if="walletStore.address" class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+          <button v-else class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="walletStore.connect()">{{t('wallet.connect')}}</button>
+        </div>
+      </template>
     </section>
   </section>
 </template>
 
 <script setup>
   import { ref, computed, watch, onMounted } from 'vue'
-  import { formatMoney, formatNumber } from '@/modules/utils'
+  import { formatMoney, formatNumber, shortAddress } from '@/modules/utils'
   import { useWalletStore } from '@/stores/wallet'
   import { storeToRefs } from 'pinia'
   import Web3 from 'web3/dist/web3.min.js'
@@ -159,6 +166,9 @@ x<template>
 
   import TinIcon from '@/components/tin/TinIcon.vue'
   import IcoModal from '@/components/tin/IcoModal.vue'
+
+  import { TIN_ICO_ABI } from '@/modules/abis'
+  import { TIN_ICO } from '@/modules/contracts'
 
   const { t } = useI18n()
 
@@ -175,9 +185,14 @@ x<template>
     price: true,
     buyers: true,
     buys: true,
+    lastbuy: true,
   })
 
   const BUYS = ref([])
+  const LAST_BUY = ref({
+    address: '0x00000000000000000000000000000000',
+    tokens: 10,
+  })
 
   const ICO = ref({
     round: {
@@ -229,6 +244,7 @@ x<template>
   const reloadPhaseInfo = () => {
     getCurrentPhase()
     getTotalRaised()
+    getBuys()
   }
 
   const getBuys = async () => {
@@ -286,15 +302,45 @@ x<template>
     })
   }
 
+  const listenTokensBought = async () => {
+    const web3 = new Web3(window.ethereum)
+    const block = await web3.eth.getBlockNumber()
+    const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
+
+    loadings.value.lastbuy = true
+
+    TIN_ICO_CONTRACT.events.tokensBought({
+      fromBlock: block - 1000,
+      toBlock: 'latest'
+    }, function(error, event){
+      // if(error) console.info('error', error)
+      // else console.info('event', event)
+    })
+    .on('data', function(event){
+      loadings.value.lastbuy = false
+      LAST_BUY.value.address = event.returnValues.buyer
+      LAST_BUY.value.tokens = web3.utils.fromWei(String(event.returnValues.tokenAmount))
+    })
+    .on('changed', function(event){
+      loadings.value.lastbuy = false
+      LAST_BUY.value.address = event.returnValues.buyer
+      LAST_BUY.value.tokens = web3.utils.fromWei(String(event.returnValues.tokenAmount))
+    })
+    .on('error', function(error){
+      console.info('error2', error)
+    })
+  }
+
   watch(provider, async (newVal, oldVal) => {
     if(newVal && !oldVal) reloadPhaseInfo()
   })
 
   watch(address, async (newVal, oldVal) => {
-    if(newVal && !oldVal) getBuys()
+    if(newVal !== oldVal) getBuys()
   })
 
   onMounted(() => {
     if(provider) reloadPhaseInfo()
+    listenTokensBought()
   })
 </script>
