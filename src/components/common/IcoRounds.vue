@@ -116,7 +116,7 @@ x<template>
 
     <section class="tin-ico__history">
       <header class="tin-ico__history__header">
-        <p class="fz-4 fw-700 has-text-white">Order history</p>
+        <p class="fz-4 fw-700 has-text-white">{{t('pages.ico-round.history.title')}}</p>
         <div class="tin-ico__history__header__vesting">
           <div class="tin-ico__footer__item__icon">
             <TinIcon name="calendar" />
@@ -129,17 +129,17 @@ x<template>
       </header>
       <div class="tin-ico__history__items">
         <header class="tin-ico__history__item is-header">
-          <span>Fecha</span>
-          <span>Precio</span>
-          <span>Cantidad (BUSD)</span>
-          <span>Total (TIN)</span>
+          <span>{{t('forms.date')}}</span>
+          <span>{{t('forms.price')}}</span>
+          <span class="text-right">{{t('forms.quantity')}} (BUSD)</span>
+          <span class="text-right">{{t('forms.total')}} (TIN)</span>
         </header>
         <template v-if="!loadings.buys">
           <div v-for="buy in BUYS" :key="buy.timestamp" class="tin-ico__history__item">
             <span>{{buy.timestamp}}</span>
-            <span>{{buy.price}}</span>
-            <span class="has-text-light fw-400">{{formatMoney(buy.busd)}}</span>
-            <span class="has-text-light fw-400">{{formatNumber(buy.tin)}}</span>
+            <span>{{formatMoney(buy.price)}}</span>
+            <span class="has-text-light fw-400 text-right">{{formatMoney(buy.busd)}}</span>
+            <span class="has-text-light fw-400 text-right">{{formatNumber(buy.tin)}}</span>
           </div>
         </template>
       </div>
