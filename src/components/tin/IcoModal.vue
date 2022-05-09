@@ -103,7 +103,7 @@
   })
 
   const referrerTax = computed(() => {
-    return referrer && referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
+    return referrer && referrer?.value?.refType === CODE_TYPE_CAPITAL && referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
   })
 
   const setAmountPercent = (percent) => {
