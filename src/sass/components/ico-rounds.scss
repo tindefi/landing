@@ -46,7 +46,7 @@
     }
 
     .last-buy{
-      filter: blur(5px);
+      // filter: blur(5px);
       display: none;
       flex-direction: row;
       justify-content: center;
@@ -160,6 +160,7 @@
 
       &__vesting{
         display: none;
+        margin-left: 50px;
       }
     }
 
@@ -201,6 +202,11 @@
           }
         }
       }
+    }
+
+    &__invest{
+      display: flex;
+      justify-content: center;
     }
 
     .tin-spinner{

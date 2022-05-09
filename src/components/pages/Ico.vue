@@ -2,12 +2,11 @@
   <section class="tin-ico-component">
     <section class="phases-section container">
       <header class="phases-section__header">
-        <router-link class="tin-ico-back" to="/">
+        <!-- <router-link class="tin-ico-back" to="/">
           <button class="tin-button" v-html="`&larr; ${t('forms.back')}`"></button>
-        </router-link>
+        </router-link> -->
 
-        <h3 class="phases-section__title is-simple"><img src="/tindefi.svg" alt="Logo Tin Defi" loading="lazy" /><span class="separator">|</span>Presale</h3>
-        <!-- <p class="phases-section__text">Must have your Wallet chrome extension installed (activate all the voices in the extens.'s settings) and be sure to have logged in. Go incognito mode if you still don't find your wallet.</p> -->
+        <h3 class="phases-section__title is-simple"><img src="/tindefi.svg" alt="Logo Tin Defi" loading="lazy" /><span class="separator">|</span>{{t('pages.ico.presale')}}</h3>
       </header>
 
       <IcoRounds />

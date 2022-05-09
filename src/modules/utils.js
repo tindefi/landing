@@ -55,4 +55,9 @@ const formatNumber = (amount, removeZeros = false, emptyDefault = null) => {
   return money.slice(2)
 }
 
-export { isInViewport, formatMoney, formatNumber }
+const shortAddress = (address) => {
+  if(!address) return ''
+  return address.slice(0, 4)+'...'+address.slice(-4)
+}
+
+export { isInViewport, formatMoney, formatNumber, shortAddress }

@@ -6,8 +6,8 @@ import moment from 'moment'
 import axios from 'axios'
 
 import { ERC20_TOKEN_ABI } from '@/modules/abis'
-import { TIN_ICO_ABI, TIN_VESTING_ABI } from '@/modules/abis'
-import { TIN_ICO, TIN_VESTING } from '@/modules/contracts'
+import { TIN_ICO_ABI } from '@/modules/abis'
+import { TIN_ICO } from '@/modules/contracts'
 
 export const useWalletStore = defineStore('wallet', {
   state: () => {
@@ -60,10 +60,13 @@ export const useWalletStore = defineStore('wallet', {
       const providerOptions = {
           walletconnect: {
               package: WalletConnectProvider, // required
+              // options: {
+              //   rpc: { 56: 'https://bsc-dataseed1.binance.org/' },
+              //   network: "binance",
+              // }
               options: {
-                rpc: { 56: 'https://bsc-dataseed1.binance.org/' },
-                network: "binance",
-              }
+                infuraId: "9e75004732bc4843881c2c3a628f338a",
+              },
           },
       }
 
@@ -232,7 +235,6 @@ export const useWalletStore = defineStore('wallet', {
       const web3 = new Web3(this.provider)
       let contract = new web3.eth.Contract(ERC20_TOKEN_ABI, token)
       return await contract.methods.balanceOf(wallet).call().catch(alert)
-      console.info(wallet, token)
     },
     async getChains() {
       await axios.get('https://chainid.network/chains.json').then(response => {
@@ -299,18 +301,14 @@ export const useWalletStore = defineStore('wallet', {
     },
     async getBuys(wallet = null) {
       wallet = wallet || this.address
-      console.info(wallet, this.address)
       if(!wallet) return
 
       let web3 = new Web3(this.provider)
       const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       const buysCount = await TIN_ICO_CONTRACT.methods.getCountBuysPerUser(wallet).call()
 
-      console.info(buysCount)
-
       let buys = new Array()
       for(let index = 0; index < buysCount; index++){
-        console.info(index)
         let buy = await TIN_ICO_CONTRACT.methods.buysPerUser(wallet, index).call()
         buys.push({
           timestamp: moment.unix(buy.timeStamp).format('YYYY-MM-DD HH:mm:ss'),
