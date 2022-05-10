@@ -1,36 +1,38 @@
 <template>
   <div class="tin-ico-modal" :class="{'is-loading':somethingLoading}">
     <header>
-      <h2 class="header-title">{{t('pages.ico.modal.participate')}}</h2>
-      <h4 class="header-text">{{t('pages.ico.modal.busd')}}</h4>
+      <h2 class="header-title">{{STEP === 'code' ? t('pages.ico.modal.code.title') : t('pages.ico.modal.participate')}}</h2>
+      <h4 class="header-text">{{STEP === 'code' ? t('pages.ico.modal.code.text') : t('pages.ico.modal.busd')}}</h4>
     </header>
     <div class="main-content">
-      <div class="invest-amount-container">
-        <div class="invest-amount-text">{{t('pages.ico.modal.amount')}}</div>
-        <div class="invest-amount-amount">
-          <input v-model="amount" class="invest-amount-input" placeholder="1,000.00" type="text" inputmode="decimal" min="0" step="0.01" size="3" maxlength="19">
-          <span class="invest-amount-token"><img src="/images/busd.png" alt="bnb"> BUSD</span>
-        </div>
-        <div class="invest-amount-utils">
-          <span class="invest-amount-utils-text">{{t('wallet.balance')}}: {{ textBalances.busd }}</span>
-          <div class="invest-amount-utils-buttons">
-            <button @click.prevent="setAmountPercent(100)">{{t('forms.max').toUpperCase()}}</button>
-            <button @click.prevent="setAmountPercent(30)">30%</button>
-            <button @click.prevent="setAmountPercent(60)">60%</button>
+      <template v-if="STEP === 'invest'">
+        <div class="invest-amount-container">
+          <div class="invest-amount-text">{{t('pages.ico.modal.amount')}}</div>
+          <div class="invest-amount-amount">
+            <input v-model="amount" class="invest-amount-input" placeholder="1,000.00" type="text" inputmode="decimal" min="0" step="0.01" size="3" maxlength="19">
+            <span class="invest-amount-token"><img src="/images/busd.png" alt="bnb"> BUSD</span>
+          </div>
+          <div class="invest-amount-utils">
+            <span class="invest-amount-utils-text">{{t('wallet.balance')}}: {{ textBalances.busd }}</span>
+            <div class="invest-amount-utils-buttons">
+              <button @click.prevent="setAmountPercent(100)">{{t('forms.max').toUpperCase()}}</button>
+              <button @click.prevent="setAmountPercent(30)">30%</button>
+              <button @click.prevent="setAmountPercent(60)">60%</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="return-amount-container">
-        <div class="return-amount-text">{{t('pages.ico.modal.expectedroi')}}</div>
-        <div class="return-amount-amount">
-          <input v-model="ROIAmount" readonly>
+        <div class="return-amount-container">
+          <div class="return-amount-text">{{t('pages.ico.modal.expectedroi')}}</div>
+          <div class="return-amount-amount">
+            <input v-model="ROIAmount" readonly>
+          </div>
+          <div class="return-amount-utils">
+            <span class="return-amount-utils-tin">~ {{TINAmount}} TIN </span>
+            <span v-if="Number(amount)" class="return-amount-utils-roi">(+{{ROIPercent}}%)</span>
+          </div>
         </div>
-        <div class="return-amount-utils">
-          <span class="return-amount-utils-tin">~ {{TINAmount}} TIN </span>
-          <span v-if="Number(amount)" class="return-amount-utils-roi">(+{{ROIPercent}}%)</span>
-        </div>
-      </div>
-      <div class="return-amount-container">
+      </template>
+      <div v-if="STEP === 'code'" class="return-amount-container">
         <div class="return-amount-text">{{t('pages.ico.modal.buycode')}}</div>
         <div class="return-amount-amount tin-input-container" :class="{'is-loading':loadings.code}">
           <input v-model="referralCode" class="code-input" placeholder="_ _ _ _ _ _ _ _ _" maxlength="9">
@@ -40,11 +42,20 @@
           <span class="return-amount-utils-tin has-text-danger">{{t('pages.ico.modal.invalidcode')}}</span>
         </div>
       </div>
+      <div class="code-info">
+        <p>{{t('pages.ico.modal.code.dont')}}</p>
+        <a :href="typeformHref" target="_blank" class="has-text-success">{{t('pages.ico.modal.code.obtain')}}</a>
+      </div>
     </div>
     <footer>
-      <div class="button-container">
-        <button class="tin-button is-success" :class="{'is-loading':loadings.approve, 'is-disabled':enoughAllowance}" @click.prevent="approve">{{t('wallet.approve')}}</button>
-        <button class="tin-button is-success" :class="{'is-loading':loadings.invest, 'is-disabled':!Number(amount) || !enoughAllowance}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+      <div class="button-container" :style="{display: STEP === 'invest' ? 'grid' : 'block'}">
+        <template v-if="STEP === 'invest'">
+          <button class="tin-button is-success" :class="{'is-loading':loadings.approve, 'is-disabled':enoughAllowance}" @click.prevent="approve">{{t('wallet.approve')}}</button>
+          <button class="tin-button is-success" :class="{'is-loading':loadings.invest, 'is-disabled':!Number(amount) || !enoughAllowance}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+        </template>
+        <template v-if="STEP === 'code'">
+          <button class="tin-button is-success" :class="{'is-loading':loadings.code, 'is-disabled':loadings.code}" @click.prevent="getReferral()">{{t('forms.confirm')}}</button>
+        </template>
       </div>
     </footer>
   </div>
@@ -62,7 +73,7 @@
   const walletStore = useWalletStore()
   const { address, balances, loading, provider } = storeToRefs(useWalletStore())
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   const TIN_PUBLIC_PRICE = 50
   const CODE_TYPE_CAPITAL = "0xbdc126fb66a19d5738edc1551662bd8be1886b6ce38e9fb3ce730d459fcdac1e"
@@ -77,6 +88,8 @@
       default: true,
     },
   })
+
+  const STEP = ref('code')
 
   const referralCode = ref('')
   const referrer = ref(null)
@@ -104,6 +117,12 @@
 
   const referrerTax = computed(() => {
     return referrer && referrer?.value?.refType === CODE_TYPE_CAPITAL && referrer?.value?.totalPerc ? (100 - referrer?.value?.totalPerc) / 100 : 1
+  })
+
+  const typeformHref = computed(() => {
+    let href = 'https://8luft87vifu.typeform.com/to/F8BK99bN'
+    if(locale.value === 'es') href = 'https://8luft87vifu.typeform.com/to/o1GxCuft'
+    return href
   })
 
   const setAmountPercent = (percent) => {
@@ -145,8 +164,8 @@
     validateReferralCode()
     if(!referralCodeValiation.value) return
 
-    if(amountWei.value > balances.value.busd){
-      alert('You have not enough BUSD in your wallet')
+    if(amountWei.value / 10**18 > balances.value.busd / 10**18){
+      alert(t('pages.ico.modal.not_enough_balance'))
       return
     }
 
@@ -171,7 +190,7 @@
   const validateReferralCode = () => {
     if(props.referralCodeRequired){
       if(!referrer?.value){
-        alert(t('pages.ico.modal.coderequired'))
+        alert(t('pages.ico.modal.code.required'))
         return
       }
 
@@ -225,8 +244,10 @@
     })
   }
 
-  const getReferral = async (code) => {
+  const getReferral = async (code = null) => {
     loadings.value.code = true
+    code = code || referralCode.value
+
     await walletStore.getReferral(code).then((res) => {
       referrer.value = {
         refType: res.refType,
@@ -236,6 +257,7 @@
         percBUSD: res.percBUSD,
         active: res.active,
       }
+      if(res.active && STEP.value === 'code') STEP.value = 'invest'
     }).catch(console.info).finally(() => {
       loadings.value.code = false
     })
@@ -254,16 +276,16 @@
     }
   })
 
-  const timeout = ref(null)
-  watch(referralCode, (newVal, oldVal) => {
-    clearTimeout(timeout.value);
+  // const timeout = ref(null)
+  // watch(referralCode, (newVal, oldVal) => {
+  //   clearTimeout(timeout.value);
 
-    if(newVal && newVal.length < 3) referrer.value = null
+  //   if(newVal && newVal.length < 3) referrer.value = null
 
-    timeout.value = setTimeout(function () {
-      if(newVal && newVal.length >= 3) getReferral(newVal)
-    }, 500);
-  })
+  //   timeout.value = setTimeout(function () {
+  //     if(newVal && newVal.length >= 3) getReferral(newVal)
+  //   }, 500);
+  // })
 
   onMounted(() => {
     getBUSDBalance()

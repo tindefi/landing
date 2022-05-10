@@ -25,7 +25,9 @@
     "date": "Fecha",
     "price": "Precio",
     "quantity": "Cantidad",
-    "total": "Total"
+    "total": "Total",
+    "check": "Comprobar",
+    "confirm": "Confirmar"
   },
   "wallet": {
     "connect": "Conectar billetera",
@@ -38,7 +40,8 @@
     "resources": "Recursos",
     "about": "Sobre nosotros",
     "faq": "FAQ",
-    "join-ico": "Únete a la ICO"
+    "join-ico": "Únete a la ICO",
+    "social": "Social"
   },
   "pages": {
     "not-found": {
@@ -207,8 +210,15 @@
         "invalidcode": "Código no válido",
         "invalidcodealert": "El código proporcionado no es válido",
         "success": "Tu inversión se ha procesado correctamente.",
-        "coderequired": "El código de compra es requerido para continuar",
-        "expectedroi": "ROI esperado al precio de listado"
+        "expectedroi": "ROI esperado al precio de listado",
+        "not_enough_balance": "No tienes suficiente BUSD en tu billetera.",
+        "code": {
+          "title": "Ingresa el código",
+          "text": "El codigo es limitado para cada ronda, destinado a la entradas de inversores estratégicos.",
+          "dont": "¿No tienes código?",
+          "obtain": "Quiero obtener el código",
+          "required": "El código de compra es requerido para continuar"
+        }
       }
     },
     "about": {
@@ -515,7 +525,9 @@
       "seed": "Fase semilla",
       "history": {
         "title": "Historial de compras"
-      }
+      },
+      "next_countdown": "La próxima ronda comenzará en:",
+      "private_round": "Ronda privada"
     },
     "roadmap-downloads": {
       "launch": "Salida de la aplicación"

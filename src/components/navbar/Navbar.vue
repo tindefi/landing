@@ -27,6 +27,21 @@
       <router-link class="tin-navbar__item" @click="opened = false" to="/about">{{t('navbar.about')}}</router-link>
       <router-link class="tin-navbar__item" @click="opened = false" to="/faq">{{t('navbar.faq')}}</router-link>
 
+      <MenuItemDropdown :title="t('navbar.social')">
+        <a :href="`${filteredSocial.linkedin}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-left:30px">
+          <TinIcon class="tin-footer__rrss" name="rrss/linkedin" size="23px" />
+        </a>
+        <a :href="`${filteredSocial.instagram}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+          <TinIcon class="tin-footer__rrss" name="rrss/instagram" size="23px" />
+        </a>
+        <a :href="`${filteredSocial.twitter}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+          <TinIcon class="tin-footer__rrss" name="rrss/twitter" size="23px" />
+        </a>
+        <a :href="`${filteredSocial.telegram}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-right: 20px">
+          <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
+        </a>
+      </MenuItemDropdown>
+
       <template v-if="$route.name === 'ico'">
         <a v-if="walletStore.address" class="tin-navbar__item is-button tin-button wallet-connect-button is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
         <a v-else class="tin-navbar__item is-button tin-button wallet-connect-button" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
@@ -51,6 +66,7 @@
 <script setup>
   import MenuItemDropdown from '@/components/navbar/MenuItemDropdown.vue'
   import TinIcon from '@/components/tin/TinIcon.vue'
+  import { social } from '@/json/social'
 
   import { useWalletStore } from '@/stores/wallet'
   const walletStore = useWalletStore()
@@ -62,6 +78,9 @@
   const setLocale = (selected) => {
     locale.value = selected
   }
+  const filteredSocial = computed(() => {
+    return social[locale.value]
+  })
 
   watch(locale, async (newVal, oldVal) => {
     localStorage.setItem('locale', newVal)

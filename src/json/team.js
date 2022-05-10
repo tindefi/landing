@@ -76,17 +76,7 @@ const team = [
     position: "Motion Graphics Designer",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/armando-jimenez-"
-    }
-  },
-  {
-    avatar: "jose-romero",
-    name: "Jose Romero Diaz",
-    position: "Video Editor & 3D Motion Designer",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/joseromerodiaz",
-      twitter: "https://twitter.com/joseromeromedia"
+      linkedin: "https://www.linkedin.com/in/armando-jimenez-"
     }
   },
   {

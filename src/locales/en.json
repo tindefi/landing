@@ -25,7 +25,9 @@
     "date": "Date",
     "price": "Price",
     "quantity": "Quantity",
-    "total": "Total"
+    "total": "Total",
+    "check": "Check",
+    "confirm": "Confirm"
   },
   "wallet": {
     "connect": "Connect Wallet",
@@ -38,7 +40,8 @@
     "resources": "Resources",
     "about": "About us",
     "faq": "FAQ",
-    "join-ico": "Join ICO"
+    "join-ico": "Join ICO",
+    "social": "Social"
   },
   "pages": {
     "not-found": {
@@ -207,8 +210,15 @@
         "invalidcode": "Invalid code",
         "invalidcodealert": "The provided code is invalid",
         "success": "Your purchase has been successfully processed.",
-        "coderequired": "Buy code is required to continue",
-        "expectedroi": "Expected ROI at launch price"
+        "expectedroi": "Expected ROI at launch price",
+        "not_enough_balance": "You have not enough BUSD in your wallet.",
+        "code": {
+          "title": "Insert code",
+          "text": "The code is limited for each round, intended for the entry of strategic investors.",
+          "dont": "Don't have code?",
+          "obtain": "I want to get a code",
+          "required": "Buy code is required to continue"
+        }
       }
     },
     "about": {
@@ -513,7 +523,9 @@
       "seed": "Seed phase",
       "history": {
         "title": "Order history"
-      }
+      },
+      "next_countdown": "Next round will start in:",
+      "private_round": "Private round"
     },
     "roadmap-downloads": {
       "launch": "Application launch"

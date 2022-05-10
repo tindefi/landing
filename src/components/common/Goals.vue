@@ -118,16 +118,9 @@
 
   const { t } = useI18n()
 
-  const financing = ref(270000);
+  const financing = ref(1000000);
 
   const financingAchieved = computed(() => {
     return Number((financing.value * 100 / 100000000).toFixed(2));
   })
 </script>
-
-{
-  "es": {
-    "top": "30%",
-    "left": "63%",
-  },
-}
