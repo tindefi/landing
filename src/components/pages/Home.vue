@@ -5,8 +5,9 @@
         <h1 class="text-gradient-1" v-html="t('pages.home.hero.title')"></h1>
       </div>
       <div class="hero-section__buttons appear fade-down delay-100">
-        <a :href="`/downloads/business-plan-1-${locale}.pdf`" target="_blank" class="tin-button">{{t('pages.home.hero.buttons.business')}}</a>
-        <a :href="`/downloads/pitch-deck-1-${locale}.pdf`" target="_blank" class="tin-button">{{t('pages.home.hero.buttons.pitch')}}</a>
+        <!-- <a :href="`/downloads/business-plan-1-${locale}.pdf`" target="_blank" class="tin-button">{{t('pages.home.hero.buttons.business')}}</a>
+        <a :href="`/downloads/pitch-deck-1-${locale}.pdf`" target="_blank" class="tin-button">{{t('pages.home.hero.buttons.pitch')}}</a> -->
+        <router-link class="tin-button is-success big-shadow hero-section__join-button" to="/ico">{{t('navbar.join-ico')}}</router-link>
       </div>
       <!-- <a href="#video" v-smooth-scroll class="hero-section__scroll"> -->
       <div v-scroll-to="'.video-section'" class="hero-section__scroll">
