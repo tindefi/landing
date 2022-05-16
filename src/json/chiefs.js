@@ -41,10 +41,21 @@ const chiefs = [
   {
     avatar: "nicolas-vanni",
     name: "Nicolás Vanni",
-    position : "CCO",
+    position : "CCO - Spanish",
     social: {
       tindefi: "#",
       linkedin: "www.linkedin.com/in/nicolas-vanni",
+    }
+  },
+  {
+    avatar: "juan-gasca",
+    name: "Juan Gasca",
+    position: "CCO - English",
+    social: {
+      tindefi: "#",
+      linkedin: "https://www.linkedin.com/in/juan-gasca",
+      instagram: "https://www.instagram.com/juan_gasca2/",
+      telegram: "https://t.me/juanG_scandefi",
     }
   },
   {
