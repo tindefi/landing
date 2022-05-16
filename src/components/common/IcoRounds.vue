@@ -1,7 +1,22 @@
 <template>
   <section class="tin-ico">
     <widget-container-modal />
-    <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
+    <!-- <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside> -->
+
+    <nav class="tin-ico__social">
+      <a :href="`${filteredSocial.linkedin}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-left:30px">
+        <TinIcon class="tin-footer__rrss" name="rrss/linkedin" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.instagram}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+        <TinIcon class="tin-footer__rrss" name="rrss/instagram" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.twitter}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+        <TinIcon class="tin-footer__rrss" name="rrss/twitter" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.telegram}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-right: 20px">
+        <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
+      </a>
+    </nav>
 
     <section class="tin-ico__items">
       <article class="tin-ico__item">
@@ -161,6 +176,7 @@
   import { useWalletStore } from '@/stores/wallet'
   import { storeToRefs } from 'pinia'
   import Web3 from 'web3/dist/web3.min.js'
+  import { social } from '@/json/social'
 
   import { openModal } from "jenesius-vue-modal"
 
@@ -227,6 +243,10 @@
       },
       totalRaised: formatNumber(web3.utils.fromWei(String(ICO.value.totalRaised)))
     }
+  })
+
+  const filteredSocial = computed(() => {
+    return social[locale.value]
   })
 
   const showRangeValue = (value = null) => {

@@ -1,6 +1,13 @@
 .tin-ico{
   position: relative;
 
+  &__social{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 35px;
+  }
+
   &__coming-soon{
     display: none;
     position: absolute;
