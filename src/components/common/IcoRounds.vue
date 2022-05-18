@@ -33,10 +33,10 @@
             </div>
           </div>
           <div class="tin-ico__item__header__right">
-            <template v-if="active">
+            <!-- <template v-if="active">
               <p class="next-round-text">{{t('common.ico-rounds.next_countdown')}}</p>
-              <TinCountdown target="2022-05-18 18:00:00" size="large" wrap @finished="active = true" />
-            </template>
+              <TinCountdown target="2022-05-18 18:00:00" size="large" wrap @finished="active = false" />
+            </template> -->
             <!-- <div class="last-buy" :class="{'is-blurred':loadings.lastbuy}">
               <div class="last-buy__user">
                 <img :src="`https://avatars.dicebear.com/api/identicon/${LAST_BUY.address}.svg?colorLevel=100`" alt="Avatar" class="last-buy__avatar" loading="lazy" />
