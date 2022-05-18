@@ -59,6 +59,6 @@
   const { t, locale } = useI18n()
 
   const filteredSocial = computed(() => {
-    return social[locale.value]
+    return social[locale.value] ?? social['en']
   })
 </script>
