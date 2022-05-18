@@ -1,7 +1,22 @@
 <template>
   <section class="tin-ico">
     <widget-container-modal />
-    <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside>
+    <!-- <aside class="tin-ico__coming-soon fz-2 fw-600 text-gradient-0">{{t('forms.comingsoon')}}</aside> -->
+
+    <nav class="tin-ico__social">
+      <a :href="`${filteredSocial.linkedin}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-left:30px">
+        <TinIcon class="tin-footer__rrss" name="rrss/linkedin" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.instagram}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+        <TinIcon class="tin-footer__rrss" name="rrss/instagram" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.twitter}`" target="_blank" class="tin-navbar__item" @click="opened = false">
+        <TinIcon class="tin-footer__rrss" name="rrss/twitter" size="23px" />
+      </a>
+      <a :href="`${filteredSocial.telegram}`" target="_blank" class="tin-navbar__item" @click="opened = false" style="margin-right: 20px">
+        <TinIcon class="tin-footer__rrss" name="rrss/telegram" size="23px" />
+      </a>
+    </nav>
 
     <section class="tin-ico__items">
       <article class="tin-ico__item">
@@ -18,10 +33,10 @@
             </div>
           </div>
           <div class="tin-ico__item__header__right">
-            <template v-if="active">
+            <!-- <template v-if="active">
               <p class="next-round-text">{{t('common.ico-rounds.next_countdown')}}</p>
               <TinCountdown target="2022-05-18 18:00:00" size="large" wrap @finished="active = false" />
-            </template>
+            </template> -->
             <!-- <div class="last-buy" :class="{'is-blurred':loadings.lastbuy}">
               <div class="last-buy__user">
                 <img :src="`https://avatars.dicebear.com/api/identicon/${LAST_BUY.address}.svg?colorLevel=100`" alt="Avatar" class="last-buy__avatar" loading="lazy" />
@@ -163,6 +178,7 @@
   import { useWalletStore } from '@/stores/wallet'
   import { storeToRefs } from 'pinia'
   import Web3 from 'web3/dist/web3.min.js'
+  import { social } from '@/json/social'
 
   import { openModal } from "jenesius-vue-modal"
 
@@ -231,6 +247,10 @@
       },
       totalRaised: formatNumber(web3.utils.fromWei(String(ICO.value.totalRaised)))
     }
+  })
+
+  const filteredSocial = computed(() => {
+    return social[locale.value] || social['en']
   })
 
   const showRangeValue = (value = null) => {
