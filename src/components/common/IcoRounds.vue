@@ -250,7 +250,7 @@
   })
 
   const filteredSocial = computed(() => {
-    return social[locale.value]
+    return social[locale.value] || social['en']
   })
 
   const showRangeValue = (value = null) => {
