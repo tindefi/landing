@@ -6,8 +6,8 @@ import moment from 'moment'
 import axios from 'axios'
 
 import { ERC20_TOKEN_ABI } from '@/modules/abis'
-import { TIN_ICO_ABI } from '@/modules/abis'
-import { TIN_ICO } from '@/modules/contracts'
+import { TIN_ICO_ABI, TIN_ICO_ABI_OLD } from '@/modules/abis'
+import { TIN_ICO, TIN_ICO_OLD } from '@/modules/contracts'
 
 export const useWalletStore = defineStore('wallet', {
   state: () => {
@@ -287,6 +287,7 @@ export const useWalletStore = defineStore('wallet', {
     async pricePerTokenPerPhase(phase) {
       let web3 = new Web3(this.provider)
       const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
+      console.log('phase', phase)
       return await TIN_ICO_CONTRACT.methods.getWeiPerTokenPerPhase(phase).call()
     },
     async totalRaised() {
@@ -303,11 +304,25 @@ export const useWalletStore = defineStore('wallet', {
       wallet = wallet || this.address
       if(!wallet) return
 
+      let buys = new Array()
+
       let web3 = new Web3(this.provider)
+      const TIN_ICO_CONTRACT_OLD = new web3.eth.Contract(TIN_ICO_ABI_OLD, TIN_ICO_OLD)
+      const buysCountOld = await TIN_ICO_CONTRACT_OLD.methods.getCountBuysPerUser(wallet).call()
+
+      for(let index = 0; index < buysCountOld; index++){
+        let buy = await TIN_ICO_CONTRACT_OLD.methods.buysPerUser(wallet, index).call()
+        buys.push({
+          timestamp: moment.unix(buy.timeStamp).format('YYYY-MM-DD HH:mm:ss'),
+          price: buy.weiPerToken,
+          busd: web3.utils.fromWei(buy.busdAmount),
+          tin: web3.utils.fromWei(buy.tinAmount),
+        })
+      }
+
       const TIN_ICO_CONTRACT = new web3.eth.Contract(TIN_ICO_ABI, TIN_ICO)
       const buysCount = await TIN_ICO_CONTRACT.methods.getCountBuysPerUser(wallet).call()
 
-      let buys = new Array()
       for(let index = 0; index < buysCount; index++){
         let buy = await TIN_ICO_CONTRACT.methods.buysPerUser(wallet, index).call()
         buys.push({

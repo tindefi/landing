@@ -13,6 +13,8 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+
+    // https://github.com/liuweiGL/vite-plugin-mkcert
     mkcert(),
 
     // https://github.com/antfu/unplugin-auto-import
