@@ -1,5 +1,5 @@
 <template>
-  <section class="tin-countdown" :class="[`is-${props.size}`, {'has-dots':dots}]">
+  <section ref="tinCountdown" class="tin-countdown" :class="[`is-${props.size}`, {'has-dots':dots}]">
     <div class="tin-countdown__container">
       <div class="tin-countdown__item tin-countdown__days">
         <span class="tin-countdown__item__value" v-html="countdown.days"></span>
@@ -23,6 +23,8 @@
 
 <script setup>
   import { ref, onMounted } from 'vue'
+
+  const emit = defineEmits()
 
   const { t } = useI18n()
 
@@ -57,6 +59,8 @@
     seconds: 0,
   })
 
+  const tinCountdown = ref(null)
+
   const initInterval = () => {
     const interval = setInterval(function() {
       const now = new Date().getTime()
@@ -74,8 +78,9 @@
 
       //do something later when date is reached
       if (distance < 0){
-        document.getElementById("countdown").style.display = "none"
+        tinCountdown.value.style.display = "none"
         clearInterval(interval)
+        emit('finished', true)
       }
     }, 0)
   }

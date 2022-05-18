@@ -33,8 +33,10 @@
             </div>
           </div>
           <div class="tin-ico__item__header__right">
-            <p class="next-round-text">{{t('common.ico-rounds.next_countdown')}}</p>
-            <TinCountdown target="2022-05-18 18:00:00" size="large" wrap />
+            <template v-if="active">
+              <p class="next-round-text">{{t('common.ico-rounds.next_countdown')}}</p>
+              <TinCountdown target="2022-05-18 18:00:00" size="large" wrap @finished="active = true" />
+            </template>
             <!-- <div class="last-buy" :class="{'is-blurred':loadings.lastbuy}">
               <div class="last-buy__user">
                 <img :src="`https://avatars.dicebear.com/api/identicon/${LAST_BUY.address}.svg?colorLevel=100`" alt="Avatar" class="last-buy__avatar" loading="lazy" />
@@ -95,7 +97,7 @@
             </article> -->
           </div>
           <div class="tin-ico__footer__right">
-            <button v-if="walletStore.address" class="tin-button is-success big-shadow has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+            <button v-if="walletStore.address" class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading, 'big-shadow':active, 'is-disabled':!active}" @click.prevent="invest()">{{t('forms.invest')}}</button>
             <button v-else class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="walletStore.connect()">{{t('wallet.connect')}}</button>
           </div>
         </footer>
@@ -162,7 +164,7 @@
           </div>
         </div>
         <div v-else class="tin-ico__history__invest">
-          <button v-if="walletStore.address" class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="invest()">{{t('forms.invest')}}</button>
+          <button v-if="walletStore.address" class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading, 'is-disabled':!active}" @click.prevent="invest()">{{t('forms.invest')}}</button>
           <button v-else class="tin-button is-success has-text-darker tin-ico__button" :class="{'is-loading':loading}" @click.prevent="walletStore.connect()">{{t('wallet.connect')}}</button>
         </div>
       </template>
@@ -227,6 +229,8 @@
     totalRaised: 0,
   })
 
+  const active = ref(true)
+
   const icoInfo = computed(() => {
     const web3 = new Web3(provider)
     return {
@@ -260,6 +264,10 @@
   }
 
   const invest = () => {
+    if(!active.value){
+      alert('Current phase is ended')
+      return
+    }
     openModal(IcoModal, {referralCodeRequired: ICO.value.round.referralCodeRequired})
   }
 
@@ -388,7 +396,7 @@ const getUnitAndValueDate = (secondsElapsed) => {
 }
 
 const getTimeAgo = timestamp => {
-  const rtf = new Intl.RelativeTimeFormat(locale.value)
+  const rtf = new Intl.RelativeTimeFormat('es')
 
   const secondsElapsed = getSecondsDiff(timestamp)
   const {value, unit} = getUnitAndValueDate(secondsElapsed)

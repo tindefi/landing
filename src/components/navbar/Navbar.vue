@@ -58,6 +58,9 @@
         <div class="tin-navbar__dropdown_item tin-navbar__lang__item" :class="{'is-selected':locale === 'en'}" @click.prevent="setLocale('en')">
           <img src="/icons/lang/en.svg" width="23" /> <span class="lang-name">English</span>
         </div>
+        <div class="tin-navbar__dropdown_item tin-navbar__lang__item" :class="{'is-selected':locale === 'ch'}" @click.prevent="setLocale('ch')">
+          <img src="/icons/lang/ch.svg" width="23" /> <span class="lang-name">千野</span>
+        </div>
       </MenuItemDropdown>
     </div>
   </nav>
@@ -79,7 +82,7 @@
     locale.value = selected
   }
   const filteredSocial = computed(() => {
-    return social[locale.value]
+    return social[locale.value] ?? social['en']
   })
 
   watch(locale, async (newVal, oldVal) => {

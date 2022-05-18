@@ -1,16 +1,5 @@
 const team = [
   {
-    avatar: "juan-gasca",
-    name: "Juan Gasca",
-    position: "Head of Public Relations and Capital Investment",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/juan-gasca",
-      instagram: "https://www.instagram.com/juan_gasca2/",
-      telegram: "https://t.me/juanG_scandefi",
-    }
-  },
-  {
     avatar: "tello-hernandez",
     name: "Tello Hernandez",
     position: "Design Project Manager",

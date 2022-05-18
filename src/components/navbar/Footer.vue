@@ -23,15 +23,15 @@
       </div>
       <div class="tin-footer__right">
         <div class="tin-footer__column">
-          <a href="/downloads/terminos-y-condiciones-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.terms')}}</a>
+          <a :href="`/downloads/terminos-y-condiciones-tin-defi-${locale}.pdf`" target="_blank" class="tin-footer__link">{{t('footer.terms')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <a href="/downloads/politica-de-privacidad-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.privacy')}}</a>
+          <a :href="`/downloads/politica-de-privacidad-tin-defi-${locale}.pdf`" target="_blank" class="tin-footer__link">{{t('footer.privacy')}}</a>
         </div>
 
         <div class="tin-footer__column">
-          <a href="/downloads/politica-de-cookies-tin-defi.pdf" target="_blank" class="tin-footer__link">{{t('footer.cookies')}}</a>
+          <a :href="`/downloads/politica-de-cookies-tin-defi-${locale}.pdf`" target="_blank" class="tin-footer__link">{{t('footer.cookies')}}</a>
         </div>
 
         <div class="tin-footer__column">
@@ -59,6 +59,6 @@
   const { t, locale } = useI18n()
 
   const filteredSocial = computed(() => {
-    return social[locale.value]
+    return social[locale.value] ?? social['en']
   })
 </script>

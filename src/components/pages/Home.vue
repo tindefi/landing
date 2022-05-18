@@ -22,7 +22,15 @@
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-es.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
-        <video v-if="locale === 'en'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+        <video v-else-if="locale === 'en'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-en.mp4" />
+          <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+        </video>
+        <video v-else-if="locale === 'ch'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-ch.mp4" />
+          <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+        </video>
+        <video v-else class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-en.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
