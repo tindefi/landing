@@ -18,7 +18,12 @@ const routes = [
   {
     path: '/ico',
     name: 'ico',
-    component: Ico
+    component: Ico,
+  },
+  {
+    path: '/ico/:code',
+    name: 'ico.code',
+    component: Ico,
   },
   {
     path: '/faq',
