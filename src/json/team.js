@@ -65,7 +65,7 @@ const team = [
     position: "Motion Graphics Designer",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/armando-jimenez-"
+      linkedin: "https://www.linkedin.com/in/brayan-armando-guzman-juarez-896653230/"
     }
   },
   {
@@ -102,8 +102,7 @@ const team = [
     position: "Branding Designer & Illustrator",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/josé-villacrez-lopez",
-      twitter: "https://twitter.com/jose-villacrez"
+      linkedin: "https://www.linkedin.com/in/josé-villacrez-lopez"
     }
   },
   {
@@ -172,7 +171,7 @@ const team = [
     position: "Copywriter",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/Valentina-Rangel",
+      linkedin: "https://www.linkedin.com/in/Valentina-Rangel",
    }
   },
   {
@@ -191,7 +190,7 @@ const team = [
     position : "Business Advisor",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/lluis-camacho",
+      linkedin: "https://www.linkedin.com/in/lluis-camacho-mejias",
     }
   },
 
@@ -219,7 +218,7 @@ const team = [
     position : "Business Executive",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/Antonio-Perandones-Gasca",
+      linkedin: "http://www.linkedin.com/in/antonio-perandones-gasca",
     }
   },
   {
@@ -228,7 +227,7 @@ const team = [
     position: "Head of Investors",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/jaime-soto-oncina-",
+      linkedin: "https://www.linkedin.com/in/jaime-soto-oncina-",
     }
   },
   {
@@ -258,7 +257,7 @@ const team = [
     position: "Marketing assistant",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/brayan-armando-guzm",
+      linkedin: "https://www.linkedin.com/in/brayan-armando-guzm%C3%A1n-ju%C3%A1rez-896653230/",
       instagram: "https://www.instagram.com/b.armando_juarezs/"
     }
   },
@@ -278,7 +277,16 @@ const team = [
     position: "Business Executive",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/cayetano-re-palao"
+      linkedin: "https://www.linkedin.com/in/cayetano-re-palao"
+    }
+  },
+  {
+    avatar: "rose-rosales",
+    name: "Rose Rosales",
+    position: "Business Executive",
+    social: {
+      tindefi: "#",
+      linkedin: "https://www.linkedin.com/in/rose-rosales-5b422123a/"
     }
   },
 ]
