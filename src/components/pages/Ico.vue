@@ -82,10 +82,14 @@
   import Utils from '@/components/common/Utils.vue'
   import TinCountdown from '@/components/tin/Countdown.vue'
 
+  const route = useRoute()
+
   const { t } = useI18n()
 
   onMounted(() => {
     sketch(document.querySelector('.phases-section'), false)
     sketch(document.querySelector('.goals-section'))
+
+    if(route.params.code) localStorage.setItem('icoReferralCode', route.params.code)
   })
 </script>

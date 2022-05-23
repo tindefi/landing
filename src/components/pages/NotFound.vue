@@ -7,7 +7,6 @@
 </template>
 
 <script setup>
-  import Faq from '@/components/common/Faq.vue'
   import { sketch } from '@/modules/sketch'
 
   const { t } = useI18n()

@@ -263,6 +263,10 @@
     })
   }
 
+  const setRererralCode = () => {
+    if(localStorage.getItem('icoReferralCode')) referralCode.value = localStorage.getItem('icoReferralCode')
+  }
+
   watch(address, (val) => {
     getBUSDBalance()
   })
@@ -288,6 +292,7 @@
   // })
 
   onMounted(() => {
+    setRererralCode()
     getBUSDBalance()
     getAllowance()
     getCurrentPhase()
