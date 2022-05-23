@@ -44,7 +44,7 @@ const chiefs = [
     position : "CCO - Spanish",
     social: {
       tindefi: "#",
-      linkedin: "www.linkedin.com/in/nicolas-vanni",
+      linkedin: "https:/www.linkedin.com/in/nicolas-vanni",
     }
   },
   {

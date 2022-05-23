@@ -19,16 +19,16 @@ const advisors = [
       linkedin: "https://www.linkedin.com/in/victoria-rodr%C3%ADguez-blanco-9847791a/",
     }
   },
-  {
-    imgLink: "https://media-exp1.licdn.com/dms/image/C4D03AQEnjHYm5e7BNQ/profile-displayphoto-shrink_400_400/0/1594047180612?e=1656547200&v=beta&t=qLXVSk6K6hMRnVqNuyxWFoJOhv_nKXFREWTu8rD7AWM",
-    avatar: "emilio-hurtado",
-    name: "Emilio Hurtado",
-    position: "Business Advisor",
-    social: {
-      tindefi: "https://tindefi.net/users/emilio-hurtado",
-      linkedin: "https://www.linkedin.com/in/emiliohurtadoruiz/",
-    }
-  },
+  // {
+  //   imgLink: "https://media-exp1.licdn.com/dms/image/C4D03AQEnjHYm5e7BNQ/profile-displayphoto-shrink_400_400/0/1594047180612?e=1656547200&v=beta&t=qLXVSk6K6hMRnVqNuyxWFoJOhv_nKXFREWTu8rD7AWM",
+  //   avatar: "emilio-hurtado",
+  //   name: "Emilio Hurtado",
+  //   position: "Business Advisor",
+  //   social: {
+  //     tindefi: "https://tindefi.net/users/emilio-hurtado",
+  //     linkedin: "https://www.linkedin.com/in/emiliohurtadoruiz/",
+  //   }
+  // },
   {
     imgLink: "https://yt3.ggpht.com/ytc/AKedOLQAi2bJNHv4Aa2X2pzzKnpW_NOvuNgYoRAmn2-R=s176-c-k-c0x00ffffff-no-rj",
     avatar: "levs",
@@ -69,26 +69,26 @@ const advisors = [
       instagram: "https://www.instagram.com/marcobanderasbcn/?hl=es",
     }
   },
-  {
-    imgLink: "https://media-exp1.licdn.com/dms/image/C5603AQF2fTbwlTrLYw/profile-displayphoto-shrink_400_400/0/1642874145075?e=1656547200&v=beta&t=bONR57M9GX0lHSJGmSKJxBm9t8n2DLgslFXRalUTLAA",
-    avatar: "raphael-dennett",
-    name: "Raphael Dennet",
-    position: "Marketing digital & networking",
-    social: {
-      tindefi: "https://tindefi.net/users/raphael-dennet",
-      linkedin: "https://www.linkedin.com/in/raphaeldennett/",
-    }
-  },
-  {
-    imgLink: "https://media-exp1.licdn.com/dms/image/C4D03AQHQsJ9RN0TXyA/profile-displayphoto-shrink_800_800/0/1615465343187?e=1656547200&v=beta&t=xW7n6yVSu7vKRd7L2l4ZP8Br5NlnguBO2os_5oMaWmQ",
-    avatar: "daniel-martin",
-    name: "Daniel Martin",
-    position: "Financial Advisor",
-    social: {
-      tindefi: "https://tindefi.net/users/daniel-martin",
-      linkedin: "https://www.linkedin.com/in/daniel-mart%C3%ADn-escanciano-55908b198/",
-    }
-  },
+  // {
+  //   imgLink: "https://media-exp1.licdn.com/dms/image/C5603AQF2fTbwlTrLYw/profile-displayphoto-shrink_400_400/0/1642874145075?e=1656547200&v=beta&t=bONR57M9GX0lHSJGmSKJxBm9t8n2DLgslFXRalUTLAA",
+  //   avatar: "raphael-dennett",
+  //   name: "Raphael Dennet",
+  //   position: "Marketing digital & networking",
+  //   social: {
+  //     tindefi: "https://tindefi.net/users/raphael-dennet",
+  //     linkedin: "https://www.linkedin.com/in/raphaeldennett/",
+  //   }
+  // },
+  // {
+  //   imgLink: "https://media-exp1.licdn.com/dms/image/C4D03AQHQsJ9RN0TXyA/profile-displayphoto-shrink_800_800/0/1615465343187?e=1656547200&v=beta&t=xW7n6yVSu7vKRd7L2l4ZP8Br5NlnguBO2os_5oMaWmQ",
+  //   avatar: "daniel-martin",
+  //   name: "Daniel Martin",
+  //   position: "Financial Advisor",
+  //   social: {
+  //     tindefi: "https://tindefi.net/users/daniel-martin",
+  //     linkedin: "https://www.linkedin.com/in/daniel-mart%C3%ADn-escanciano-55908b198/",
+  //   }
+  // },
   {
     imgLink: "https://scontent-bcn1-1.cdninstagram.com/v/t51.2885-19/278308727_5104876329591349_2778001041143544271_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-bcn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=mxlfXS2FSWQAX9IozT-&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8Fd8SJOe6qk3j2Ygi_H3q8Tco1b9U-ImJQYmm16fdD9A&oe=62743CAE&_nc_sid=7bff83",
     avatar: "alvaro-reyes",
