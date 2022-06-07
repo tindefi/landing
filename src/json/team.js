@@ -65,7 +65,7 @@ const team = [
     position: "Motion Graphics Designer",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/brayan-armando-guzman-juarez-896653230/"
+      linkedin: "https://www.linkedin.com/in/armando-jimenez-/"
     }
   },
   {
@@ -289,6 +289,15 @@ const team = [
       linkedin: "https://www.linkedin.com/in/rose-rosales-5b422123a/"
     }
   },
+  {
+    avatar: "adriel-acevedo",
+    name: "Adriel Acevedo",
+    formation: "Advisory & Consultancy",
+    social: {
+      tindefi: "#",
+      linkedin: "https://www.linkedin.com/in/adriel-acevedo/"
+    }
+  }
 ]
 
 export { team }

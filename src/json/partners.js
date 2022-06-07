@@ -31,6 +31,14 @@ const partners = [
     social: {
       website: "https://escuelacryptoes.com",
     }
+  },
+  {
+    size: "250",
+    logo: "gotbit",
+    name: "GotBit",
+    social: {
+      website: "https://gotbit.io",
+    }
   }
 ]
 

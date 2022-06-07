@@ -53,7 +53,7 @@ const chiefs = [
     position: "CCO - English",
     social: {
       tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/juan-gasca",
+      linkedin: "https://www.linkedin.com/in/juan-gasca-aristeguieta/",
       instagram: "https://www.instagram.com/juan_gasca2/",
       telegram: "https://t.me/juanG_scandefi",
     }
