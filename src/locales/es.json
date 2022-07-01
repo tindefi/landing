@@ -352,6 +352,50 @@
           }
         }
       }
+    },
+    "profile": {
+      "step1": {
+        "title": "Crea tu perfil",
+        "subtitle": "Reserva tu nombre y nombre de usuario",
+        "incubated": "Camaleones incubados",
+        "button": "Comenzar"
+      },
+      "step2": {
+        "title": "Conecta tu billetera para crear tu cuenta en Tin Defi",
+        "text": "Tu billetera cripto guarda de manera segura tus bienes digitales y criptomonedas. Conéctate a uno de nuestros proveedores de billeteras o crea una nueva."
+      },
+      "step3": {
+        "title": "¿Cómo empezamos?",
+        "text": "Vamos a empezar con algo simple, el nombre que aparecerá cuando otros usuarios visiten tu perfil.",
+        "label": "¿Cómo quieres llamarte?",
+        "placeholder": "Nombre"
+      },
+      "step4": {
+        "title": "Muy bien, {name}",
+        "text": "Recuerda que siempre puedes editarlo más tarde.",
+        "label": "¿Cómo debería llamarte la gente?",
+        "placeholder": "{'@'}nombre de usuario"
+      },
+      "step5": {
+        "title": "¿Cómo te describirías a ti mismo?",
+        "text": "Especifica cómo te gustaría que la gente te vea. Recuerda resaltar tus mejores puntos.",
+        "placeholder": "Hodl Bitcoin!"
+      },
+      "step6": {
+        "title": "Sube una foto de perfil o escoge un avatar",
+        "text": "Los avatares y elementos visuales son propiedad de © Tin DeFi. Leer más",
+        "picture": "Añade tu foto de perfil",
+        "random": "Use random avatar"
+      },
+      "step7": {
+        "title": "Ya casi estamos. Escoge un encabezado",
+        "text": "Enseña al mundo cuál es tu estilo. La gente que visite tu perfil lo verá de esta forma",
+        "button": "Crear perfil"
+      },
+      "step8": {
+        "title": "Enhorabuena! Tu cuenta ha sido creada correctamente",
+        "text": "Especifica cómo te gustaría que la gente te vea. Recuerda resaltar tus mejores puntos."
+      }
     }
   },
   "common": {
@@ -693,5 +737,13 @@
     "terms": "Términos y condiciones",
     "cookies": "Política de cookies",
     "privacy": "Política de privacidad"
+  },
+  "errors": {
+    "required_field": "Campo obligatorio",
+    "min_chars": "Al menos {num} caracteres",
+    "max_chars": "Máximo {num} caracteres",
+    "correct_before_proceed": "Por favor, corrige los errores antes de continuar.",
+    "max_file_size": "El tamaño máximo de archivo es {mb}mb",
+    "alias_taken": "Alias no disponible"
   }
 }
