@@ -27,7 +27,9 @@
     "quantity": "Quantity",
     "total": "Total",
     "check": "Check",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "upload": "Upload"
   },
   "wallet": {
     "connect": "Connect Wallet",
@@ -346,6 +348,50 @@
             "html": "Real-time information about price charts, transaction history, tracking wallet movements and much more."
           }
         }
+      }
+    },
+    "profile": {
+      "step1": {
+        "title": "Create your profile",
+        "subtitle": "Reserve your name and username",
+        "incubated": "Incubated chamelons",
+        "button": "Get started"
+      },
+      "step2": {
+        "title": "Connect your wallet to create your Tin DeFi account",
+        "text": "Your crypto wallet securely stores your digital goods and cryptocurrencies. Connect to one of our wallet providers or create a new one."
+      },
+      "step3": {
+        "title": "How do we start?",
+        "text": "Let's start with something simple, the name will show up when other users look at your profile.",
+        "label": "What do you want to call you?",
+        "placeholder": "Name"
+      },
+      "step4": {
+        "title": "Very good, {name}",
+        "text": "Remember that you can always edit it later.",
+        "label": "How should people call you?",
+        "placeholder": "{'@'}username"
+      },
+      "step5": {
+        "title": "How would you describe yourself?",
+        "text": "Detail how you would to be percibed. Remember to make yourself stand out.",
+        "placeholder": "Hold Bitcoin!"
+      },
+      "step6": {
+        "title": "Upload your profile picture or choose a random avatar",
+        "text": "The avatars and visual elements are property of © Tin DeFi. Learn more",
+        "picture": "Add profile picture",
+        "random": "Use random avatar"
+      },
+      "step7": {
+        "title": "We're almost done. Choose a header",
+        "text": "Show the world your style. People who visit your profile will see it in that way",
+        "button": "Create profile"
+      },
+      "step8": {
+        "title": "Congratulations your account has been created successfully",
+        "text": "Detail how you would to be percibed. Remember to make yourself stand out."
       }
     }
   },
@@ -688,6 +734,14 @@
     "terms": "Terms and conditions",
     "cookies": "Cookies policy",
     "privacy": "Privacy policy"
+  },
+  "errors": {
+    "required_field": "Required field",
+    "min_chars": "At least {num} characters",
+    "max_chars": "Maximum {num} characters",
+    "correct_before_proceed": "Please, correct errors before proceed.",
+    "max_file_size": "Maximum file size is {mb}mb",
+    "alias_taken": "Alias already taken"
   }
 }
 

@@ -5,8 +5,6 @@ import router from '@/router/router'
 import { i18n } from '@/modules/i18n'
 import vClickOutside from "click-outside-vue3"
 
-import './sass/app.scss'
-
 import VueScrollTo from 'vue-scrollto' // https://github.com/rigor789/vue-scrollto
 import { initAppear } from '@/modules/appear'
 
@@ -24,3 +22,5 @@ app.use(vClickOutside)
 app.mount('#app')
 
 initAppear()
+
+import './sass/app.scss'

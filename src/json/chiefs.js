@@ -82,11 +82,20 @@ const chiefs = [
   {
     avatar: "isaac-eustaquio",
     name: "Isaac Eustaquio",
-    position: "CDO",
+    position: "Product Designer",
     social: {
       tindefi: "#",
       linkedin: "https://www.linkedin.com/in/isaaceustaquio",
       twitter: "https://twitter.com/Isaac_eustaquio",
+    }
+  },
+  {
+    avatar: "tello-hernandez",
+    name: "Tello Hernandez",
+    position: "CDO",
+    social: {
+      tindefi: "#",
+      linkedin: "https://www.linkedin.com/in/tello-hernandez"
     }
   },
 ]

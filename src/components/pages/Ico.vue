@@ -6,7 +6,7 @@
           <button class="tin-button" v-html="`&larr; ${t('forms.back')}`"></button>
         </router-link> -->
 
-        <h3 class="phases-section__title is-simple"><img src="/tindefi.svg" alt="Logo Tin Defi" loading="lazy" /><span class="separator">|</span>{{t('pages.ico.presale')}}</h3>
+        <h1 class="phases-section__title is-simple fz-3"><img src="/tindefi.svg" alt="Logo Tin Defi" loading="lazy" /><span class="separator">|</span>{{t('pages.ico.presale')}}</h1>
       </header>
 
       <IcoRounds />

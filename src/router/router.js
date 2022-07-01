@@ -8,6 +8,7 @@ import FaqItem from '@/components/pages/FaqItem.vue'
 import About from '@/components/pages/About.vue'
 import Services from '@/components/pages/Services.vue'
 import NotFound from '@/components/pages/NotFound.vue'
+import CreateYourProfile from '@/components/pages/CreateYourProfile.vue'
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: '/services',
     name: 'services',
     component: Services
+  },
+  {
+    path: '/create-your-profile',
+    name: 'create-profile',
+    component: CreateYourProfile
   },
   {
     path: '/:pathMatch(.*)*',

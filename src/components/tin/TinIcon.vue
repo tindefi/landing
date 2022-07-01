@@ -56,6 +56,9 @@
     }
 
     &.is-success{ background-color: $success-color; }
+    &.is-info{ background-color: $info-color; }
+    &.is-warning{ background-color: $warning-color; }
+    &.is-danger{ background-color: $danger-color; }
     &.is-dark{ background-color: $text-color-dark; }
     &.is-light{ background-color: $text-color-light; }
     &.is-lighter{ background-color: $text-color-lighter; }

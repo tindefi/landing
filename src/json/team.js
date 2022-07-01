@@ -1,14 +1,5 @@
 const team = [
   {
-    avatar: "tello-hernandez",
-    name: "Tello Hernandez",
-    position: "Design Project Manager",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/tello-hernandez"
-    }
-  },
-  {
     avatar: "juan-cervantes",
     name: "Juancer",
     position: "Product Manager",

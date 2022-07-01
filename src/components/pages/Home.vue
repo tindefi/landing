@@ -362,7 +362,7 @@
         </div>
         <div class="tin-lives__messages">
           <div class="tin-lives__message">
-            <h1 class="tin-lives__message__title text-gradient-6 appear fade-right">{{t('pages.home.lives.title')}}</h1>
+            <h2 class="tin-lives__message__title text-gradient-6 appear fade-right fz-1">{{t('pages.home.lives.title')}}</h2>
             <p class="tin-lives__message__text appear fade-right delay-200">{{t('pages.home.lives.text')}}</p>
           </div>
         </div>
