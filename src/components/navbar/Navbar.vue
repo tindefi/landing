@@ -42,6 +42,8 @@
         </a>
       </MenuItemDropdown>
 
+      <router-link class="tin-navbar__item is-button tin-button" @click="opened = false" to="/create-your-profile">{{t('navbar.profile')}}</router-link>
+
       <template v-if="$route.name === 'ico'">
         <a v-if="walletStore.address" class="tin-navbar__item is-button tin-button wallet-connect-button is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
         <a v-else class="tin-navbar__item is-button tin-button wallet-connect-button" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
