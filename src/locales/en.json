@@ -355,7 +355,7 @@
       "step1": {
         "title": "Create your profile",
         "subtitle": "Reserve your name and username",
-        "incubated": "Incubated chamelons",
+        "incubated": "Incubated chameleons",
         "button": "Get started"
       },
       "step2": {
@@ -376,7 +376,7 @@
       },
       "step5": {
         "title": "How would you describe yourself?",
-        "text": "Detail how you would to be percibed. Remember to make yourself stand out.",
+        "text": "Detail how you would like to be percibed. Remember to make yourself stand out.",
         "placeholder": "Hold Bitcoin!"
       },
       "step6": {
