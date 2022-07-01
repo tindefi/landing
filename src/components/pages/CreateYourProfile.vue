@@ -92,8 +92,8 @@
             </div>
             <button class="tin-button m-t-30 is-info w-full continue-button" :class="{'is-loading is-disabled': loading}" @click.prevent="storeProfile">{{t('pages.profile.step7.button')}}</button>
           </div>
-          <div v-show="step === 8" class="create-your-profile__step step8">
-            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 1"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
+          <div v-show="step === 'congratulations'" class="create-your-profile__step step8">
+            <!-- <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 1"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div> -->
             <img src="/images/profile/tin-chamelon-pals.svg" alt="Tin DeFi Scan pals" width="230">
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step8.title')}}</p>
             <p class="has-text-centered m-t-10">{{t('pages.profile.step8.text')}}</p>
@@ -136,8 +136,8 @@
   const { t } = useI18n()
   const { address } = storeToRefs(useWalletStore())
 
-  const step = ref(7)
-  const incubated = ref(1495)
+  const step = ref(1)
+  const incubated = ref(0)
   const descriptionMaxChars = ref(120)
   const randomAvatarIndex = ref(1)
   const maxMB = ref(5)
@@ -397,28 +397,29 @@
 
   // TODO: descomentar y cambiar URL
   const storeProfile = async () => {
-    if(Object.values(errors.value).some(o => !!o)){
-      alert(t('errors.correct_before_proceed'))
-      return
-    }
+    step.value = 'congratulations' //TODO: eliminar esta línea
+    // if(Object.values(errors.value).some(o => !!o)){
+    //   alert(t('errors.correct_before_proceed'))
+    //   return
+    // }
 
-    loading.value = true
+    // loading.value = true
 
-    let data = new FormData()
-    data.append('wallet', form.value.wallet)
-    data.append('name', form.value.name)
-    data.append('alias', form.value.alias)
-    data.append('avatar', form.value.avatar)
-    data.append('background', form.value.background)
-    data.append('description', form.value.description)
+    // let data = new FormData()
+    // data.append('wallet', form.value.wallet)
+    // data.append('name', form.value.name)
+    // data.append('alias', form.value.alias)
+    // data.append('avatar', form.value.avatar)
+    // data.append('background', form.value.background)
+    // data.append('description', form.value.description)
 
-    await axios.post(`https://api.tindefi.net/profiles`, data).then(response => {
-      step.value = 'congratulations'
-    }).catch(error => {
-      alert(t('errors.correct_before_proceed'))
-    }).finally(() => {
-      loading.value = false
-    })
+    // await axios.post(`https://api.tindefi.net/profiles`, data).then(response => {
+    //   step.value = 'congratulations'
+    // }).catch(error => {
+    //   alert(t('errors.correct_before_proceed'))
+    // }).finally(() => {
+    //   loading.value = false
+    // })
   }
 
   onMounted(() => {
