@@ -13,7 +13,7 @@
       <article v-else class="create-your-profile__form">
         <div class="create-your-profile__form__inputs">
           <div v-show="step === 2" class="create-your-profile__step step2">
-            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 1"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
+            <!-- <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 1"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div> -->
             <img src="/images/profile/tin-wallet.svg" alt="Tin DeFi select wallet" width="230">
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step2.title')}}</p>
             <p class="has-text-centered m-t-10">{{t('pages.profile.step2.text')}}</p>
@@ -139,7 +139,7 @@
   const step = ref(1)
   const incubated = ref(0)
   const descriptionMaxChars = ref(120)
-  const randomAvatarIndex = ref(1)
+  // const randomAvatarIndex = ref(1)
   const maxMB = ref(5)
   const avatarStep = ref('random')
   const avatarPreview = ref(null)
@@ -155,6 +155,7 @@
     avatar: null,
     background: null,
     description: null,
+    default_avatar_id: 1,
   })
   const errors = ref({
     name: null,
@@ -184,7 +185,7 @@
   })
 
   const avatarStyle = computed(() => {
-    let url = avatarStep.value === 'picture' && avatarPreview.value ? avatarPreview.value : `/images/profile/avatars/tiburon${randomAvatarIndex.value}.svg`
+    let url = avatarStep.value === 'picture' && avatarPreview.value ? avatarPreview.value : `/images/profile/avatars/tiburon${form.value.default_avatar_id}.svg`
 
     return {
       backgroundImage: `url(${url})`,
@@ -244,6 +245,7 @@
 
     if(step.value === 1){
       step.value = walletStore.address ? 3 : 2
+      getProfileByWallet()
     }else{
       step.value ++
     }
@@ -276,10 +278,10 @@
 
   const setRandomAvatar = () => {
     let rand =  Math.ceil(Math.random() * 30)
-    while(rand === randomAvatarIndex){
+    while(rand === form.value.default_avatar_id){
       rand =  Math.ceil(Math.random() * 30)
     }
-    randomAvatarIndex.value = rand
+    form.value.default_avatar_id = rand
   }
 
   const uploadProfilePicture = () => {
@@ -380,51 +382,66 @@
     backgroundFileInput.value.value = null
   }
 
+  const getProfileByWallet = async () => {
+    await axios.get(`http://localhost:8000/profiles/search-by-wallet/${walletStore.address}`).then(response => { // https://api.tindefi.net/profiles/count
+      if (response.data) {
+        step.value = 'congratulations'
+        form.value.name = response.data.name
+        form.value.alias = '@' + response.data.alias
+        form.value.description = response.data.description
+        form.value.wallet = response.data.wallet
+      }
+
+      console.log(form.value.alias)
+    })
+  }
+
   // TODO: descomentar función y cambiar URL
-  // const getProfilesCount = async () => {
-  //   await axios.get(`https://api.tindefi.net/profiles/count`).then(response => {
-  //     incubated.value = response.data
-  //   })
-  // }
+  const getProfilesCount = async () => {
+    await axios.get(`http://localhost:8000/profiles/count`).then(response => { // https://api.tindefi.net/profiles/count
+      incubated.value = response.data
+    })
+  }
 
   // TODO: descomentar y cambiar URL
   const checkAlias = async () => {
-    // if(form.value.alias?.length > 5) {
-    //   const res = await axios.get(`https://api.tindefi.net/users/search-by-alias/${form.value.alias}`)
-    //   if(res.data) errors.value.alias = t('errors.alias_taken')
-    // }
+    if(form.value.alias?.length > 5 && step.value != 'congratulations') {
+      const res = await axios.get(`http://localhost:8000/profiles/search-by-alias/${form.value.alias.substring(1)}`) // https://api.tindefi.net/users/search-by-alias/${form.value.alias}
+      if(res.data) errors.value.alias = t('errors.alias_taken')
+    }
   }
 
   // TODO: descomentar y cambiar URL
   const storeProfile = async () => {
-    step.value = 'congratulations' //TODO: eliminar esta línea
-    // if(Object.values(errors.value).some(o => !!o)){
-    //   alert(t('errors.correct_before_proceed'))
-    //   return
-    // }
+    // step.value = 'congratulations' //TODO: eliminar esta línea
+    if(Object.values(errors.value).some(o => !!o)){
+      alert(t('errors.correct_before_proceed'))
+      return
+    }
 
-    // loading.value = true
+    loading.value = true
 
-    // let data = new FormData()
-    // data.append('wallet', form.value.wallet)
-    // data.append('name', form.value.name)
-    // data.append('alias', form.value.alias)
-    // data.append('avatar', form.value.avatar)
-    // data.append('background', form.value.background)
-    // data.append('description', form.value.description)
+    let data = new FormData()
+    data.append('wallet', walletStore.address)
+    data.append('name', form.value.name)
+    data.append('alias', form.value.alias.substring(1))
+    data.append('avatar', form.value.avatar)
+    data.append('default_avatar_id', form.value.default_avatar_id)
+    data.append('background', form.value.background)
+    data.append('description', form.value.description)
 
-    // await axios.post(`https://api.tindefi.net/profiles`, data).then(response => {
-    //   step.value = 'congratulations'
-    // }).catch(error => {
-    //   alert(t('errors.correct_before_proceed'))
-    // }).finally(() => {
-    //   loading.value = false
-    // })
+    await axios.post(`http://localhost:8000/profiles`, data).then(response => { // https://api.tindefi.net/profiles
+      step.value = 'congratulations'
+    }).catch(error => {
+      alert(t('errors.correct_before_proceed'))
+    }).finally(() => {
+      loading.value = false
+    })
   }
 
   onMounted(() => {
     setRandomAvatar()
     // TODO: descomentar línea
-    // getProfilesCount()
+    getProfilesCount()
   })
 </script>
