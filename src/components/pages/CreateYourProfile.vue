@@ -384,15 +384,25 @@
 
   const getProfileByWallet = async () => {
     await axios.get(`http://localhost:8000/profiles/search-by-wallet/${walletStore.address}`).then(response => { // https://api.tindefi.net/profiles/count
+    console.log(response);
       if (response.data) {
         step.value = 'congratulations'
         form.value.name = response.data.name
         form.value.alias = '@' + response.data.alias
         form.value.description = response.data.description
         form.value.wallet = response.data.wallet
-      }
 
-      console.log(form.value.alias)
+        if (response.data.default_avatar_id !== null) {
+          form.value.default_avatar_id = response.data.default_avatar_id
+        } else { // Tiene avatar propio
+          avatarStep.value = 'picture'
+          avatarPreview.value = 'http://localhost:8000' + response.data.img_url
+        }
+
+        if (response.data.background !== null) {
+          backgroundPreview.value = 'http://localhost:8000' + response.data.background_url
+        }
+      }
     })
   }
 
