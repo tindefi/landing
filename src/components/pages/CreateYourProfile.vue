@@ -383,7 +383,7 @@
   }
 
   const getProfileByWallet = async () => {
-    await axios.get(`http://localhost:8000/profiles/search-by-wallet/${walletStore.address}`).then(response => { // https://api.tindefi.net/profiles/count
+    await axios.get(`https://testapi.tindefi.net/profiles/search-by-wallet/${walletStore.address}`).then(response => { // https://api.tindefi.net/profiles/count
     console.log(response);
       if (response.data) {
         step.value = 'congratulations'
@@ -396,11 +396,11 @@
           form.value.default_avatar_id = response.data.default_avatar_id
         } else { // Tiene avatar propio
           avatarStep.value = 'picture'
-          avatarPreview.value = 'http://localhost:8000' + response.data.img_url
+          avatarPreview.value = 'https://testapi.tindefi.net' + response.data.img_url
         }
 
         if (response.data.background !== null) {
-          backgroundPreview.value = 'http://localhost:8000' + response.data.background_url
+          backgroundPreview.value = 'https://testapi.tindefi.net' + response.data.background_url
         }
       }
     })
@@ -408,7 +408,7 @@
 
   // TODO: descomentar función y cambiar URL
   const getProfilesCount = async () => {
-    await axios.get(`http://localhost:8000/profiles/count`).then(response => { // https://api.tindefi.net/profiles/count
+    await axios.get(`https://testapi.tindefi.net/profiles/count`).then(response => { // https://api.tindefi.net/profiles/count
       incubated.value = response.data
     })
   }
@@ -416,7 +416,7 @@
   // TODO: descomentar y cambiar URL
   const checkAlias = async () => {
     if(form.value.alias?.length > 5 && step.value != 'congratulations') {
-      const res = await axios.get(`http://localhost:8000/profiles/search-by-alias/${form.value.alias.substring(1)}`) // https://api.tindefi.net/users/search-by-alias/${form.value.alias}
+      const res = await axios.get(`https://testapi.tindefi.net/profiles/search-by-alias/${form.value.alias.substring(1)}`) // https://api.tindefi.net/users/search-by-alias/${form.value.alias}
       if(res.data) errors.value.alias = t('errors.alias_taken')
     }
   }
@@ -440,7 +440,7 @@
     data.append('background', form.value.background)
     data.append('description', form.value.description)
 
-    await axios.post(`http://localhost:8000/profiles`, data).then(response => { // https://api.tindefi.net/profiles
+    await axios.post(`https://testapi.tindefi.net/profiles`, data).then(response => { // https://api.tindefi.net/profiles
       step.value = 'congratulations'
     }).catch(error => {
       alert(t('errors.correct_before_proceed'))
