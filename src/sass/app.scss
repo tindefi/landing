@@ -4,6 +4,11 @@
 @import '@/sass/general/variables';
 @import '@/sass/general/animations';
 
+@import '@/sass/general/extends';
+@import '@/sass/general/helpers';
+@import '@/sass/general/mixins';
+@import '@/sass/general/main';
+
 @import '@/sass/pages/app';
 @import '@/sass/pages/home';
 @import '@/sass/pages/ico';
@@ -12,11 +17,6 @@
 @import '@/sass/pages/about';
 @import '@/sass/pages/services';
 @import '@/sass/pages/create-your-profile';
-
-@import '@/sass/general/extends';
-@import '@/sass/general/helpers';
-@import '@/sass/general/mixins';
-@import '@/sass/general/main';
 
 @import '@/sass/tin/appear';
 @import '@/sass/tin/button';

@@ -352,6 +352,8 @@
       }
     },
     "profile": {
+      "preview": "Preview my profile",
+      "create": "Create profile",
       "step1": {
         "title": "Create your profile",
         "subtitle": "Reserve your name and username",
@@ -391,6 +393,10 @@
         "button": "Create profile"
       },
       "step8": {
+        "title": "What topics are you most interested in?",
+        "text": "Select up to 3 topics we will use to recommend you communities you might like."
+      },
+      "congratulations": {
         "title": "Congratulations your account has been created successfully",
         "text": "Detail how you would to be percibed. Remember to make yourself stand out."
       }

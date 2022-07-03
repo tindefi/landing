@@ -7,7 +7,7 @@
         <p class="has-text-success">{{t('pages.profile.step1.incubated')}}</p>
         <h1 class="create-your-profile__title fz-2 fw-700 text-gradient-5 m-t-30 m-b-10">{{t('pages.profile.step1.title')}}</h1>
         <p>{{t('pages.profile.step1.subtitle')}}</p>
-        <button class="tin-button m-t-70 is-info is-xlong" @click.prevent="next">{{t('pages.profile.step1.button')}}</button>
+        <button class="tin-button m-t-70 is-info is-xlong" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{startButtonText}}</button>
       </article>
 
       <article v-else class="create-your-profile__form">
@@ -18,8 +18,8 @@
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step2.title')}}</p>
             <p class="has-text-centered m-t-10">{{t('pages.profile.step2.text')}}</p>
 
-            <a v-if="walletStore.address" class="tin-button wallet-connect-button m-t-30 w-full p-y-10 is-connected" @click.prevent="walletStore.disconnect()">{{walletStore.shortAddress}}</a>
-            <a v-else class="tin-button wallet-connect-button m-t-30 w-full p-y-10" @click.prevent="walletStore.connect()">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
+            <a v-if="walletStore.address" class="tin-button wallet-connect-button m-t-30 w-full p-y-10 is-connected" @click.prevent="walletStore.disconnect()" :class="{'is-loading': loading}" :disabled="loading">{{walletStore.shortAddress}}</a>
+            <a v-else class="tin-button wallet-connect-button m-t-30 w-full p-y-10" @click.prevent="walletStore.connect()" :class="{'is-loading': loading}" :disabled="loading">{{walletStore.loading ? t('forms.loading') : t('wallet.connect')}}</a>
           </div>
           <div v-show="step === 3" class="create-your-profile__step step3">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = walletStore.address ? 1 : 2"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
@@ -29,7 +29,7 @@
             <label for="_name_x" class="block w-full m-t-20 m-b-5">{{t('pages.profile.step3.label')}}</label>
             <input v-model="form.name" class="tin-input" type="text" name="_name_x" :placeholder="t('pages.profile.step3.placeholder')" autocomplete="off" />
             <small class="field-error has-text-danger block w-full m-t-3" v-if="errors.name">{{errors.name}}</small>
-            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next">{{t('forms.continue')}}</button>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 4" class="create-your-profile__step step4">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 3"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
@@ -39,7 +39,7 @@
             <label for="_alias_x" class="block w-full m-t-20 m-b-5">{{t('pages.profile.step4.label')}}</label>
             <input v-model="form.alias" class="tin-input" type="text" name="_alias_x" :placeholder="t('pages.profile.step4.placeholder')" autocomplete="off" />
             <small class="field-error has-text-danger block w-full m-t-3" v-if="errors.alias">{{errors.alias}}</small>
-            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next">{{t('forms.continue')}}</button>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 5" class="create-your-profile__step step5">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
@@ -50,7 +50,7 @@
             <p class="has-text-centered m-t-10">{{t('pages.profile.step5.text')}}</p>
             <textarea v-model="form.description" class="tin-input m-t-20" rows="3" name="_description_x" :placeholder="t('pages.profile.step5.placeholder')"></textarea>
             <small class="remaining-description-chars">{{remainingDescriptionChars}}</small>
-            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next">{{t('forms.continue')}}</button>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 6" class="create-your-profile__step step6">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
@@ -70,7 +70,7 @@
             <button v-if="avatarStep === 'random'" class="tin-button m-t-30 is-info is-outline w-full avatar-toggle-button" @click.prevent="uploadProfilePicture">
               <TinIcon class="is-info m-r-10" :name="`camera`" size="20px" /> {{t('pages.profile.step6.picture')}}
             </button>
-            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next">{{t('forms.continue')}}</button>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 7" class="create-your-profile__step step7">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
@@ -90,13 +90,22 @@
               <span class="background-input-alias">{{form.alias}}</span>
               <input ref="backgroundFileInput" class="background-file-input" type="file" name="background" @change="backgroundChange" style="display:none"/>
             </div>
-            <button class="tin-button m-t-30 is-info w-full continue-button" :class="{'is-loading is-disabled': loading}" @click.prevent="storeProfile">{{t('pages.profile.step7.button')}}</button>
+            <button class="tin-button m-t-30 is-info w-full continue-button" :class="{'is-loading is-disabled': loading}" @click.prevent="next">{{t('forms.continue')}}</button>
           </div>
-          <div v-show="step === 'congratulations'" class="create-your-profile__step step8">
-            <!-- <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 1"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div> -->
-            <img src="/images/profile/tin-chamelon-pals.svg" alt="Tin DeFi Scan pals" width="230">
+          <div v-show="step === 8" class="create-your-profile__step step8">
+            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 7"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step8.title')}}</p>
             <p class="has-text-centered m-t-10">{{t('pages.profile.step8.text')}}</p>
+            <div class="profile-tags w-full flex">
+              <span v-for="tag in tags" :key="tag.id" class="profile-tag" :class="{'is-selected':form.tags.includes(tag.id)}" @click.prevent="toggleTag(tag)">{{ tag.description }}</span>
+            </div>
+            <small class="field-error has-text-danger block w-full m-t-3" v-if="errors.name">{{errors.tags}}</small>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="storeProfile" :class="{'is-loading': loading}" :disabled="loading">{{t('pages.profile.create')}}</button>
+          </div>
+          <div v-show="step === 'congratulations'" class="create-your-profile__step step8">
+            <img src="/images/profile/tin-chamelon-pals.svg" alt="Tin DeFi Scan pals" width="230">
+            <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.congratulations.title')}}</p>
+            <p class="has-text-centered m-t-10">{{t('pages.profile.congratulations.text')}}</p>
           </div>
         </div>
 
@@ -124,6 +133,8 @@
 </template>
 
 <script setup>
+  const API_URL = import.meta.env.VITE_APP_API_URL
+
   import axios from 'axios'
 
   import TinIcon from '@/components/tin/TinIcon.vue'
@@ -139,16 +150,17 @@
   const step = ref(1)
   const incubated = ref(0)
   const descriptionMaxChars = ref(120)
-  // const randomAvatarIndex = ref(1)
+  const tags = ref([])
   const maxMB = ref(5)
   const avatarStep = ref('random')
   const avatarPreview = ref(null)
   const avatarFileInput = ref(null)
   const backgroundPreview = ref(null)
   const backgroundFileInput = ref(null)
-  const loading = ref(false)
+  const loading = ref(true)
 
   const form = ref({
+    id: null,
     wallet: null,
     name: null,
     alias: null,
@@ -156,14 +168,23 @@
     background: null,
     description: null,
     default_avatar_id: 1,
+    tags: [],
   })
   const errors = ref({
     name: null,
     alias: null,
   })
 
+  const startButtonText = computed(() => {
+    return form.value.id ? t('pages.profile.preview') : t('pages.profile.step1.button')
+  })
+
   const remainingDescriptionChars = computed(() => {
     return descriptionMaxChars.value - (form.value.description?.length || 0)
+  })
+
+  const id = computed(() => {
+    return form.value.id
   })
 
   const name = computed(() => {
@@ -192,7 +213,8 @@
     }
   })
 
-  watch(address, (newVal, oldVal) => {
+  watch(address, async (newVal, oldVal) => {
+    await getProfileByWallet()
     form.value.wallet = newVal
 
     if(newVal && step.value === 2){
@@ -202,6 +224,10 @@
 
   watch(form.value, (newVal, oldVal) => {
     removeErrors()
+  })
+
+  watch(id, (newVal, oldVal) => {
+    if(newVal && step.value !== 1) step.value = 'congratulations'
   })
 
   watch(name, (newVal, oldVal) => {
@@ -236,6 +262,11 @@
   })
 
   const next = async () => {
+    if(form.value.id){
+      step.value = 'congratulations'
+      return
+    }
+
     await setErrors()
 
     if(Object.values(errors.value).some(o => !!o)){
@@ -245,7 +276,6 @@
 
     if(step.value === 1){
       step.value = walletStore.address ? 3 : 2
-      getProfileByWallet()
     }else{
       step.value ++
     }
@@ -382,48 +412,60 @@
     backgroundFileInput.value.value = null
   }
 
+  const toggleTag = (tag) => {
+    if(form.value.tags?.length >= 3 && !form.value.tags.includes(tag.id)) return
+
+    if(form.value.tags.includes(tag.id)) form.value.tags = form.value.tags.filter(o => o.id !== tag.id)
+    else form.value.tags.push(tag.id)
+  }
+
   const getProfileByWallet = async () => {
-    await axios.get(`https://testapi.tindefi.net/profiles/search-by-wallet/${walletStore.address}`).then(response => { // https://api.tindefi.net/profiles/count
-    console.log(response);
+    loading.value = true
+    await axios.get(`${API_URL}/profiles/search-by-wallet/${walletStore.address}`).then(response => {
       if (response.data) {
-        step.value = 'congratulations'
+        form.value.id = response.data.id
         form.value.name = response.data.name
-        form.value.alias = '@' + response.data.alias
+        form.value.alias = `@${response.data.alias}`
         form.value.description = response.data.description
         form.value.wallet = response.data.wallet
+        form.value.tags = response.data.tags.map(o => o.id)
 
         if (response.data.default_avatar_id !== null) {
           form.value.default_avatar_id = response.data.default_avatar_id
         } else { // Tiene avatar propio
+          avatarPreview.value = `${API_URL}${response.data.img_url}`
           avatarStep.value = 'picture'
-          avatarPreview.value = 'https://testapi.tindefi.net' + response.data.img_url
         }
 
         if (response.data.background !== null) {
-          backgroundPreview.value = 'https://testapi.tindefi.net' + response.data.background_url
+          backgroundPreview.value = `${API_URL}${response.data.background_url}`
         }
       }
+    }).finally(() => {
+      loading.value = false
     })
   }
 
-  // TODO: descomentar función y cambiar URL
+  const getTags = async () => {
+    await axios.get(`${API_URL}/tags`).then(response => {
+      tags.value = response.data.tags
+    })
+  }
+
   const getProfilesCount = async () => {
-    await axios.get(`https://testapi.tindefi.net/profiles/count`).then(response => { // https://api.tindefi.net/profiles/count
+    await axios.get(`${API_URL}/profiles/count`).then(response => {
       incubated.value = response.data
     })
   }
 
-  // TODO: descomentar y cambiar URL
   const checkAlias = async () => {
     if(form.value.alias?.length > 5 && step.value != 'congratulations') {
-      const res = await axios.get(`https://testapi.tindefi.net/profiles/search-by-alias/${form.value.alias.substring(1)}`) // https://api.tindefi.net/users/search-by-alias/${form.value.alias}
+      const res = await axios.get(`${API_URL}/profiles/search-by-alias/${form.value.alias.substring(1)}`)
       if(res.data) errors.value.alias = t('errors.alias_taken')
     }
   }
 
-  // TODO: descomentar y cambiar URL
   const storeProfile = async () => {
-    // step.value = 'congratulations' //TODO: eliminar esta línea
     if(Object.values(errors.value).some(o => !!o)){
       alert(t('errors.correct_before_proceed'))
       return
@@ -439,8 +481,9 @@
     data.append('default_avatar_id', form.value.default_avatar_id)
     data.append('background', form.value.background)
     data.append('description', form.value.description)
+    data.append('tags', form.value.tags)
 
-    await axios.post(`https://testapi.tindefi.net/profiles`, data).then(response => { // https://api.tindefi.net/profiles
+    await axios.post(`${API_URL}/profiles`, data).then(response => {
       step.value = 'congratulations'
     }).catch(error => {
       alert(t('errors.correct_before_proceed'))
@@ -449,9 +492,10 @@
     })
   }
 
-  onMounted(() => {
+  onMounted(async () => {
     setRandomAvatar()
-    // TODO: descomentar línea
     getProfilesCount()
+    await getProfileByWallet()
+    await getTags()
   })
 </script>

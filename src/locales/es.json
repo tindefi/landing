@@ -354,6 +354,8 @@
       }
     },
     "profile": {
+      "preview": "Previsualizar mi perfil",
+      "create": "Crear perfil",
       "step1": {
         "title": "Crea tu perfil",
         "subtitle": "Reserva tu nombre y nombre de usuario",
@@ -389,10 +391,13 @@
       },
       "step7": {
         "title": "Ya casi estamos. Escoge un encabezado",
-        "text": "Enseña al mundo cuál es tu estilo. La gente que visite tu perfil lo verá de esta forma",
-        "button": "Crear perfil"
+        "text": "Enseña al mundo cuál es tu estilo. La gente que visite tu perfil lo verá de esta forma"
       },
       "step8": {
+        "title": "¿Qué tópicos te interesan más?",
+        "text": "Selecciona hasta 3 para que te recomendemos comunidades que te puedan interesar."
+      },
+      "congratulations": {
         "title": "Enhorabuena! Tu cuenta ha sido creada correctamente",
         "text": "Especifica cómo te gustaría que la gente te vea. Recuerda resaltar tus mejores puntos."
       }
