@@ -126,7 +126,7 @@
           <template v-else>
             <div class="profile-video__container">
               <img class="profile-video__img create-your-profile__form__preview__img" src="/images/smartphones/iphone-pro.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
-              <video class="profile-video__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+              <video class="profile-video__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted loop>
                 <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/profile/vibes.mp4" />
                 <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
               </video>
