@@ -147,7 +147,7 @@
   const { t } = useI18n()
   const { address } = storeToRefs(useWalletStore())
 
-  const step = ref(1)
+  const step = ref(8)
   const incubated = ref(0)
   const descriptionMaxChars = ref(120)
   const tags = ref([])

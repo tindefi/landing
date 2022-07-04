@@ -19,7 +19,7 @@
   text-fill-color: transparent;
 }
 
-@mixin textGradient($index: 0) {
+@mixin backgroundGradient($index: 0) {
   @if $index == 0 {
     background: linear-gradient(90deg, $warning-color 0%, $danger-color 33%, $purple-color 66%, $info-color 100%);
   }
@@ -62,7 +62,10 @@
   @if $index == 12 {
     background: linear-gradient(89.99deg, #00FFA3 28.31%, #14B2F5 60.21%);
   }
+}
 
+@mixin textGradient($index: 0) {
+  @include backgroundGradient($index);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -74,6 +77,12 @@ $indexes: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12);
 @each $index in $indexes {
   .text-gradient-#{$index} {
     @include textGradient($index);
+  }
+}
+
+@each $index in $indexes {
+  .background-gradient-#{$index} {
+    @include backgroundGradient($index);
   }
 }
 
