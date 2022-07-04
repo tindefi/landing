@@ -275,13 +275,14 @@
       margin: 5px;
       cursor: pointer;
 
-      &:hover{
-        background-color: rgba(white, 0.1);
+      &.is-selected{
+        background: $success-color;
+        border-color: $success-color;
+        color: $background-color;
       }
 
-      &.is-selected{
-        background: $text-color;
-        color: $background-color;
+      &:hover:not(.is-selected){
+        background-color: rgba(white, 0.1);
       }
     }
   }
