@@ -133,14 +133,14 @@
 </template>
 
 <script setup>
-  const API_URL = import.meta.env.VITE_APP_API_URL
-
   import axios from 'axios'
 
   import TinIcon from '@/components/tin/TinIcon.vue'
 
   import { useWalletStore } from '@/stores/wallet'
   import { storeToRefs } from 'pinia'
+
+  const API_URL = import.meta.env.VITE_APP_API_URL
 
   const walletStore = useWalletStore()
 
@@ -415,7 +415,7 @@
   const toggleTag = (tag) => {
     if(form.value.tags?.length >= 3 && !form.value.tags.includes(tag.id)) return
 
-    if(form.value.tags.includes(tag.id)) form.value.tags = form.value.tags.filter(o => o.id !== tag.id)
+    if(form.value.tags.includes(tag.id)) form.value.tags = form.value.tags.filter(o => o !== tag.id)
     else form.value.tags.push(tag.id)
   }
 
