@@ -41,7 +41,7 @@
             <small class="field-error has-text-danger block w-full m-t-3" v-if="errors.alias">{{errors.alias}}</small>
             <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
-          <div v-show="step === 5" class="create-your-profile__step step5">
+          <div v-show="step === 7" class="create-your-profile__step step5">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <div class="create-your-profile__form__avatar">
               <div class="create-your-profile__form__avatar__item" :style="avatarStyle"></div>
@@ -52,7 +52,7 @@
             <small class="remaining-description-chars">{{remainingDescriptionChars}}</small>
             <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
-          <div v-show="step === 6" class="create-your-profile__step step6">
+          <div v-show="step === 5" class="create-your-profile__step step6">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <div class="create-your-profile__form__avatar">
               <div class="create-your-profile__form__avatar__item" :style="avatarStyle" @click.prevent="avatarItemClick"></div>
@@ -72,7 +72,7 @@
             </button>
             <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
-          <div v-show="step === 7" class="create-your-profile__step step7">
+          <div v-show="step === 6" class="create-your-profile__step step7">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step7.title', {name: form.name})}}</p>
             <p class="has-text-centered m-t-10">{{t('pages.profile.step7.text')}}</p>
@@ -124,7 +124,13 @@
             </div>
           </template>
           <template v-else>
-            <img class="create-your-profile__form__preview__img" src="/images/profile/tin-iphone-background.png" alt="Tin Defi iPhone PRO shape" loading="lazy" />
+            <div class="profile-video__container">
+              <img class="profile-video__img create-your-profile__form__preview__img" src="/images/smartphones/iphone-pro.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
+              <video class="profile-video__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+                <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/profile/vibes.mp4" />
+                <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+              </video>
+            </div>
           </template>
         </div>
       </article>

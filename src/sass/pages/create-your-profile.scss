@@ -273,17 +273,39 @@
       border-radius: 999px;
       font-size: 0.8rem;
       margin: 5px;
+      color: white;
+      font-weight: 500;
       cursor: pointer;
 
       &.is-selected{
         @include backgroundGradient();
         border-color: white;
-        color: white;
       }
 
       &:hover:not(.is-selected){
         background-color: rgba(white, 0.1);
       }
+    }
+  }
+
+  .profile-video{
+    &__container{
+      position: relative;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
+    &__img{
+      position: relative;
+      z-index: 2;
+    }
+
+    &__video{
+      position: absolute;
+      top: 1.5%;
+      left: 3.5%;
+      width: 95%;
+      z-index: 1;
     }
   }
 

@@ -11,6 +11,9 @@ export default defineConfig({
       '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
+  compilerOptions: {
+    isCustomElement: tag => tag === 'lottie-player'
+  },
   plugins: [
     vue(),
 
