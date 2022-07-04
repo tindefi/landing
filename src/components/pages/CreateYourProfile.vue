@@ -41,17 +41,6 @@
             <small class="field-error has-text-danger block w-full m-t-3" v-if="errors.alias">{{errors.alias}}</small>
             <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
-          <div v-show="step === 7" class="create-your-profile__step step5">
-            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
-            <div class="create-your-profile__form__avatar">
-              <div class="create-your-profile__form__avatar__item" :style="avatarStyle"></div>
-            </div>
-            <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step5.title', {name: form.name})}}</p>
-            <p class="has-text-centered m-t-10">{{t('pages.profile.step5.text')}}</p>
-            <textarea v-model="form.description" class="tin-input m-t-20" rows="3" name="_description_x" :placeholder="t('pages.profile.step5.placeholder')"></textarea>
-            <small class="remaining-description-chars">{{remainingDescriptionChars}}</small>
-            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
-          </div>
           <div v-show="step === 5" class="create-your-profile__step step6">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <div class="create-your-profile__form__avatar">
@@ -92,6 +81,17 @@
             </div>
             <button class="tin-button m-t-30 is-info w-full continue-button" :class="{'is-loading is-disabled': loading}" @click.prevent="next">{{t('forms.continue')}}</button>
           </div>
+          <div v-show="step === 7" class="create-your-profile__step step5">
+            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
+            <div class="create-your-profile__form__avatar">
+              <div class="create-your-profile__form__avatar__item" :style="avatarStyle"></div>
+            </div>
+            <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step5.title', {name: form.name})}}</p>
+            <p class="has-text-centered m-t-10">{{t('pages.profile.step5.text')}}</p>
+            <textarea v-model="form.description" class="tin-input m-t-20" rows="3" name="_description_x" :placeholder="t('pages.profile.step5.placeholder')"></textarea>
+            <small class="remaining-description-chars">{{remainingDescriptionChars}}</small>
+            <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
+          </div>
           <div v-show="step === 8" class="create-your-profile__step step8">
             <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 7"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.step8.title')}}</p>
@@ -105,7 +105,7 @@
           <div v-show="step === 'congratulations'" class="create-your-profile__step step8">
             <img src="/images/profile/tin-chamelon-pals.svg" alt="Tin DeFi Scan pals" width="230">
             <p class="fz-3 fw-600 text-gradient-6 step-title has-text-centered">{{t('pages.profile.congratulations.title')}}</p>
-            <p class="has-text-centered m-t-10">{{t('pages.profile.congratulations.text')}}</p>
+            <!-- <p class="has-text-centered m-t-10">{{t('pages.profile.congratulations.text')}}</p> -->
           </div>
         </div>
 
