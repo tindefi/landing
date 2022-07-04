@@ -421,7 +421,7 @@
 
   const getProfileByWallet = async () => {
     loading.value = true
-    await axios.get(`https://testapi.tindefi.net/profiles/search-by-wallet/${walletStore.address}`).then(response => {
+    await axios.get(`${API_URL}/profiles/search-by-wallet/${walletStore.address}`).then(response => {
       if (response.data) {
         form.value.id = response.data.id
         form.value.name = response.data.name
@@ -433,12 +433,12 @@
         if (response.data.default_avatar_id !== null) {
           form.value.default_avatar_id = response.data.default_avatar_id
         } else { // Tiene avatar propio
-          avatarPreview.value = `https://testapi.tindefi.net${response.data.img_url}`
+          avatarPreview.value = `${API_URL}${response.data.img_url}`
           avatarStep.value = 'picture'
         }
 
         if (response.data.background !== null) {
-          backgroundPreview.value = `https://testapi.tindefi.net${response.data.background_url}`
+          backgroundPreview.value = `${API_URL}${response.data.background_url}`
         }
       }
     }).finally(() => {
@@ -447,20 +447,20 @@
   }
 
   const getTags = async () => {
-    await axios.get(`https://testapi.tindefi.net/tags`).then(response => {
+    await axios.get(`${API_URL}/tags`).then(response => {
       tags.value = response.data.tags
     })
   }
 
   const getProfilesCount = async () => {
-    await axios.get(`https://testapi.tindefi.net/profiles/count`).then(response => {
+    await axios.get(`${API_URL}/profiles/count`).then(response => {
       incubated.value = response.data
     })
   }
 
   const checkAlias = async () => {
     if(form.value.alias?.length > 5 && step.value != 'congratulations') {
-      const res = await axios.get(`https://testapi.tindefi.net/profiles/search-by-alias/${form.value.alias.substring(1)}`)
+      const res = await axios.get(`${API_URL}/profiles/search-by-alias/${form.value.alias.substring(1)}`)
       if(res.data) errors.value.alias = t('errors.alias_taken')
     }
   }
@@ -483,7 +483,7 @@
     data.append('description', form.value.description)
     data.append('tags', form.value.tags)
 
-    await axios.post(`https://testapi.tindefi.net/profiles`, data).then(response => {
+    await axios.post(`${API_URL}/profiles`, data).then(response => {
       step.value = 'congratulations'
     }).catch(error => {
       alert(t('errors.correct_before_proceed'))
