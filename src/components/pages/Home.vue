@@ -47,6 +47,9 @@
               <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin2.png" alt="Tin Defi Ethereum coin" loading="lazy" />
               <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin3.png" alt="Tin Defi Ethereum coin" loading="lazy" />
               <img class="smartphone-container__tins appear fade-in" src="/images/tins-cake.svg" alt="Tin Defi CAKE content" loading="lazy" />
+              <video id="pancake-video" class="smartphone-container__video appear fade-in" autoplay loop muted>
+                <source src="/images/pancake.mp4">
+              </video>
               <img class="mission-section__img appear fade-in" src="/images/smartphones/iphone-pro-tin.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
             </div>
           </div>
@@ -74,6 +77,9 @@
     <section class="tin-features container">
       <div class="tin-features__background">
         <div class="smartphone-container appear fade-in fade-down">
+          <video id="tins-video" class="smartphone-container__video appear fade-in" autoplay loop muted>
+            <source src="/videos/profile/tins.mp4">
+          </video>
           <div class="smartphone-container__radial-background"></div>
           <div class="smartphone-container__background"></div>
           <!-- <img class="smartphone-container__tins" src="/images/tins-bayc.svg" alt="tindefi BAYC content" loading="lazy" /> -->
