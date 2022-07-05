@@ -2,7 +2,7 @@
   <section class="tin-advisors">
     <div class="tin-advisors__items">
       <article v-for="advisor, i in advisors" :key="i" class="tin-advisors__card">
-        <div class="tin-advisors__card__picture" :style="{backgroundImage: `url(/images/advisors/${advisor.avatar}.jpg)`}"></div>
+        <div class="tin-advisors__card__picture" :style="{backgroundImage: `url(/images/advisors/${advisor.avatar}.webp)`}"></div>
         <div class="tin-advisors__card__info">
           <div class="tin-advisors__card__name">{{advisor.name}}</div>
           <div class="tin-advisors__card__position">{{advisor.position}}</div>

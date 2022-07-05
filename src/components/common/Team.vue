@@ -4,7 +4,7 @@
       <article v-for="member, i in team" :key="i" class="tin-team__card is-short">
         <div class="tin-team__card__content">
           <header class="tin-team__card__head">
-            <img class="tin-team__card__picture" :src="`/images/team/${member.avatar}.jpg`" alt="Tindefi team member picture" loading="lazy" />
+            <img class="tin-team__card__picture" :src="`/images/team/${member.avatar}.webp`" alt="Tindefi team member picture" loading="lazy" />
             <p class="tin-team__card__name">{{member.name}}</p>
           </header>
           <p class="tin-team__card__formation">{{member.position}}</p>

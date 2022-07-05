@@ -23,7 +23,7 @@
       </div>
 
       <div class="tin-downloads-roadmap__info">
-        <div class="tin-downloads-roadmap__info__background" :style="{backgroundImage: `url(/images/roadmap/downloads/${target}.jpg)`}"></div>
+        <div class="tin-downloads-roadmap__info__background" :style="{backgroundImage: `url(/images/roadmap/downloads/${target}.webp)`}"></div>
         <div class="tin-downloads-roadmap__info__wrapper">
           <!-- <div class="tin-downloads-roadmap__info__content">
             <img src="/tindefi.svg" alt="Logo Tin Defi" loading="lazy" />

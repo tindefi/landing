@@ -43,9 +43,9 @@
           <div class="mission-section__column__container">
             <div class="mission-section__background"></div>
             <div class="smartphone-container">
-              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin1.png" alt="Tin Defi Ethereum coin" loading="lazy" />
-              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin2.png" alt="Tin Defi Ethereum coin" loading="lazy" />
-              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin3.png" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin1.webp" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin2.webp" alt="Tin Defi Ethereum coin" loading="lazy" />
+              <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin3.webp" alt="Tin Defi Ethereum coin" loading="lazy" />
               <img class="smartphone-container__tins appear fade-in" src="/images/tins-cake.svg" alt="Tin Defi CAKE content" loading="lazy" />
               <video id="pancake-video" class="smartphone-container__video appear fade-in" autoplay loop muted>
                 <source src="/images/pancake.mp4">
@@ -360,7 +360,7 @@
     <section class="tin-lives container">
       <div class="tin-lives__wrapper">
         <div class="tin-lives__video-container appear fade-in fade-down delay-300">
-          <video class="tin-lives__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="tin-lives__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop poster="/images/livestreams.webp">
             <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/videos/home/lives.webm" />
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/lives.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
