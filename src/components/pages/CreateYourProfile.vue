@@ -42,7 +42,7 @@
             <button class="tin-button m-t-30 is-info w-full continue-button" @click.prevent="next" :class="{'is-loading': loading}" :disabled="loading">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 5" class="create-your-profile__step step6">
-            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 5"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
+            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <div class="create-your-profile__form__avatar">
               <div class="create-your-profile__form__avatar__item" :style="avatarStyle" @click.prevent="avatarItemClick"></div>
               <div class="avatar-button" @click.prevent="avatarItemClick">
@@ -82,7 +82,7 @@
             <button class="tin-button m-t-30 is-info w-full continue-button" :class="{'is-loading is-disabled': loading}" @click.prevent="next">{{t('forms.continue')}}</button>
           </div>
           <div v-show="step === 7" class="create-your-profile__step step5">
-            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 4"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
+            <div class="back-step" :class="{'is-disabled':loading}" @click.prevent="step = 6"><TinIcon class="back-step-icon" :name="`arrow-left`" size="30px" /></div>
             <div class="create-your-profile__form__avatar">
               <div class="create-your-profile__form__avatar__item" :style="avatarStyle"></div>
             </div>
