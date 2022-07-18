@@ -18,19 +18,19 @@
 
     <section class="video-section container">
       <div class="video-section__container">
-        <video v-if="locale === 'es'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+        <video v-if="locale === 'es'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted playsinline>
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-es.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
-        <video v-else-if="locale === 'en'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+        <video v-else-if="locale === 'en'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted playsinline>
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-en.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
-        <video v-else-if="locale === 'ch'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+        <video v-else-if="locale === 'ch'" class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted playsinline>
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-ch.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
-        <video v-else class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted>
+        <video v-else class="video-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" controls autoplay muted playsinline>
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/intro-en.mp4" />
           <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
         </video>
@@ -47,7 +47,7 @@
               <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin2.webp" alt="Tin Defi Ethereum coin" loading="lazy" />
               <img class="mission-section__img__coin appear fade-in fade-down" src="/images/home/tin3.webp" alt="Tin Defi Ethereum coin" loading="lazy" />
               <img class="smartphone-container__tins appear fade-in" src="/images/tins-cake.svg" alt="Tin Defi CAKE content" loading="lazy" />
-              <video id="pancake-video" class="smartphone-container__video appear fade-in" autoplay loop muted>
+              <video id="pancake-video" class="smartphone-container__video appear fade-in" autoplay loop muted playsinline>
                 <source src="/images/pancake.mp4">
               </video>
               <img class="mission-section__img appear fade-in" src="/images/smartphones/iphone-pro-tin.svg" alt="Tin Defi iPhone PRO shape" loading="lazy" />
@@ -77,7 +77,7 @@
     <section class="tin-features container">
       <div class="tin-features__background">
         <div class="smartphone-container appear fade-in fade-down">
-          <video id="tins-video" class="smartphone-container__video appear fade-in" autoplay loop muted>
+          <video id="tins-video" class="smartphone-container__video appear fade-in" autoplay loop muted playsinline>
             <source src="/videos/profile/tins.mp4">
           </video>
           <div class="smartphone-container__radial-background"></div>
@@ -173,7 +173,7 @@
 
       <div class="chat-section__items">
         <div class="chat-section__item">
-          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline>
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/chats_1.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
@@ -185,7 +185,7 @@
           </div>
         </div>
         <div class="chat-section__item">
-          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline>
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/chats_2.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
@@ -197,7 +197,7 @@
           </div>
         </div>
         <div class="chat-section__item">
-          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline>
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/chats_3.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
@@ -209,7 +209,7 @@
           </div>
         </div>
         <div class="chat-section__item">
-          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="chat-section__item__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline>
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/chats_4.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
@@ -318,7 +318,7 @@
     <section class="profile-section container">
       <div class="profile-section__video-container">
         <div class="profile-section__video-wrapper" :class="{'is-in-viewport':profileInViewport}">
-          <video class="profile-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop>
+          <video class="profile-section__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline>
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/experiences.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
           </video>
@@ -360,7 +360,7 @@
     <section class="tin-lives container">
       <div class="tin-lives__wrapper">
         <div class="tin-lives__video-container appear fade-in fade-down delay-300">
-          <video class="tin-lives__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop poster="/images/livestreams.webp">
+          <video class="tin-lives__video" tabindex="0" autobuffer="autobuffer" preload="preload" autoplay muted loop playsinline poster="/images/livestreams.webp">
             <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/videos/home/lives.webm" />
             <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/videos/home/lives.mp4" />
             <p>Sorry, your browser does not support the &lt;video&gt; element.</p>

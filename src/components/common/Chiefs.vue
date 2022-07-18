@@ -4,7 +4,7 @@
       <article v-for="chief, i in chiefs" :key="i" class="tin-team__card">
         <div class="tin-team__card__content">
           <header class="tin-team__card__head">
-            <img class="tin-team__card__picture" :src="`/images/team/${chief.avatar}.jpg`" alt="Tin Defi chief picture" loading="lazy" />
+            <img class="tin-team__card__picture" :src="`/images/team/${chief.avatar}.webp`" alt="Tin Defi chief picture" loading="lazy" />
             <p class="tin-team__card__name">{{chief.name}}</p>
             <p class="tin-team__card__position">{{chief.position}}</p>
           </header>
