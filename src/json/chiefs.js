@@ -50,7 +50,7 @@ const chiefs = [
   {
     avatar: "juan-gasca",
     name: "Juan Gasca",
-    position: "CCO - English",
+    position: "Public Relations Coordinator",
     social: {
       tindefi: "#",
       linkedin: "https://www.linkedin.com/in/juan-gasca-aristeguieta/",

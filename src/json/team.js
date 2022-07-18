@@ -116,26 +116,6 @@ const team = [
     }
   },
   {
-    avatar: "juanmi-bassa",
-    name: "Juanmi Bassa",
-    position: "Graphic Designer",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/juanmi-bassa-pericas/",
-      twitter: "https://twitter.com/xflugox"
-    }
-  },
-  {
-    avatar: "pau-perello",
-    name: "Pau Perelló",
-    position: "Advisory & Consultancy",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/pau-perello/",
-      twitter: "https://twitter.com/pauperello_"
-    }
-  },
-  {
     avatar: "christopher-mendoza",
     name: "Christopher Mendoza",
     position: "Advisory & Consultancy",
@@ -154,25 +134,6 @@ const team = [
       github: "https://github.com/ilyanSD",
       linkedin: "https://www.linkedin.com/in/ilya-slyusarchuk",
       twitter: "https://twitter.com/_ilyaan"
-    }
-  },
-  {
-    avatar: "valentina-rangel",
-    name: "Valentina Rangel",
-    position: "Copywriter",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/Valentina-Rangel",
-   }
-  },
-  {
-    avatar: "keiberlyn-cordero",
-    name: "Keiberlyn Cordero",
-    position: "Social ads Specialist",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/keiberlyn-cordero",
-
     }
   },
   {
@@ -222,27 +183,6 @@ const team = [
     }
   },
   {
-    avatar: "ignacio-gonzalez",
-    name: "Ignacio Gonzalez",
-    position: "Sales & Marketing representative",
-    social: {
-      tindefi: "#",
-      linkedin: "http://www.linkedin.com/in/WayneStatic",
-      twitter: "https://twitter.com/WayneSCrypto",
-      instagram: "https://www.Instagram.com/Wayne.Static.Crypto"
-    }
-  },
-  {
-    avatar: "alejo-daniel-miguez",
-    name: "Alejo Daniel Miguez",
-    position: "Community Manager",
-    social: {
-      tindefi: "#",
-      linkedin: " https://www.linkedin.com/in/alejodanielmiguez/",
-      instagram: "https://www.instagram.com/Miguez.Alejo/"
-    }
-  },
-  {
     avatar: "bryan-armando-guzman-juarez",
     name: "Brayan Armando Guzmán Juárez",
     position: "Marketing assistant",
@@ -250,16 +190,6 @@ const team = [
       tindefi: "#",
       linkedin: "https://www.linkedin.com/in/brayan-armando-guzm%C3%A1n-ju%C3%A1rez-896653230/",
       instagram: "https://www.instagram.com/b.armando_juarezs/"
-    }
-  },
-  {
-    avatar: "alejandro-bassa",
-    name: "Alejandro Bassa",
-    position: "Sales & Marketing representative",
-    social: {
-      tindefi: "#",
-      linkedin: "https://www.linkedin.com/in/alejandro-scandefi/",
-      twitter: "https://twitter.com/ComunidadCRIPTO"
     }
   },
   {
@@ -283,7 +213,7 @@ const team = [
   {
     avatar: "adriel-acevedo",
     name: "Adriel Acevedo",
-    formation: "Advisory & Consultancy",
+    position: "Advisory & Consultancy",
     social: {
       tindefi: "#",
       linkedin: "https://www.linkedin.com/in/adriel-acevedo/"
